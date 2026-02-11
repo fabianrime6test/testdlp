@@ -1,0 +1,453 @@
+# server expects this 2nd line
+// PRCSFLAGS.DAT
+#
+#
+# Linux process flags file format.
+# Agent version: 7.3.14
+# Date 15-SEP-2022
+#
+# '#' is eol comment, '//' is too. Blank lines are ignored.
+# 
+# A valid line should consist of three entries separated
+# by a ','. 
+#
+# First field is an absolute path or regexp. If the path starts with a
+# slash ('/') and does NOT contain any of the following symbols
+# \ ^ $ [ ] ( ) { } | ? * +
+# then it is treated as an absolute path, otherwise it is a regular expression.
+# Empty path is permissible, but in this case md5 needs to be specified
+# Second field is md5 sum. regexp lines should not have md5 specified 
+# (leave blank or '0'). If both path and md5 are specified, both should match.
+#
+#
+# Third field specifies flags, either symbolic, decimal or 0x hexadecimal.
+# Flags can be combined with '|' or '+' (both symbols are equivalent and mean
+# bitwise OR). The flags can be prepended with a '~', meaning that this flag
+# will be dropped for the process. Example flags:
+#
+# NI|NH # no inject and no close file history
+# TRC+TR # trusted and propagate flags to children.
+#
+# Possible flags:
+#	'IN'  MPO_INVISIBLE			= 0x1,
+#	'IM'  MPO_IMMORTAL			= 0x2,
+#	'SK'  MPO_SKIPPED			= 0x4,
+#	'CD'  MPO_CD_BURNER			= 0x8,
+#	'TR'  MPO_TRUSTED		= 0x10,
+#	'NI'  MPO_NO_INJECT		= 0x100,
+#	'NN'  MPO_NO_NETWORK_OPS 		= 0x200,
+#	'NH'  MPO_NO_CLOSED_FILE_HISTORY 	= 0x1000
+#	'TRC' MPO_TRUST_CHILDREN	= 0x8000, 
+#	'MBR' MPO_ALLOW_MBR			= 0x10000
+#	'TP'  MPO_NO_TAG_PROPAGATION 		= 0x200000
+#	'NF'  MPO_NO_ON_THE_FLY_CLASSIFICATION 	= 0x400000
+#	'CC'  MPO_CLASSIFICATION_ON_CLOSE 	= 0x800000
+#
+# Special line DEFAULT_FLAGS=<flags> can be added to set flags on all processes
+#
+# Effective process flags for the process are determined as follows:
+# 1. FLAGS = DEFAULT_FLAGS (0 if not specified)
+# 2. If the parent process has a TRC flags, parent FLAGS = FLAGS | parent's flags
+# 3. The table is traversed. For ALL matching entries SET and DROP flags are OR'd 
+#    together.
+# 4. FLAGS = FLAGS | SET flags
+# 5. FLAGS = FLAGS & (NOT DROP flags)
+#
+# To reduce startup noise, add all the init scripts to 
+# /etc/init.d/* by rc5
+# md5sum /etc/rc /etc/rc.sysinit /etc/init.d/* | awk '{print ","$1",0x8010"}' >> prcsflgs.dat
+
+# Example:
+#DEFAULT_FLAGS=NI
+
+/dgagent/dgagent_uninstall,0,TRC|SK
+/dgagent/xprompt,0,SK
+/dgagent/dgscan,0,SK
+/dgagent/dgciapp,0,SK
+/dgagent/ACI/DiSH/AutonomyDiSH.exe,0,SK
+/dgagent/ACI/IDOL/agentstore/agentstore.exe,0,SK
+/dgagent/ACI/kv/kvoop,0,SK
+/dgagent/eda_scan,0,SK
+/dgagent/dgsmon,0,SK
+# Fix for RHEL74 nvidia GPU library interception fail, happens only when nvidia GPU available.
+# Don't remove /usr/libexec/gnome-session-check-accelerated,0,NI.
+/usr/libexec/gnome-session-check-accelerated,0,NI
+/usr/share/mozilla/native-messaging-hosts/dgff_webexthelper,0,SK # Trust web extension helper process
+/bin/basename,0,TR
+/bin/date,0,TR
+# We noticed multiple issues on suse (Events are not reported when operations
+# are performed from command line). The reason is, terminal process is started
+# by gnome-terminal-server, which is started by systemd(by sending a signal
+# using dbus daemon). Since dbus-daemon has TRC set on it all the flags
+# propogates to it's child, gnome-terminal-server. This hierarchy of propogation
+# continues till terminal and any process invoked further from terminal.
+# To fix this we remove TRC on dbus-daemon
+/bin/dbus-daemon,0,TR
+/bin/dirname,0,TR
+/bin/env,0,TR
+/bin/hostname,0,TR
+/bin/kbd_mode,0,TR
+/bin/ls,0,TR
+/bin/mktemp,0,TR
+/bin/mount,0,TR
+/bin/nice,0,TR
+/bin/pwd,0,TR
+/bin/setfont,0,TR|TRC
+/bin/touch,0,TR
+/bin/uname,0,TR
+/bin/unicode_start,0,TR
+/bin/unicode_stop,0,TR
+/bin/vgscan,0,SK|MBR
+/bin/dracut,0,SK|MBR
+/lib/udev/udev_run_devd,0,TR
+/lib/udev/udev_run_hotplugd,0,TR
+/lib/systemd/systemd-journald,0,SK|TRC
+/lib/systemd/systemd-logind,0,TR
+/lib/systemd/systemd-udevd,0,SK|TRC|MBR
+/sbin/accton,0,TR
+/sbin/arptables,0,TR
+/sbin/auditd,0,TR
+/sbin/blogd,0,TR
+/sbin/blogger,0,TR
+/sbin/blkid,0,MBR
+/sbin/cardmgr,0,TR
+/sbin/chkconfig,0,TR
+/sbin/consoletype,0,TR
+/sbin/dhclient,0,TR
+/sbin/fbresolution,0,TR
+/sbin/hdparm,0,TR
+/sbin/hotplug,0,TR|TRC #rhel hotplug multiplexer
+/sbin/hwclock,0,TR
+/sbin/initlog,0,TR
+/sbin/iscsid,0,TR
+/sbin/isdnlog,0,TR
+/sbin/klogd,0,TR
+/sbin/killproc,0,TR
+/sbin/lsmod,0,TR
+/sbin/lspci,0,TR
+/sbin/lvm,0,TR|MBR
+/sbin/mdadm,0,TR
+/sbin/mdmpd,0,TR
+/sbin/microcode_ctl,0,TR
+/sbin/mingetty,0,TR
+/sbin/multipathd,0,TR
+/sbin/netplugd,0,TR
+/sbin/ntpd,0,TR
+/sbin/portmap,0,TR
+/sbin/portreserve,0,TR
+/sbin/rpc.lockd,0,TR
+/sbin/rpc.statd,0,TR
+/sbin/scsi_id,0,TR
+/sbin/splash,0,TR
+/sbin/startproc,0,TR
+/sbin/syslogd,0,TR
+/sbin/udev,0,TR
+/sbin/udevd,0,TR|TRC|MBR
+/sbin/udevsend,0,TR
+/sbin/vgchange,0,MBR
+/sbin/vgs,0,MBR
+/sbin/wait_for_sysfs,0,TR
+/sbin/ypbind,0,TR
+/sbin/vgscan,0,MBR
+/sbin/dracut,0,MBR
+/sbin/pvscan,0,MBR
+/sbin/pvs,0,MBR
+/usr/X11R6/bin/XFree86,0,TR
+/usr/bin/canberra-gtk-play,0,TR
+/usr/bin/certwatch,0,TR
+/usr/bin/compiz,0,NP
+/usr/bin/cups-config-daemon,0,TR
+/usr/bin/dc_client,0,TR
+/usr/bin/dc_server,0,TR
+/usr/bin/dircolors,0,TR
+/usr/bin/dund,0,TR
+/usr/bin/fc-cache,0,TR
+/usr/bin/genisoimage,0,CD
+/usr/bin/gnome-keyring-daemon,0,TR
+/usr/bin/gnome-panel,0,TR
+/usr/bin/gnome-screensaver,0,TR
+/usr/bin/gnome-session,0,TR
+/usr/bin/gnome-volume-manager,0,TR
+/usr/bin/hidd,0,TR
+/usr/bin/id,0,TR
+/usr/bin/jserver,0,TR
+/usr/bin/k3b,0,CD
+/usr/bin/lisa,0,TR
+/usr/bin/logger,0,TR
+/usr/bin/makewhatis,0,TRC|TR
+/usr/bin/man,0,TR
+/usr/bin/mkisofs,0,CD
+/usr/bin/mrtg,0,TR
+/usr/bin/mysqld_multi,0,TR
+/usr/bin/mysqld_safe,0,TR
+/usr/bin/mysql_install_db,0,TR
+/usr/bin/nautilus-cd-burner,0,CD
+/usr/bin/opensm,0,TR
+/usr/bin/pand,0,TR
+/usr/bin/pactl,0,TR
+/usr/bin/postgres,0,TR
+/usr/bin/pulseaudio,0,TR
+/usr/bin/raw,0,TR
+/usr/bin/rhgb,0,TR
+/usr/bin/sensors,0,TR
+/usr/bin/sessreg,0,TR
+/usr/bin/spamd,0,TR
+/usr/bin/ttmkfdir,0,TR
+/usr/bin/udevinfo,0,TR
+/usr/bin/updatedb,0,TR
+/usr/bin/webalizer,0,TR
+/usr/bin/which,0,TR
+/usr/bin/xauth,0,TR
+/usr/bin/xkbcomp,0,TR
+/usr/bin/Xorg,0,TR
+/usr/bin/yum,0,TR
+/usr/bin/vgscan,0,SK|MBR
+/usr/bin/dracut,0,SK|MBR
+/usr/bin/dgclipboard,0,SK
+/bin/dgclipboard,0,SK
+/usr/bin/vmware-user,0,TR
+/usr/lib/vmware-tools/bin32/vmware-user,0,TR
+/usr/lib/vmware-tools/bin32/appLoader,0,TR
+/usr/lib/vmware-tools/bin64/vmware-user,0,TR
+/usr/lib/vmware-tools/bin64/appLoader,0,TR
+/usr/kerberos/sbin/kadmind,0,TR
+/usr/kerberos/sbin/kpropd,0,TR
+/usr/kerberos/sbin/krb524d,0,TR
+/usr/kerberos/sbin/krb5kdc,0,TR
+/usr/lib/cups/backend/serial,0,TR
+/usr/lib/cups/backend/parallel,0,TR
+/usr/lib/cyrus-imapd/ctl_mboxlist,0,TR
+/usr/lib/cyrus-imapd/cyrus-master,0,TR
+/usr/lib/postfix/bounce,0,TR
+/usr/lib/postfix/cleanup,0,TR
+/usr/lib/postfix/error,0,TR
+/usr/lib/postfix/flush,0,TR
+/usr/lib/postfix/lmtp,0,TR
+/usr/lib/postfix/local,0,TR
+/usr/lib/postfix/master,0,TR
+/usr/lib/postfix/nqmgr,0,TR
+/usr/lib/postfix/oqmgr,0,TR
+/usr/lib/postfix/pickup,0,TR
+/usr/lib/postfix/pipe,0,TR
+/usr/lib/postfix/proxymap,0,TR
+/usr/lib/postfix/qmgr,0,TR
+/usr/lib/postfix/qmqpd,0,TR
+/usr/lib/postfix/showq,0,TR
+#/usr/lib/postfix/smtp,0,TR
+#/usr/lib/postfix/smtpd,0,TR
+/usr/lib/postfix/spawn,0,TR
+/usr/lib/postfix/tlsmgr,0,TR
+/usr/lib/postfix/trivial-rewrite,0,TR
+/usr/lib/postfix/verify,0,TR
+/usr/lib/postfix/virtual,0,TR
+/usr/lib/systemd/systemd-journald,0,SK|TRC
+/usr/lib/systemd/systemd-logind,0,TR
+/usr/lib/systemd/systemd-udevd,0,SK|TRC|MBR
+/usr/lib/vte/gnome-pty-helper,0,TR
+/usr/lib/zeitgeist/zeitgeist-fts,0,TR
+/usr/lib/x86_64-linux-gnu/gconf/gconfd-2,0,TR
+/usr/lib64/vte/gnome-pty-helper,0,TR
+/usr/libexec/abrt-hook-ccpp,0,TR
+/usr/libexec/accounts-daemon,0,TR
+/usr/libexec/clock-applet,0,TR
+/usr/libexec/dconf-service,0,TR
+/usr/libexec/gcc/i386-redhat-linux/4.1.0/cc1,0,TR
+/usr/libexec/gconfd-2,0,TR
+/usr/libexec/gconf-sanity-check-2,0,TR
+/usr/libexec/gdict-applet,0,TR
+/usr/libexec/gdm-crash-logger,0,TR
+/usr/libexec/gdm-factory-slave,0,TR
+/usr/libexec/gdm-host-chooser,0,TR
+/usr/libexec/gdm-product-slave,0,TR
+/usr/libexec/gdm-simple-chooser,0,TR
+/usr/libexec/gdm-simple-greeter,0,TR
+/usr/libexec/gdm-simple-slave,0,TR
+/usr/libexec/gdm-xdmcp-chooser-slave,0,TR
+/usr/libexec/gnome-settings-daemon,0,TR
+/usr/libexec/hald-addon-storage,0,TR
+/usr/libexec/hal.dev,0,TR
+/usr/libexec/hald-runner,0,TR|TRC
+/usr/libexec/hal.hotplug,0,TR 
+/usr/libexec/hal-hotplug-map,0,TR
+/usr/libexec/mixer-applet2,0,TR
+/usr/libexec/notification-area-applet,0,TR
+/usr/libexec/postfix/bounce,0,TR
+/usr/libexec/postfix/cleanup,0,TR
+/usr/libexec/postfix/error,0,TR
+/usr/libexec/postfix/flush,0,TR
+/usr/libexec/postfix/lmtp,0,TR
+/usr/libexec/postfix/local,0,TR
+/usr/libexec/postfix/master,0,TR
+/usr/libexec/postfix/nqmgr,0,TR
+/usr/libexec/postfix/oqmgr,0,TR
+/usr/libexec/postfix/pickup,0,TR
+/usr/libexec/postfix/pipe,0,TR
+/usr/libexec/postfix/proxymap,0,TR
+/usr/libexec/postfix/qmgr,0,TR
+/usr/libexec/postfix/qmqpd,0,TR
+/usr/libexec/postfix/showq,0,TR
+#/usr/libexec/postfix/smtp,0,TR
+#/usr/libexec/postfix/smtpd,0,TR
+/usr/libexec/postfix/spawn,0,TR
+/usr/libexec/postfix/tlsmgr,0,TR
+/usr/libexec/postfix/trivial-rewrite,0,TR
+/usr/libexec/postfix/verify,0,TR
+/usr/libexec/postfix/virtual,0,TR
+/usr/libexec/tracker-store,0,TR
+/usr/libexec/tracker-extract,0,TR
+/usr/libexec/tracker-miner-fs,0,TR
+/usr/libexec/wnck-applet,0,TR
+/usr/libexec/yum-updatesd-helper,0,TR
+/usr/libexec/gnome-shell-hotplug-sniffer,0,TR
+/usr/libexec/sssd/sssd_nss,0,TR
+/usr/lib/hal/hald-addon-storage,0,TR
+/usr/lib/sa/sa1,0,TR
+/usr/lib/sa/sa2,0,TR
+/usr/lib/sa/sadc,0,TR
+/usr/sbin/abrt-server,0,TR
+/usr/sbin/acpid,0,TR
+/usr/sbin/amd,0,TR
+/usr/sbin/anacron,0,TR
+/usr/sbin/apmd,0,TR
+/usr/sbin/arpwatch,0,TR
+/usr/sbin/atd,0,TR
+/usr/sbin/automount,0,TR
+/usr/sbin/avahi-daemon,0,TR
+/usr/sbin/bgpd,0,TR
+/usr/sbin/blkid,0,TR|MBR
+/usr/sbin/cannakill,0,TR
+/usr/sbin/cannaserver,0,TR
+/usr/sbin/console-kit-daemon,0,TR
+/usr/sbin/cpuspeed,0,TR
+/usr/sbin/crond,0,TR
+/usr/sbin/chronyd,0,TR
+/usr/sbin/cupsd,0,NI|TR
+/usr/sbin/dgclient,0,TR
+/usr/sbin/dhcp6r,0,TR
+/usr/sbin/dhcp6s,0,TR
+/usr/sbin/dhcpd,0,TR
+/usr/sbin/dhcrelay,0,TR
+/usr/sbin/dovecot,0,TR
+/usr/sbin/exim,0,TR
+/usr/sbin/exportfs,0,TR
+/usr/sbin/firstboot,0,TR
+/usr/sbin/fstab-sync,0,TR
+/usr/sbin/gpm,0,TR
+/usr/sbin/gnome-pty-helper,0,TR
+/usr/sbin/hal,0,TR
+/usr/sbin/hald,0,TR|TRC
+/usr/sbin/hal_lpadmin,0,TR
+/usr/sbin/hciattach,0,TR
+/usr/sbin/hcid,0,TR
+/usr/sbin/htt,0,TR
+/usr/sbin/hwbootscan,0,TR
+/usr/sbin/hwscan,0,TR
+/usr/sbin/ibmsphalt,0,TR
+/usr/sbin/inputattach,0,TR
+/usr/sbin/irqbalance,0,TR
+/usr/sbin/kudzu,0,TR
+/usr/sbin/makewhatis,0,TR|TRC
+/usr/sbin/mcelog,0,TR
+/usr/sbin/logrotate,0,TR|TRC
+/usr/sbin/lvm,0,TR|MBR
+/usr/sbin/named,0,TR
+/usr/sbin/netdump-server,0,TR
+/usr/sbin/nmbd,0,TR
+/usr/sbin/nscd,0,TR
+/usr/sbin/ntpd,0,TR
+/usr/sbin/ntpdate,0,TR
+/usr/sbin/oddjobd,0,TR
+/usr/sbin/ospf6d,0,TR
+/usr/sbin/ospfd,0,TR
+/usr/sbin/postfix,0,TR
+/usr/sbin/prelink,0,TR
+/usr/sbin/printconf-backend,0,TR
+/usr/sbin/ptal-init,0,TR
+/usr/sbin/radiusd,0,TR
+/usr/sbin/radvd,0,TR
+/usr/sbin/rarpd,0,TR
+/usr/sbin/readahead,0,TR
+/usr/sbin/rhnsd,0,TR
+/usr/sbin/ripngd,0,TR
+/usr/sbin/rpc.bootparamd,0,TR
+/usr/sbin/rpc.gssd,0,TR
+/usr/sbin/rpc.idmapd,0,TR
+/usr/sbin/rpc.mountd,0,TR
+/usr/sbin/rpc.nfsd,0,TR
+/usr/sbin/rpc.rstatd,0,TR
+/usr/sbin/rpc.rusersd,0,TR
+/usr/sbin/rpc.svcgssd,0,TR
+/usr/sbin/rpc.yppasswdd,0,TR
+/usr/sbin/rpc.ypxfrd,0,TR
+/usr/sbin/saslauthd,0,TR
+/usr/sbin/sdpd,0,TR
+/usr/sbin/slpd,0,TR
+/usr/sbin/slapd,0,TR			#LDAP
+/usr/sbin/slaptest,0,TR			#LDAP
+/usr/sbin/slurpd,0,TR			#LDAP
+/usr/sbin/nscd,0,TR
+/usr/sbin/smartd,0,TR
+/usr/sbin/snmpd,0,TR
+/usr/sbin/snmptrapd,0,TR
+/usr/sbin/squid,0,TR
+/usr/sbin/tmpwatch,0,TR
+/usr/sbin/vgchange,0,MBR
+/usr/sbin/winbindd,0,TR
+/usr/sbin/ypserv,0,TR
+/usr/sbin/zebra,0,TR
+/usr/sbin/vgscan,0,MBR
+/usr/sbin/vgs,0,MBR
+/usr/sbin/dracut,0,MBR
+/usr/sbin/pvscan,0,MBR
+/usr/sbin/pvs,0,MBR
+/usr/share/rhn/rhn_applet/applet.py,0,TR
+/usr/X11R6/bin/mkfontdir,0,TR
+/usr/X11R6/bin/mkfontscale,0,TR
+/usr/X11R6/bin/xfs,0,TR
+/usr/X11R6/bin/xkbcomp,0,TR
+/usr/X11R6/bin/sessreg,0,TR
+/usr/X11R6/bin/Xorg,0,TR
+/usr/X11R6/lib/X11/xkb/xkbcomp,0,TR
+/usr/local/verdasys/bin/tvad,0,TR
+/opt/kde3/bin/suseplugger,0,TR
+/opt/kde3/bin/susewatcher,0,TR
+/opt/ppc,0,TR
+/opt/NAI/.*,0,SK|TRC
+/opt/McAfee/.*,0,SK|TRC
+
+# For Bit9 compatibility
+^/opt/bit9/bin/.*,0,SK|TRC				# Bit9 Agent application and uninstall script
+^/etc/rc.*/.*b9daemon,0,SK|TRC				# Bit9 Agent startup script
+/etc/init.d/b9daemon,0,SK|TRC				# Bit9 Agent startup script
+/etc/X11/xinit/xinitrc.d/90b9notifier.sh,0,SK|TRC	# Bit9 blocked file notifier
+^/var/lib/cb/.*,0,SK|TRC				# Carbon Black
+
+#We noticed dbus-daemon created too much noice on debian 9 ,we saw many event in LFR.
+#We have already dbus-daemon entry in prcsflags but the path is diffrent 
+#To Fix this we added dbus-daemon with new path in prcsflag file as trusted  flag.
+/usr/bin/dbus-daemon,0,TR
+/usr/bin/gnome-shell,0,TR
+
+#Process flags for addressing high cpu usage
+/sbin/setroubleshootd,0,SK|TRC
+/usr/sbin/setroubleshootd,0,SK|TRC
+/sbin/rsyslogd,0,SK|TRC
+/usr/sbin/rsyslogd,0,SK|TRC
+/usr/bin/abrt-dump-journal-oops,0,SK|TRC
+
+#man-db 2.8.3 version  won't allaw to inject preconve using /etc/ld.so.preloader
+/bin/preconv,0,TR
+/usr/bin/preconv,0,TR
+
+/sbin/parted,0,TR|MBR
+/usr/sbin/parted,0,TR|MBR
+/bin/parted,0,TR|MBR
+/usr/bin/parted,0,TR|MBR
+/sbin/fdisk,0,TR|MBR
+/usr/sbin/fdisk,0,TR|MBR
+/bin/fdisk,0,TR|MBR
+/usr/bin/fdisk,0,TR|MBR
+
+# Cortex
+/opt/traps/.*,0,SK|TRC
+#end of file

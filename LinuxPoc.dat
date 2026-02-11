@@ -1,0 +1,62 @@
+// server expects this 2nd line
+// FILE: DIRCTRL.DAT
+//
+// Agent version: 7.3.14
+//
+// Linux Directory Control File differs from windows a bit.
+// Unix-style comments (#) are valid along with (//).
+// The file is split into four sections of identical format.
+//
+// Directory names can be separated with a ';' or a newline.
+// Two modes of name expansion are supported: "like" search and regexp.
+// "like" supports wildcard characters '%' at beginning and/or end
+// of a pattern (e.g. %bin, bin%, %bin%) - it is similar to "like"
+// operator in rules. If '%' are not specified at beginning and/or end
+// of a pattern, it is treated as a regexp pattern.
+
+# List of directories to be scanned.
+# IMPORTANT! Only directories specified in this section are scanned -
+# this list takes precedence over "scanFixed[Removable]Drives" settings!
+# If nothing is specified in this section, scanning starts from /.
+# Name expansion is NOT supported in this section,
+# only exact directory names should be used!
+SECTION INCLUDE:
+
+#/home;/media;/mnt
+
+# Directories excluded from scan (and thus from classification and encryption)
+# Name expansion is supported.
+SECTION EXCLUDE:
+
+/dgagent
+/proc;/sys;/dev;/selinux
+*/bin;*/sbin;*/lib;*/lib64;*/etc;*/libexec
+*/.lost+found
+
+# Directories excluded from classification
+# Name expansion is supported.
+SECTION ACI:
+
+/bin/*
+/boot/*
+/dev/*
+/dgagent/*
+/etc/*
+/lib/*
+/lib64/*
+/opt/*
+/proc/*
+/sbin/*
+/selinux/*
+/srv/*
+/sys/*
+/tmp/*
+/usr/*
+/var/*
+*/.cache/*
+*/.synergy/*
+*/.pki/*
+
+# Directories excluded from encryption
+# Name expansion is supported.
+SECTION AFE:
