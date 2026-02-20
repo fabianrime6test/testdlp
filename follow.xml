@@ -1,0 +1,221 @@
+For each new tag to be added, you have to:
+
+Create the component rule dlp_lin_asml_is_lgl_legal_issues checking for the tag value, 
+Then if needed exceptions upload 
+then add the block below into the upload_monitor
+
+This component rule dlp_lin_asml_classification_requirements_upload_monitor
+is called from all the rules NTU_monitor
+
+when there is an exception then create something like dlp_lin_asml_approved_uploads_zeiss
+
+dlp_lin_asml_classification_requirements_upload_monitor
+  <!-- Evaluate Top Secret classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_topsecret"/></not>
+    <userFunction name="dlp_lin_asml_is_topsecret_all"/>
+  </and>
+
+dlp_lin_asml_is_topsecret_all
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="TOP_SECRET_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="TOP_SECRET_INFO"/>
+    </list>
+  </in>
+</or>
+
+dlp_lin_asml_approved_uploads_topsecret
+<!-- Standard upload whitelist for Top Secret classification -->
+<in op="like" match="any">
+  <evtDomain/>
+  <list>
+    <componentListString name="dlp-asml-approveduploadlocations-topsecret" />
+  </list>
+</in>
+
+
+When on the PDF we see Apply exceptions, create something like this:
+dlp_lin_asml_approved_uploads_gmf_sat_packages
+<!-- Standard upload whitelist for it_architectural_design classification -->
+<or>
+  <in op="like" match="any">
+    <evtDomain/>
+    <list>
+      <componentListString name="dlp-asml-internal_domains_excluding_top_secret" />
+    </list>
+  </in>
+  <in op="like" match="any">
+    <evtDomain/>
+    <list>
+      <componentListString name="dlp-asml-approveduploadlocations_gmf_sat_packages" />
+    </list>
+  </in>
+</or>
+
+
+*****************************************************************
+
+but first need to create the component list that evaluate the classification label
+dlp_lin_asml_is_pd_css_cal_1.9_monitor
+
+
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_CAL_1_9_MONITOR_MEDIUM"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_CAL_1_9_MONITOR_MEDIUM"/>
+    </list>
+  </in>
+</or>
+
+
+NTU Exceptions 
+
+dlp_lin_asml_approved_uploads_pd_css_cal_1.9_monitor
+<!-- Standard upload whitelist for rba_pentest_reports classification -->
+<or>
+  <in op="like" match="any">
+    <evtDomain/>
+    <list>
+      <componentListString name="dlp-asml-file_extensions_pd_css_cal_1.9_monitor" />
+    </list>
+  </in>
+  <in op="like" match="any">
+    <evtDomain/>
+    <list>
+      <componentListString name="dlp-asml-approveduploadlocations_pd_css_cal_1.9_monitor" />
+    </list>
+  </in>
+</or>
+
+Print exceptions 
+
+dlp_lin_asml_approved_printers_pd_ibp
+
+<and>
+  <!-- Standard printer whitelist for pd_ibp classification -->
+  <in op = "like" like = "both" match = "any">
+    <varstring name = "dlp-evtPrinterName" scope = "event"/>
+    <list>
+      <componentListString name = "dlp-asml-printerwhitelist-pd_ibp" />
+    </list>
+  </in>
+  <set>
+    <varstring name = "dlp-evtPrinterName" scope = "event"/>
+    <evtPrinterName/>
+  </set>
+</and>
+
+For mail exceptions 
+dlp_lin_asml_approved_emaildomains_ibp_apps
+
+<!-- Standard email domain whitelist for VPA classification -->
+<in op="like" like="both" match="all">
+  <evtMailRecipients />
+  <list>
+    <componentListString name="dlp-asml-approvedemaildomains-ibp_apps" />
+  </list>
+</in>
+
+Then on the component list below add a section like this:
+
+ dlp_lin_asml_classification_requirements_upload_monitor
+  
+  <!-- Evaluate CSS CAL 1.9 MONITOR classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_is_pd_css_cal_1.9_monitor"/></not>
+    <userFunction name="dlp_lin_asml_is_pd_css_cal_1.9_monitor"/>
+  </and>
+
+
+When there is not exceptions for an exfiltration channel just add something like this on the requirement component
+
+  <!-- Evaluate ONLY classification requirements NOT EXCEPTIONS FOR THESE TAGS -->
+<userFunction name="dlp_lin_asml_is_pd_css_cal_1.9_monitor"/>
+<userFunction name="dlp_lin_asml_is_financial_forecast"/>
+<userFunction name="dlp_lin_asml_is_lgl_export_control"/> 
+<userFunction name="dlp_lin_asml_is_lgl_legal_issues"/> 
+<userFunction name="dlp_lin_asml_is_sp_rabobank_files"/> 
+<userFunction name="dlp_lin_asml_is_pd_capacity_planning"/> 
+ 
+ 
+  <userFunction name="dlp_lin_asml_is_ssp_qmd_high"/>
+  <userFunction name="dlp_lin_asml_is_db_fb_drawings"/>
+  
+  <userFunction name="dlp_lin_asml_is_brion_export_control_source"/>
+  <userFunction name="dlp_lin_asml_is_de_matlab"/>
+  <userFunction name="dlp_lin_asml_is_de_co_drawings"/>
+  <userFunction name="dlp_lin_asml_is_corp_conq_excom"/>
+  
+  <userFunction name="dlp_lin_asml_is_css_known_issues"/>
+  <userFunction name="dlp_lin_asml_is_employee_data_generator"/>
+  	<userFunction name="dlp_lin_asml_is_rba_keepas"/>
+	<userFunction name="dlp_lin_asml_is_de_kicad"/>
+  	<userFunction name="dlp_lin_asml_is_de_kicad"/>
+  	<userFunction name="dlp_lin_asml_is_it_findings"/>
+  	<userFunction name="dlp_lin_asml_is_it_architectural_design"/>
+  	<userFunction name="dlp_lin_asml_is_asml_gmf_sat"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	NTU Exceptions 
+
+dlp_lin_asml_approved_uploads_pd_css_cal_1.9_monitor
+<!-- Standard upload whitelist for rba_pentest_reports classification -->
+<or>
+  <in op="like" match="any">
+    <evtDomain/>
+    <list>
+      <componentListString name="dlp-asml-file_extensions_pd_css_cal_1.9_monitor" />
+    </list>
+  </in>
+  <in op="like" match="any">
+    <evtDomain/>
+    <list>
+      <componentListString name="dlp-asml-approveduploadlocations_pd_css_cal_1.9_monitor" />
+    </list>
+  </in>
+</or>
+	
+<and>	
+<or>	
+ <in op="like" match="any">
+    <evtSrcFileExt />
+    <list>
+      <componentListString name="dlp-asml-file_extensions_pd_css_cal_1.9_monitor" />    
+    </list>
+  </in>
+  <in op="like" match="any">
+    <evtDestFileExt />
+    <list>
+      <componentListString name="dlp-asml-file_extensions_pd_css_cal_1.9_monitor" />
+    </list>
+  </in>
+</or>  
+    <in op="like" match="any">
+    <evtDomain/>
+    <list>
+      <componentListString name="dlp-asml-approveduploadlocations_pd_css_cal_1.9_monitor" />
+    </list>
+  </in>
+  </and>
