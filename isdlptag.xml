@@ -1,0 +1,196 @@
+
+dlp_lin_asml_is_enp_rba_julia_source_code_1_1_monitor_info
+dlp_lin_asml_is_enp_it_tce_infra_architecture_1_1_monitor_info
+dlp_lin_asml_is_enp_it_risk_assessments_1_2_monitor_info
+dlp_lin_asml_is_enp_it_awoai_files_2_1_block_high
+dlp_lin_asml_is_enp_it_audit_observations_1_1_monitor_info
+dlp_lin_asml_is_enp_gmf_queues_1_0_monitor_low
+dlp_lin_asml_is_enp_cymer_customer_laser_allocation_2_0_block_info
+dlp_lin_asml_is_enp_css_pcs_2_0_user_cancel_block_medium
+dlp_lin_asml_is_enp_css_pccism_2_1_block_info
+dlp_lin_asml_is_enp_css_npi_kt_2_0_monitor_info
+dlp_lin_asml_is_enp_css_cal_1_9_monitor_context_medium
+dlp_lin_asml_is_enp_corp_customer_value_1_1_monitor_info
+
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_RBA_JULIA_SOURCE_CODE_1_1_MONITOR_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_RBA_JULIA_SOURCE_CODE_1_1_MONITOR_INFO"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_IT_TCE_INFRA_ARCHITECTURE_1_1_MONITOR_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_IT_TCE_INFRA_ARCHITECTURE_1_1_MONITOR_INFO"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_IT_RISK_ASSESSMENTS_1_2_MONITOR_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_IT_RISK_ASSESSMENTS_1_2_MONITOR_INFO"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_IT_AWOAI_FILES_2_1_BLOCK_HIGH"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_IT_AWOAI_FILES_2_1_BLOCK_HIGH"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_IT_AUDIT_OBSERVATIONS_1_1_MONITOR_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_IT_AUDIT_OBSERVATIONS_1_1_MONITOR_INFO"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_GMF_QUEUES_1_0_MONITOR_LOW"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_GMF_QUEUES_1_0_MONITOR_LOW"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_CYMER_CUSTOMER_LASER_ALLOCATION_2_0_BLOCK_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_CYMER_CUSTOMER_LASER_ALLOCATION_2_0_BLOCK_INFO"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_PCS_2_0_USER_CANCEL_BLOCK_MEDIUM"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_PCS_2_0_USER_CANCEL_BLOCK_MEDIUM"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_PCCISM_2_1_BLOCK_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_PCCISM_2_1_BLOCK_INFO"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_NPI_KT_2_0_MONITOR_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_NPI_KT_2_0_MONITOR_INFO"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_CAL_1_9_MONITOR_CONTEXT_MEDIUM"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_CAL_1_9_MONITOR_CONTEXT_MEDIUM"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_CAL_1_9_MONITOR_MEDIUM"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_CSS_CAL_1_9_MONITOR_MEDIUM"/>
+    </list>
+  </in>
+</or>
+<or>
+  <in>
+    <evtDestFilePolicyTag/>
+    <list>
+      <string value="ENP_CORP_CUSTOMER_VALUE_1_1_MONITOR_INFO"/>
+    </list>
+  </in>
+  <in>
+    <evtSrcFilePolicyTag/>
+    <list>
+      <string value="ENP_CORP_CUSTOMER_VALUE_1_1_MONITOR_INFO"/>
+    </list>
+  </in>
+</or>
