@@ -1,0 +1,63 @@
+eidvdi39231:~ % 
+eidvdi39231:~ % 
+eidvdi39231:~ %  
+eidvdi39231:~ % sudo -u '#501811' stat /home/farivera/Downloads/testfile/2mailtest.txt 
+Sorry, user farivera is not allowed to execute '/bin/stat /home/farivera/Downloads/testfile/2mailtest.txt' as farivera on eidvdi39231.
+eidvdi39231:~ % 
+eidvdi39231:~ % 
+eidvdi39231:~ % 
+eidvdi39231:~ % 
+eidvdi39231:~ % 
+eidvdi39231:~ % clear
+eidvdi39231:~ % ls -ald /home/farivera/
+drwx------. 13 farivera asd 4096 Mar 19 13:56 /home/farivera/
+eidvdi39231:~ % ls -ald /home/farivera/Downloads/
+drwxr-xr-x. 11 farivera users 4096 Mar 18 11:41 /home/farivera/Downloads/
+eidvdi39231:~ % ls -ald /home/farivera/Downloads/testfile/
+drwxrwxr-x. 3 farivera users 4096 Mar 19 10:08 /home/farivera/Downloads/testfile/
+eidvdi39231:~ % 
+eidvdi39231:~ % ls -ald /home/farivera/Downloads/testfile/2mailtest.txt 
+-rw-rw-r--. 1 farivera users 704 Mar 19 10:08 /home/farivera/Downloads/testfile/2mailtest.txt
+eidvdi39231:~ % stat /home/farivera/Downloads/testfile/2mailtest.txt
+  File: /home/farivera/Downloads/testfile/2mailtest.txt
+  Size: 704       	Blocks: 8          IO Block: 65536  regular file
+Device: 30h/48d	Inode: 1260591780  Links: 1
+Access: (0664/-rw-rw-r--)  Uid: (501811/farivera)   Gid: (  500/   users)
+Context: system_u:object_r:nfs_t:s0
+Access: 2026-03-19 10:08:37.025187000 +0100
+Modify: 2026-03-19 10:08:37.030218000 +0100
+Change: 2026-03-19 10:08:37.038139000 +0100
+ Birth: -
+eidvdi39231:~ % 
+eidvdi39231:~ % namei -l /home/farivera/Downloads/testfile/2mailtest.txt
+f: /home/farivera/Downloads/testfile/2mailtest.txt
+dr-xr-xr-x root     root  /
+drwxr-xr-x root     root  home
+drwx------ farivera asd   farivera
+drwxr-xr-x farivera users Downloads
+drwxrwxr-x farivera users testfile
+-rw-rw-r-- farivera users 2mailtest.txt
+eidvdi39231:~ % 
+eidvdi39231:~ % ls -lZ /home/farivera/Downloads/testfile/2mailtest.txt
+-rw-rw-r--. 1 farivera users system_u:object_r:nfs_t:s0 704 Mar 19 10:08 /home/farivera/Downloads/testfile/2mailtest.txt
+eidvdi39231:~ % 
+eidvdi39231:~ % getfacl /home/farivera/Downloads/testfile/2mailtest.txt
+getfacl: Removing leading '/' from absolute path names
+# file: home/farivera/Downloads/testfile/2mailtest.txt
+# owner: farivera
+# group: users
+user::rw-
+group::rw-
+other::r--
+
+eidvdi39231:~ % ps -eo pid,user,group,cmd | grep -E /dgagent/DgAdmin|/dgagent/dgda
+/dgagent/ unreadable
+
+eidvdi39231:~ %  ps -eo pid,user,group,cmd | grep -E '/dgagent/DgAdmin|/dgagent/dgdaemon|/dgagent/eda_scan' | grep -v grep
+ 377793 root     root     /dgagent/DgAdmin
+eidvdi39231:~ % 
+eidvdi39231:~ % sudo -u '#501811' stat /home/farivera/Downloads/testfile/2mailtest.txt
+Sorry, user farivera is not allowed to execute '/bin/stat /home/farivera/Downloads/testfile/2mailtest.txt' as farivera on eidvdi39231.
+eidvdi39231:~ % 
+eidvdi39231:~ % 
+
