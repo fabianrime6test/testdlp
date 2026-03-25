@@ -1,0 +1,57 @@
+Fiscal YearPeriod
+GC Amount
+LC Planning Amount
+Plan Item
+Plan item description
+ccb cost bucket
+
+<?xml version="1.0" encoding="utf-8"?>
+<Grammars>
+	<Dictionary name="asml_corp_ccb">
+		<EntrySet name="corp_ccb_keywords_01" case="off">
+			<Entry headword="Fiscal YearPeriod" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_02" case="off">
+			<Entry headword="GC Amount" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_03" case="off">
+			<Entry headword="LC Planning Amount" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_04" case="off">
+			<Entry headword="Plan Item" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_05" case="off">
+			<Entry headword="Plan Item Description" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_06" case="off">
+			<Entry headword="CCB Cost Bucket" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_07" case="off">
+			<Entry headword="Subtotal" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_08" case="off">
+			<Entry headword="Grand total" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_09" case="off">
+			<Entry headword="dynamic" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_10" case="off">
+			<Entry headword="Actuals" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_11" case="off">
+			<Entry headword="Hierarchy" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_12" case="off">
+			<Entry headword="Sector" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_13" case="off">
+			<Entry headword="GC Currency" />
+		</EntrySet>
+			<EntrySet name="corp_ccb_keywords_14" case="off">
+			<Entry headword="Cost Center" />
+		</EntrySet>
+		<EntrySet name="corp_ccb_keywords_15" case="off">
+			<Entry headword="LC Planning Amount" />
+		</EntrySet>
+	</Dictionary>
+</Grammars>
