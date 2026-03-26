@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Grammars>
+	<Dictionary name="asml_gmf_csr">
+		<EntrySet name="gmf_csr_keywords_01" case="off">
+			<Entry headword="General CNL information" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_02" case="off">
+			<Entry headword="Machine specific information" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_03" case="off">
+			<Entry headword="CNL number" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_04" case="off">
+			<Entry headword="Wafer size" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_05" case="off">
+			<Entry headword="RelatedCNL number" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_06" case="off">
+			<Entry headword="DOE ID" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_07" case="off">
+			<Entry headword="DOE name" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_08" case="off">
+			<Entry headword="Sigma-outer" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_09" case="off">
+			<Entry headword="Sigma-inner" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_10" case="off">
+			<Entry headword="Polarization" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_11" case="off">
+			<Entry headword="Used in execution" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_12" case="off">
+			<Entry headword="Checked by FC-010" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_13" case="off">
+			<Entry headword="IMAGING" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_14" case="off">
+			<Entry headword="PROJECTION LENS" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_15" case="off">
+			<Entry headword="PUPIL VERIFICATION" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_16" case="off">
+			<Entry headword="ILLUMINATION" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_17" case="off">
+			<Entry headword="DOSE CONTROL" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_18" case="off">
+			<Entry headword="OVERLAY" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_19" case="off">
+			<Entry headword="WAFER ALIGNMENT (SENSOR)" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_20" case="off">
+			<Entry headword="METROLOGY" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_21" case="off">
+			<Entry headword="LENSHEATING" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_22" case="off">
+			<Entry headword="FOCUS PERFORMANCE" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_23" case="off">
+			<Entry headword="LEVELLING" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_24" case="off">
+			<Entry headword="SENSOR OPERATION" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_25" case="off">
+			<Entry headword="WAFER CONTAMINATION" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_26" case="off">
+			<Entry headword="PRODUCTIVITY" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_27" case="off">
+			<Entry headword="DYNAMIC PERFORMANCE" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_28" case="off">
+			<Entry headword="WAFER TABLE" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_29" case="off">
+			<Entry headword="WAFER HANDLING" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_30" case="off">
+			<Entry headword="RETICLE HANDLING &amp; POSITIONING" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_31" case="off">
+			<Entry headword="RETICLE MASKING" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_32" case="off">
+			<Entry headword="SOURCE (EUV)" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_33" case="off">
+			<Entry headword="Customer Request Parameter Description &amp; Conditions" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_34" case="off">
+			<Entry headword="Customer Request Specification,ASML Reply / Actions" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_35" case="off">
+			<Entry headword="Customer Reply / Actions" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_36" case="off">
+			<Entry headword="Final Agreed Description &amp; Conditions" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_37" case="off">
+			<Entry headword="Final Agreed Illumination Setting" />
+		</EntrySet>
+		<EntrySet name="gmf_csr_keywords_38" case="off">
+			<Entry headword="Final Agreed Configuration Option" />
+		</EntrySet>
+	</Dictionary>
+</Grammars>
