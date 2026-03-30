@@ -1,0 +1,271 @@
+
+<ArrayOfRule xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Rule>
+        <Choices>
+            <Show>Normal</Show>
+            <ActionTypeChoice>Alert</ActionTypeChoice>
+            <ActionTypeChoiceDefault>Alert</ActionTypeChoiceDefault>
+            <ActionTypeChoiceSelected>None</ActionTypeChoiceSelected>
+            <AlertLevelChoiceEnabled>false</AlertLevelChoiceEnabled>
+            <AlertLevelChoice>Informational_1</AlertLevelChoice>
+            <AlertLevelChoiceDefault>Informational</AlertLevelChoiceDefault>
+            <AlertLevelChoiceSelected>None</AlertLevelChoiceSelected>
+            <EncryptionTypeChoicesEnabled>false</EncryptionTypeChoicesEnabled>
+            <EncryptionTypeChoice>None</EncryptionTypeChoice>
+            <EncryptionTypeChoiceDefault>None</EncryptionTypeChoiceDefault>
+            <EncryptionTypeChoiceSelected>None</EncryptionTypeChoiceSelected>
+            <PromptChoicesEnabled>false</PromptChoicesEnabled>
+            <PromptChoice />
+            <PromptChoiceDefault />
+            <PromptChoiceSelected />
+            <LabelChoicesEnabled>false</LabelChoicesEnabled>
+            <LabelChoice />
+            <LabelChoiceDefault />
+            <LabelChoiceSelected />
+            <ChoiceSelections />
+            <RuleStatusDefault>None</RuleStatusDefault>
+            <FileUploadChoicesEnabled>false</FileUploadChoicesEnabled>
+            <FileUploadChoice>NoAction</FileUploadChoice>
+            <FileUploadChoiceDefault>NoAction</FileUploadChoiceDefault>
+            <FileUploadChoiceSelected>NoAction</FileUploadChoiceSelected>
+        </Choices>
+        <RuleType>Control</RuleType>
+        <RuleClass>Component</RuleClass>
+        <Name>dlp_lin_asml_is_corp_internal_audit_reports_ntu</Name>
+        <Description />
+        <Text>&lt;in&gt;
+  &lt;evtSrcFilePolicyTag/&gt;
+  &lt;list&gt;
+    &lt;string value="asml_corp_internal_audit_reports_info"/&gt;
+  &lt;/list&gt;
+&lt;/in&gt;</Text>
+        <AlertLevel>0</AlertLevel>
+        <Status>Active</Status>
+        <ActionType>None</ActionType>
+        <SupportedPlatform>Linux MacOSX Mobile Windows</SupportedPlatform>
+        <LicenseRequirement />
+        <RemediationType>None</RemediationType>
+        <RulePriority>100000</RulePriority>
+        <IsDefaultPriority>true</IsDefaultPriority>
+        <IsExpedited>false</IsExpedited>
+        <IsFDERule>false</IsFDERule>
+        <ContinueRuleEvaluation>false</ContinueRuleEvaluation>
+        <RunPostOp>false</RunPostOp>
+        <ApplyDgeExtension>false</ApplyDgeExtension>
+        <PromptID>00000000-0000-0000-0000-000000000000</PromptID>
+        <ProcessRuleId>00000000-0000-0000-0000-000000000000</ProcessRuleId>
+        <SendAlert>false</SendAlert>
+        <SendAlertInt>0</SendAlertInt>
+        <EncryptionType>None</EncryptionType>
+        <ZipPasswordAutoGen>false</ZipPasswordAutoGen>
+        <ZipPassword />
+        <MipLabel />
+        <MipLabelId>00000000-0000-0000-0000-000000000000</MipLabelId>
+        <LabelPartnerId>0</LabelPartnerId>
+        <ContainerId>00000000-0000-0000-0000-000000000001</ContainerId>
+        <ReadOnly>false</ReadOnly>
+        <ExistingPoliciesThatArentSupportedByRulePlatforms />
+        <FileUploadFlags>NoAction</FileUploadFlags>
+    </Rule>
+    <Rule>
+        <Choices>
+            <Show>Normal</Show>
+            <ActionTypeChoice>Alert</ActionTypeChoice>
+            <ActionTypeChoiceDefault>Alert</ActionTypeChoiceDefault>
+            <ActionTypeChoiceSelected>None</ActionTypeChoiceSelected>
+            <AlertLevelChoiceEnabled>false</AlertLevelChoiceEnabled>
+            <AlertLevelChoice>Informational_1</AlertLevelChoice>
+            <AlertLevelChoiceDefault>Informational</AlertLevelChoiceDefault>
+            <AlertLevelChoiceSelected>None</AlertLevelChoiceSelected>
+            <EncryptionTypeChoicesEnabled>false</EncryptionTypeChoicesEnabled>
+            <EncryptionTypeChoice>None</EncryptionTypeChoice>
+            <EncryptionTypeChoiceDefault>None</EncryptionTypeChoiceDefault>
+            <EncryptionTypeChoiceSelected>None</EncryptionTypeChoiceSelected>
+            <PromptChoicesEnabled>false</PromptChoicesEnabled>
+            <PromptChoice />
+            <PromptChoiceDefault />
+            <PromptChoiceSelected />
+            <LabelChoicesEnabled>false</LabelChoicesEnabled>
+            <LabelChoice />
+            <LabelChoiceDefault />
+            <LabelChoiceSelected />
+            <ChoiceSelections />
+            <RuleStatusDefault>None</RuleStatusDefault>
+            <FileUploadChoicesEnabled>false</FileUploadChoicesEnabled>
+            <FileUploadChoice>NoAction</FileUploadChoice>
+            <FileUploadChoiceDefault>NoAction</FileUploadChoiceDefault>
+            <FileUploadChoiceSelected>NoAction</FileUploadChoiceSelected>
+        </Choices>
+        <RuleType>Control</RuleType>
+        <RuleClass>Component</RuleClass>
+        <Name>dlp_lin_asml_is_it_findings_ntu</Name>
+        <Description />
+        <Text>&lt;in&gt;
+  &lt;evtSrcFilePolicyTag/&gt;
+  &lt;list&gt;
+    &lt;string value="asml_it_findings_info"/&gt;
+  &lt;/list&gt;
+&lt;/in&gt;</Text>
+        <AlertLevel>0</AlertLevel>
+        <Status>Active</Status>
+        <ActionType>None</ActionType>
+        <SupportedPlatform>Linux MacOSX Mobile Windows</SupportedPlatform>
+        <LicenseRequirement />
+        <RemediationType>None</RemediationType>
+        <RulePriority>100000</RulePriority>
+        <IsDefaultPriority>true</IsDefaultPriority>
+        <IsExpedited>false</IsExpedited>
+        <IsFDERule>false</IsFDERule>
+        <ContinueRuleEvaluation>false</ContinueRuleEvaluation>
+        <RunPostOp>false</RunPostOp>
+        <ApplyDgeExtension>false</ApplyDgeExtension>
+        <PromptID>00000000-0000-0000-0000-000000000000</PromptID>
+        <ProcessRuleId>00000000-0000-0000-0000-000000000000</ProcessRuleId>
+        <SendAlert>false</SendAlert>
+        <SendAlertInt>0</SendAlertInt>
+        <EncryptionType>None</EncryptionType>
+        <ZipPasswordAutoGen>false</ZipPasswordAutoGen>
+        <ZipPassword />
+        <MipLabel />
+        <MipLabelId>00000000-0000-0000-0000-000000000000</MipLabelId>
+        <LabelPartnerId>0</LabelPartnerId>
+        <ContainerId>00000000-0000-0000-0000-000000000001</ContainerId>
+        <ReadOnly>false</ReadOnly>
+        <ExistingPoliciesThatArentSupportedByRulePlatforms />
+        <FileUploadFlags>NoAction</FileUploadFlags>
+    </Rule>
+    <Rule>
+        <Choices>
+            <Show>Normal</Show>
+            <ActionTypeChoice>Alert</ActionTypeChoice>
+            <ActionTypeChoiceDefault>Alert</ActionTypeChoiceDefault>
+            <ActionTypeChoiceSelected>None</ActionTypeChoiceSelected>
+            <AlertLevelChoiceEnabled>false</AlertLevelChoiceEnabled>
+            <AlertLevelChoice>Informational_1</AlertLevelChoice>
+            <AlertLevelChoiceDefault>Informational</AlertLevelChoiceDefault>
+            <AlertLevelChoiceSelected>None</AlertLevelChoiceSelected>
+            <EncryptionTypeChoicesEnabled>false</EncryptionTypeChoicesEnabled>
+            <EncryptionTypeChoice>None</EncryptionTypeChoice>
+            <EncryptionTypeChoiceDefault>None</EncryptionTypeChoiceDefault>
+            <EncryptionTypeChoiceSelected>None</EncryptionTypeChoiceSelected>
+            <PromptChoicesEnabled>false</PromptChoicesEnabled>
+            <PromptChoice />
+            <PromptChoiceDefault />
+            <PromptChoiceSelected />
+            <LabelChoicesEnabled>false</LabelChoicesEnabled>
+            <LabelChoice />
+            <LabelChoiceDefault />
+            <LabelChoiceSelected />
+            <ChoiceSelections />
+            <RuleStatusDefault>None</RuleStatusDefault>
+            <FileUploadChoicesEnabled>false</FileUploadChoicesEnabled>
+            <FileUploadChoice>NoAction</FileUploadChoice>
+            <FileUploadChoiceDefault>NoAction</FileUploadChoiceDefault>
+            <FileUploadChoiceSelected>NoAction</FileUploadChoiceSelected>
+        </Choices>
+        <RuleType>Control</RuleType>
+        <RuleClass>Component</RuleClass>
+        <Name>dlp_lin_asml_is_gmf_sat_ntu</Name>
+        <Description />
+        <Text>&lt;in&gt;
+  &lt;evtSrcFilePolicyTag/&gt;
+  &lt;list&gt;
+    &lt;string value="asml_gmf_sat_low"/&gt;
+  &lt;/list&gt;
+&lt;/in&gt;</Text>
+        <AlertLevel>0</AlertLevel>
+        <Status>Active</Status>
+        <ActionType>None</ActionType>
+        <SupportedPlatform>Linux MacOSX Mobile Windows</SupportedPlatform>
+        <LicenseRequirement />
+        <RemediationType>None</RemediationType>
+        <RulePriority>100000</RulePriority>
+        <IsDefaultPriority>true</IsDefaultPriority>
+        <IsExpedited>false</IsExpedited>
+        <IsFDERule>false</IsFDERule>
+        <ContinueRuleEvaluation>false</ContinueRuleEvaluation>
+        <RunPostOp>false</RunPostOp>
+        <ApplyDgeExtension>false</ApplyDgeExtension>
+        <PromptID>00000000-0000-0000-0000-000000000000</PromptID>
+        <ProcessRuleId>00000000-0000-0000-0000-000000000000</ProcessRuleId>
+        <SendAlert>false</SendAlert>
+        <SendAlertInt>0</SendAlertInt>
+        <EncryptionType>None</EncryptionType>
+        <ZipPasswordAutoGen>false</ZipPasswordAutoGen>
+        <ZipPassword />
+        <MipLabel />
+        <MipLabelId>00000000-0000-0000-0000-000000000000</MipLabelId>
+        <LabelPartnerId>0</LabelPartnerId>
+        <ContainerId>00000000-0000-0000-0000-000000000001</ContainerId>
+        <ReadOnly>false</ReadOnly>
+        <ExistingPoliciesThatArentSupportedByRulePlatforms />
+        <FileUploadFlags>NoAction</FileUploadFlags>
+    </Rule>
+    <Rule>
+        <Choices>
+            <Show>Normal</Show>
+            <ActionTypeChoice>Alert</ActionTypeChoice>
+            <ActionTypeChoiceDefault>Alert</ActionTypeChoiceDefault>
+            <ActionTypeChoiceSelected>None</ActionTypeChoiceSelected>
+            <AlertLevelChoiceEnabled>false</AlertLevelChoiceEnabled>
+            <AlertLevelChoice>Informational_1</AlertLevelChoice>
+            <AlertLevelChoiceDefault>Informational</AlertLevelChoiceDefault>
+            <AlertLevelChoiceSelected>None</AlertLevelChoiceSelected>
+            <EncryptionTypeChoicesEnabled>false</EncryptionTypeChoicesEnabled>
+            <EncryptionTypeChoice>None</EncryptionTypeChoice>
+            <EncryptionTypeChoiceDefault>None</EncryptionTypeChoiceDefault>
+            <EncryptionTypeChoiceSelected>None</EncryptionTypeChoiceSelected>
+            <PromptChoicesEnabled>false</PromptChoicesEnabled>
+            <PromptChoice />
+            <PromptChoiceDefault />
+            <PromptChoiceSelected />
+            <LabelChoicesEnabled>false</LabelChoicesEnabled>
+            <LabelChoice />
+            <LabelChoiceDefault />
+            <LabelChoiceSelected />
+            <ChoiceSelections />
+            <RuleStatusDefault>None</RuleStatusDefault>
+            <FileUploadChoicesEnabled>false</FileUploadChoicesEnabled>
+            <FileUploadChoice>NoAction</FileUploadChoice>
+            <FileUploadChoiceDefault>NoAction</FileUploadChoiceDefault>
+            <FileUploadChoiceSelected>NoAction</FileUploadChoiceSelected>
+        </Choices>
+        <RuleType>Control</RuleType>
+        <RuleClass>Component</RuleClass>
+        <Name>dlp_lin_asml_is_it_architectural_design_ntu</Name>
+        <Description />
+        <Text>&lt;in&gt;
+  &lt;evtSrcFilePolicyTag/&gt;
+  &lt;list&gt;
+    &lt;string value="asml_it_architectural_design_low"/&gt;
+  &lt;/list&gt;
+&lt;/in&gt;</Text>
+        <AlertLevel>0</AlertLevel>
+        <Status>Active</Status>
+        <ActionType>None</ActionType>
+        <SupportedPlatform>Linux MacOSX Mobile Windows</SupportedPlatform>
+        <LicenseRequirement />
+        <RemediationType>None</RemediationType>
+        <RulePriority>100000</RulePriority>
+        <IsDefaultPriority>true</IsDefaultPriority>
+        <IsExpedited>false</IsExpedited>
+        <IsFDERule>false</IsFDERule>
+        <ContinueRuleEvaluation>false</ContinueRuleEvaluation>
+        <RunPostOp>false</RunPostOp>
+        <ApplyDgeExtension>false</ApplyDgeExtension>
+        <PromptID>00000000-0000-0000-0000-000000000000</PromptID>
+        <ProcessRuleId>00000000-0000-0000-0000-000000000000</ProcessRuleId>
+        <SendAlert>false</SendAlert>
+        <SendAlertInt>0</SendAlertInt>
+        <EncryptionType>None</EncryptionType>
+        <ZipPasswordAutoGen>false</ZipPasswordAutoGen>
+        <ZipPassword />
+        <MipLabel />
+        <MipLabelId>00000000-0000-0000-0000-000000000000</MipLabelId>
+        <LabelPartnerId>0</LabelPartnerId>
+        <ContainerId>00000000-0000-0000-0000-000000000001</ContainerId>
+        <ReadOnly>false</ReadOnly>
+        <ExistingPoliciesThatArentSupportedByRulePlatforms />
+        <FileUploadFlags>NoAction</FileUploadFlags>
+    </Rule>
+</ArrayOfRule>
