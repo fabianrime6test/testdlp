@@ -1,0 +1,13 @@
+
+document information
+impacts
+gdsups.asml.com
+euapps.asml.com
+servers and specifications
+
+Ibeid0SD 
+fa-p_srv_b8p45
+sa-p_srv_b8p45
+sa-t_srv_q0D
+sa-d_srv_LYI
+
