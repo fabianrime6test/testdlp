@@ -1,0 +1,532 @@
+<or>
+<and>
+  <and>
+    <!-- Evaluate Destination file -->
+	<!-- ===== Dataset 02 - CO_Keywords_2 ===== -->
+    <!-- Classify if counter is 7 or more -->
+    <greaterThan>
+      <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+      <int value="6" />
+    </greaterThan>
+	
+	<!-- Evaluate asml_de_all_drawings_keywords_16 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_16" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_16" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_15 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_15" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_15" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_14 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_14" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_14" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_13 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_13" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_13" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_12 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_12" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_12" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_11 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_11" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_11" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+	
+	<!-- Evaluate asml_de_all_drawings_keywords_10 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_10" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_10" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_de_all_drawings_keywords_09 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_09" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_09" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_de_all_drawings_keywords_08 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_08" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_08" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_de_all_drawings_keywords_07 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_07" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_07" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_de_all_drawings_keywords_06 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_06" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_de_all_drawings_keywords_06" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+	</and>
+    <set>
+      <varint name="asml_de_all_drawings_counter_dest" scope="event" />
+      <int value ="0" />
+    </set>
+	<greaterThan><evtSrcFileEntityFrequency name="asml_db_fb_drawings_keywords_04" /><int value="0" /></greaterThan>
+  </and>
+  
+  <!-- Evaluate Source file -->
+  <!-- ===== Dataset 01 - CO_Keywords_2 ===== -->
+  <and>
+  <and>
+    <!-- Classify if counter is 6 or more -->
+    <greaterThan>
+      <varint name="asml_de_all_drawings_counter_src" scope="event" />
+      <int value="6" />
+    </greaterThan>	
+    <!-- Evaluate de_all_drawings_keywords_16 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_16" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_16" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_15 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_15" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_15" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_14 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_14" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_14" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_13 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_13" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_13" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_12 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_12" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_12" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_11 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_11" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_11" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_10 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_10" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_10" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+	<!-- Evaluate asml_de_all_drawings_keywords_09 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_09" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_09" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_de_all_drawings_keywords_08 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_08" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_08" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_de_all_drawings_keywords_07 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_07" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_07" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_de_all_drawings_keywords_06 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_06" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_de_all_drawings_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_de_all_drawings_keywords_06" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+	</and>
+    <set>
+      <varint name="asml_de_all_drawings_counter_src" scope="event" />
+      <int value ="0" />
+    </set>
+	<greaterThan><evtSrcFileEntityFrequency name="asml_db_fb_drawings_keywords_04" /><int value="0" /></greaterThan>
+  </and> 
+</or>
