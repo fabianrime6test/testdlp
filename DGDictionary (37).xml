@@ -27,3 +27,368 @@
 		</EntrySet>
 	</Dictionary>
 </Grammars>
+
+<and>
+  <or>
+    <greaterThan><evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_01" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_01" /><int value="0" /></greaterThan>
+  </or>
+  <userFunction name="dlp_aci_extractable_file_extensions"/> 
+</and>
+
+
+<or>
+  <and>
+    <!-- Evaluate Source file -->
+    <!-- ===== Dataset 02 - QMR Headers ===== -->
+    <greaterThan>
+      <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+      <int value="5" />
+    </greaterThan>
+    <!-- Evaluate asml_ssp_qmd_keywords_08 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_08" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_08" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_07 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_07" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_07" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_06 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_06" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_06" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_05 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_05" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_05" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_04 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_04" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_04" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_03 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_03" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_03" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_02 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_02" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtDestFileEntityFrequency name="asml_ssp_qmd_keywords_02" />
+          <int value="0" />
+        </greaterThan>
+        <in op="like">
+          <evtDestFilePath />
+          <list>
+            <string value="%/%" />
+            <string value="%\%" />
+          </list>
+        </in>
+      </and>
+    </or>
+  </and>
+  <set>
+    <varint name="asml_ssp_qmd_counter_dest" scope="event" />
+    <int value ="0" />
+  </set>
+
+  <!-- Evaluate Source file -->
+  <!-- ===== Dataset 02 - QMR Headers ===== -->
+
+  <and>
+    <!-- Classify if counter is 6 or more -->
+    <greaterThan>
+      <varint name="asml_ssp_qmd_counter_src" scope="event" />
+      <int value="5" />
+    </greaterThan>	
+    <!-- Evaluate asml_ssp_qmd_keywords_08 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_08" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_08" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_07 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_07" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_07" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_06 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_06" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_06" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_05 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_05" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_05" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_04 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_04" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_04" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_03 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_03" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_03" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+    <!-- Evaluate asml_ssp_qmd_keywords_02 -->
+    <or>
+      <!-- Continue if content pattern not found -->
+      <equal>
+        <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_02" />
+        <int value="0" />
+      </equal>
+      <!-- If content pattern found, increment variable -->
+      <and>
+        <add>
+          <varint name="asml_ssp_qmd_counter_src" scope="event" />
+          <int value ="1" />
+        </add>
+        <greaterThan>
+          <evtSrcFileEntityFrequency name="asml_ssp_qmd_keywords_02" />
+          <int value="0" />
+        </greaterThan>
+      </and>
+    </or>
+  </and>
+  <set>
+    <varint name="asml_ssp_qmd_counter_src" scope="event" />
+    <int value ="0" />
+  </set>
+</or>
+
+
+
+asml_ssp_qmd_keywords_01 > (?A:asml_ssp_qmd/ssp_qmd_keywords_01)
+asml_ssp_qmd_keywords_02 > (?A:asml_ssp_qmd/ssp_qmd_keywords_02)
+asml_ssp_qmd_keywords_03 > (?A:asml_ssp_qmd/ssp_qmd_keywords_03)
+asml_ssp_qmd_keywords_04 > (?A:asml_ssp_qmd/ssp_qmd_keywords_04)
+asml_ssp_qmd_keywords_05 > (?A:asml_ssp_qmd/ssp_qmd_keywords_05)
+asml_ssp_qmd_keywords_06 > (?A:asml_ssp_qmd/ssp_qmd_keywords_06)
+asml_ssp_qmd_keywords_07 > (?A:asml_ssp_qmd/ssp_qmd_keywords_07)
+asml_ssp_qmd_keywords_08 > (?A:asml_ssp_qmd/ssp_qmd_keywords_08)
