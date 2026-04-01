@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Grammars>
+	<Dictionary name="asml_ssp_qmd">
+		<EntrySet name="ssp_qmd_keywords_01" case="off">
+			<Entry headword="PLDMQ$84!" />
+		</EntrySet>
+		<EntrySet name="ssp_qmd_keywords_02" case="off">
+			<Entry headword="FC_ID" />
+		</EntrySet>
+		<EntrySet name="ssp_qmd_keywords_03" case="off">
+			<Entry headword="CustomerName" />
+		</EntrySet>
+		<EntrySet name="ssp_qmd_keywords_04" case="off">
+			<Entry headword="CustGroup" />
+		</EntrySet>
+		<EntrySet name="ssp_qmd_keywords_05" case="off">
+			<Entry headword="Salesdoc" />
+		</EntrySet>
+		<EntrySet name="ssp_qmd_keywords_06" case="off">
+			<Entry headword="WBS_element" />
+		</EntrySet>
+		<EntrySet name="ssp_qmd_keywords_07" case="off">
+			<Entry headword="Random (also unKOOPed)" />
+		</EntrySet>
+		<EntrySet name="ssp_qmd_keywords_08" case="off">
+			<Entry headword="Event_Value" />
+		</EntrySet>
+	</Dictionary>
+</Grammars>
