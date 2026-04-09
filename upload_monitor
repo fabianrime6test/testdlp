@@ -1,0 +1,571 @@
+Original One
+<or>
+  <!-- Evaluate DE SEG requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_de_seg"/></not>
+    <userFunction name="dlp_lin_asml_is_de_seg"/>
+  </and>
+  <!-- Evaluate CSS MACHINE DATArequirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_css_machine_data"/></not>
+    <userFunction name="dlp_lin_asml_is_css_machine_data"/>
+  </and>
+  <!-- Evaluate CSS COACH requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_css_coach"/></not>
+    <userFunction name="dlp_lin_asml_is_css_coach_all"/>
+  </and>
+  
+  <!-- Evaluate Customer Surveys requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_css_customer_surveys"/></not>
+    <userFunction name="dlp_lin_asml_is_css_customer_surveys"/>
+  </and>
+  <!-- Evaluate BERLIN ETS BOND DIFUSSION requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_berlin_ets_bond_difussion"/></not>
+    <userFunction name="dlp_lin_asml_is_berlin_ets_bond_difussion_ntu"/>
+  </and>
+  <!-- Evaluate CSS VBA requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_css_vba"/></not>
+    <userFunction name="dlp_lin_asml_is_css_vba"/>
+  </and> 
+  <!-- Evaluate ZEMAX FILES requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_de_zemax_files"/></not>
+    <userFunction name="dlp_lin_asml_is_de_zemax_files_ntu"/>
+  </and>
+  <!-- Evaluate TEAM CENTER requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_team_center"/></not>
+    <userFunction name="dlp_lin_asml_is_team_center_ntu"/>
+  </and>
+  <!-- Evaluate KOREAN PII requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_korean_pii"/></not>
+    <userFunction name="dlp_lin_asml_is_korean_pii"/>
+  </and>
+  <!-- Evaluate CSS VPA requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_css_vpa"/></not>
+    <userFunction name="dlp_lin_asml_is_css_vpa_low_ntu"/>
+  </and>
+  <!-- Evaluate CSS FAIRNESS CURVE requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_css_fairness_curve"/></not>
+    <userFunction name="dlp_lin_asml_is_css_fairness_curve_ntu"/>
+  </and>
+  <!-- Evaluate PD IBP HMI requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_pd_ibp_hmi"/></not>
+    <userFunction name="dlp_lin_asml_is_pd_ibp_hmi_ntu"/>
+  </and>
+  <!-- Evaluate SP NPI PA requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_sp_npi_pa"/></not>
+    <userFunction name="dlp_lin_asml_is_sp_npi_pa_ntu"/>
+  </and>
+  <!-- Evaluate CYMER UPGRADE STATUS requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_cymer_upgrade_status"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_cymer_upgrade_status_ntu"/>
+  </and>
+  <!-- Evaluate ENP CSS PCS requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_pcs"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_css_pcs_ntu"/>
+  </and>
+  <!-- Evaluate ENP DE E DRAWINGS requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_de_e_drawings"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_de_e_drawings_ntu"/>
+  </and>
+  <!-- Evaluate ENP ENP CSS SOLD OPTION requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_sold_option_tracker"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_css_sold_option_tracker_ntu"/>
+  </and>
+  <!-- Evaluate ENP GMF SENSITIVITY FILES requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_gmf_sensitivity_files"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_gmf_sensitivity_files_ntu"/>
+  </and>
+  <!-- Evaluate ENP CSS PCCISM requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_pccism"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_css_pccism_ntu"/>
+  </and>
+  <!-- Evaluate CSS NPI KTclassification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_npi_kt"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_css_npi_kt_ntu"/>
+  </and>
+  <!-- Evaluate CYMER CUSTOMER LASER ALLOCATION classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_cymer_customer_laser_allocation"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_cymer_customer_laser_allocation_ntu"/>
+  </and>
+  <!-- Evaluate enp_css_cs_academy_kt classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_cs_academy_kt"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_css_cs_academy_kt_ntu"/>
+  </and>
+  <!-- Evaluate enp_corp_cccr classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_corp_cccr"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_corp_cccr_ntu"/>
+  </and>
+  <!-- Evaluate LGL DUTCH classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_lgl_dutch"/></not>
+    <userFunction name="dlp_lin_asml_is_lgl_dutch_ntu"/>
+  </and>
+  <!-- Evaluate de_dw_drawings classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_de_dw_drawings"/></not>
+    <userFunction name="dlp_lin_asml_is_de_dw_drawings_ntu"/>
+  </and>
+  <!-- Evaluate CORP INTERNAL AUDIT classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_corp_internal_audit_reports"/></not>
+    <userFunction name="dlp_lin_asml_is_corp_internal_audit_reports"/>
+  </and>
+  <!-- Evaluate GMF CSR classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_gmf_csr"/></not>
+    <userFunction name="dlp_lin_asml_is_gmf_csr"/>
+  </and>
+  
+
+  
+  <!-- Evaluate ENP RBA SPECIFIC SOURCE CODE classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_rba_specific_source_code"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_rba_specific_source_code_ntu"/>
+  </and>
+  
+  <!-- Evaluate ENP IT RISK ASSESSMENTS classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_it_risk_assessments"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_it_risk_assessments_1_2_ntu"/>
+  </and>
+  
+  <!-- Evaluate ENP CORP CUSTOMER VALUE classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_corp_customer_value"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_corp_customer_value_ntu"/>
+  </and>
+  
+  
+  <!-- Evaluate ENP IT Audit Observations classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_it_audit_observations"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_it_audit_observations_1_1_ntu"/>
+  </and>
+  <!-- Evaluate ENP IT TCE INFRA ARCHITECTURE classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_it_tce_infra_architecture"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_it_tce_infra_architecture_1_1_ntu"/>
+  </and>
+  <!-- Evaluate ENP RBA Julia Source Code classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_rba_julia_source_code"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_rba_julia_source_code_ntu"/>
+  </and>
+  <!-- Evaluate ENP GMF QUEUES classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_gmf_queues"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_gmf_queues_ntu"/>
+  </and>
+  <!-- Evaluate IBP EUV classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_ibp_euv"/></not>
+    <userFunction name="dlp_lin_asml_is_ibp_euv_all_ntu"/>
+  </and>
+  <!-- Evaluate ENP CSS CAL classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_cal"/></not>
+    <userFunction name="dlp_lin_asml_is_enp_css_cal_ntu"/>
+  </and>
+  <!-- Evaluate IBP DUV classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_ibp_duv"/></not>
+    <userFunction name="dlp_lin_asml_is_ibp_duv_all_ntu"/>
+  </and>
+  
+  
+  
+  <!-- Evaluate TPD Packages classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_tpd_packages"/></not>
+    <userFunction name="dlp_lin_asml_is_tpd_packages_all_ntu"/>
+  </and>
+  <!-- Evaluate BRION EXPORT CONTROL classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_brion_export_control_source"/></not>
+    <userFunction name="dlp_lin_asml_is_brion_export_control_source_ntu"/>
+  </and>
+  <!-- Evaluate RBA PENTEST REPORTS classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_rba_pentest_reports"/></not>
+    <userFunction name="dlp_lin_asml_is_rba_pentest_reports_ntu"/>
+  </and>
+  <!-- Evaluate DE MATLAB classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_de_matlab"/></not>
+    <userFunction name="dlp_lin_asml_is_de_matlab_ntu"/>
+  </and>
+  <!-- Evaluate DE CO DRAWINGS classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_de_co_drawings"/></not>
+    <userFunction name="dlp_lin_asml_is_de_co_drawings_ntu"/>
+  </and>
+  <!-- Evaluate CORP CCB classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_corp_ccb"/></not>
+    <userFunction name="dlp_lin_asml_is_corp_ccb_info"/>
+  </and>
+  
+  
+  <!-- Evaluate CORP CONQ EXCOM REPORTS classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_corp_conq_excom"/></not>
+    <userFunction name="dlp_lin_asml_is_corp_conq_excom_ntu"/>
+  </and>
+  <!-- Evaluate CORP FINANCIAL PLANNING classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_corp_financial_planning"/></not>
+    <userFunction name="dlp_lin_asml_is_corp_financial_planning_ntu"/>
+  </and>
+  <!-- Evaluate CSS Known Issues classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_css_known_issues"/></not>
+    <userFunction name="dlp_lin_asml_is_css_known_issues_ntu"/>
+  </and>
+  <!-- Evaluate DE KICAD classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_de_kicad"/></not>
+    <userFunction name="dlp_lin_asml_is_de_kicad"/>
+  </and>
+  <!-- Evaluate GMF SAT Packages classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_gmf_sat_packages"/></not>
+    <userFunction name="dlp_lin_asml_is_gmf_sat_ntu"/>
+  </and>
+  <!-- Evaluate IT Architectural Design classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_it_architectural_design"/></not>
+    <userFunction name="dlp_lin_asml_is_it_architectural_design_ntu"/>
+  </and>
+  
+  
+  <!-- Evaluate IT FINDINGS requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_it_findings"/></not>
+    <userFunction name="dlp_lin_asml_is_it_findings_ntu"/>
+  </and>
+  <!-- Evaluate LGL LEGAL ISSUESrequirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_lgl_legal_issues"/></not>
+    <userFunction name="dlp_lin_asml_is_lgl_legal_issues_ntu"/>
+  </and>
+  <!-- Evaluate LGL EXPORT CONTROLrequirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_lgl_export_control"/></not>
+    <userFunction name="dlp_lin_asml_is_lgl_export_control_ntu"/>
+  </and>
+  <!-- Evaluate CAPACITY PLANNINGrequirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_capacity_planning"/></not>
+    <userFunction name="dlp_lin_asml_is_pd_capacity_planning_ntu"/>
+  </and>
+  <!-- Evaluate SSP QMDrequirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_ssp_qmd"/></not>
+    <userFunction name="dlp_lin_asml_is_ssp_qmd_high_ntu"/>
+  </and>
+  <!-- Evaluate VPA classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_vpa"/></not>
+    <userFunction name="dlp_lin_asml_is_sp_vpa_all_ntu"/>
+  </and>
+  <!-- Evaluate Top Secret classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_topsecret"/></not>
+    <userFunction name="dlp_lin_asml_is_topsecret_all_ntu"/>
+  </and>
+  <!-- Evaluate Company Secret classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_companysecret"/></not>
+    <userFunction name="dlp_lin_asml_is_companysecret_all_ntu"/>
+  </and>
+  <!-- Evaluate Zeiss classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_zeiss"/></not>
+    <userFunction name="dlp_lin_asml_is_zeiss_all_ntu"/>
+  </and>
+
+  <!-- Evaluate DE TPD classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_de_tpd"/></not>
+    <userFunction name="dlp_lin_asml_is_de_tpd_ntu"/>
+  </and>
+  <!-- Evaluate TPD INFO/Low/MONITOR classification requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_tpd"/></not>
+    <userFunction name="dlp_lin_asml_is_tpd_info_ntu"/>
+  </and>
+</or>
+
+
+Current One 
+<or>
+    <!-- Evaluate IT ARCHITECTURAL DESIGN requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_it_architectural_design"/></not>
+      <userFunction name="dlp_lin_asml_is_it_architectural_design_ntu"/>
+    </and>
+    <!-- Evaluate IT FINDINGS requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_it_findings"/></not>
+      <userFunction name="dlp_lin_asml_is_it_findings_ntu"/>
+    </and>
+    <!-- Evaluate CORP INTERNAL AUDIT REPORTS requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_corp_internal_audit_reports"/></not>
+      <userFunction name="dlp_lin_asml_is_corp_internal_audit_reports_ntu"/>
+    </and>
+    <!-- Evaluate LEGAL ISSUES requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_lgl_legal_issues"/></not>
+      <userFunction name="dlp_lin_asml_is_lgl_legal_issues_ntu"/>
+    </and>
+    <!-- Evaluate SAT PACKAGES requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_gmf_sat_packages"/></not>
+      <userFunction name="dlp_lin_asml_is_gmf_sat_ntu"/>
+    </and>
+    <!-- Evaluate KIDCAD requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_de_kicad"/></not>
+      <userFunction name="dlp_lin_asml_is_de_kicad_ntu"/>
+    </and>
+    <!-- Evaluate GMF CSR requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_gmf_csr"/></not>
+      <userFunction name="dlp_lin_asml_is_gmf_csr_ntu"/>
+    </and>
+    <!-- Evaluate CORP CCB requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_corp_ccb"/></not>
+      <userFunction name="dlp_lin_asml_is_corp_ccb_info_ntu"/>
+    </and>
+    <!-- Evaluate CSS CAL 1.9 requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_pd_css_cal_1.9_monitor"/></not>
+      <userFunction name="dlp_lin_asml_is_pd_css_cal_1.9_monitor_ntu"/>
+    </and>
+    <!-- Evaluate CSS KNOWN ISSUES requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_css_known_issues"/></not>
+      <userFunction name="dlp_lin_asml_is_css_known_issues_ntu"/>
+    </and>
+    <!-- Evaluate DE SEG requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_de_seg"/></not>
+      <userFunction name="dlp_lin_asml_is_de_seg_ntu"/>
+    </and>
+
+    <!-- Evaluate CSS MACHINE DATArequirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_css_machine_data"/></not>
+      <userFunction name="dlp_lin_asml_is_css_machine_data_ntu"/>
+    </and>
+    <!-- Evaluate CSS COACH requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_css_coach"/></not>
+      <userFunction name="dlp_lin_asml_is_css_coach_all"/>
+    </and>
+
+    <!-- Evaluate Customer Surveys requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_css_customer_surveys"/></not>
+      <userFunction name="dlp_lin_asml_is_css_customer_surveys_ntu"/>
+    </and>
+    <!-- Evaluate BERLIN ETS BOND DIFUSSION requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_berlin_ets_bond_difussion"/></not>
+      <userFunction name="dlp_lin_asml_is_berlin_ets_bond_difussion_ntu"/>
+    </and>
+
+    <!-- Evaluate CSS VBA requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_css_vba"/></not>
+      <userFunction name="dlp_lin_asml_is_css_vba_ntu"/>
+    </and> 
+
+    <!-- Evaluate ZEMAX FILES requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_de_zemax_files"/></not>
+      <userFunction name="dlp_lin_asml_is_de_zemax_files_ntu"/>
+    </and>
+    <!-- Evaluate TEAM CENTER requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_team_center"/></not>
+      <userFunction name="dlp_lin_asml_is_team_center_ntu"/>
+    </and>
+
+    <!-- Evaluate KOREAN PII requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_korean_pii"/></not>
+      <userFunction name="dlp_lin_asml_is_korean_pii_ntu"/>
+    </and>
+
+    <!-- Evaluate CSS VPA requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_css_vpa"/></not>
+      <userFunction name="dlp_lin_asml_is_css_vpa_low_ntu"/>
+    </and>
+    <!-- Evaluate CSS FAIRNESS CURVE requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_css_fairness_curve"/></not>
+      <userFunction name="dlp_lin_asml_is_css_fairness_curve_ntu"/>
+    </and>
+    <!-- Evaluate PD IBP HMI requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_pd_ibp_hmi"/></not>
+      <userFunction name="dlp_lin_asml_is_pd_ibp_hmi_ntu"/>
+    </and>
+    <!-- Evaluate SP NPI PA requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_sp_npi_pa"/></not>
+      <userFunction name="dlp_lin_asml_is_sp_npi_pa_ntu"/>
+    </and>
+    <!-- Evaluate CYMER UPGRADE STATUS requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_cymer_upgrade_status"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_cymer_upgrade_status_ntu"/>
+    </and>
+    <!-- Evaluate ENP CSS PCS requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_pcs"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_css_pcs_ntu"/>
+    </and>
+    <!-- Evaluate ENP DE E DRAWINGS requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_de_e_drawings"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_de_e_drawings_ntu"/>
+    </and>
+    <!-- Evaluate ENP ENP CSS SOLD OPTION requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_sold_option_tracker"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_css_sold_option_tracker_ntu"/>
+    </and>
+    <!-- Evaluate ENP GMF SENSITIVITY FILES requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_gmf_sensitivity_files"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_gmf_sensitivity_files_ntu"/>
+    </and>
+    <!-- Evaluate ENP CSS PCCISM requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_pccism"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_css_pccism_ntu"/>
+    </and>
+    <!-- Evaluate CSS NPI KTclassification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_npi_kt"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_css_npi_kt_ntu"/>
+    </and>
+    <!-- Evaluate CYMER CUSTOMER LASER ALLOCATION classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_cymer_customer_laser_allocation"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_cymer_customer_laser_allocation_ntu"/>
+    </and>
+    <!-- Evaluate enp_css_cs_academy_kt classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_css_cs_academy_kt"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_css_cs_academy_kt_ntu"/>
+    </and>
+
+    <!-- Evaluate enp_corp_cccr classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_corp_cccr"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_corp_cccr_ntu"/>
+    </and>
+
+    <!-- Evaluate LGL DUTCH classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_lgl_dutch"/></not>
+      <userFunction name="dlp_lin_asml_is_lgl_dutch_ntu"/>
+    </and>
+
+    <!-- Evaluate de_dw_drawings classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_de_dw_drawings"/></not>
+      <userFunction name="dlp_lin_asml_is_de_dw_drawings_ntu"/>
+    </and>
+    <!-- Evaluate ENP RBA SPECIFIC SOURCE CODE classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_rba_specific_source_code"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_rba_specific_source_code_ntu"/>
+    </and>
+
+    <!-- Evaluate ENP IT RISK ASSESSMENTS classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_it_risk_assessments"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_it_risk_assessments_1_2_ntu"/>
+    </and>
+
+    <!-- Evaluate ENP CORP CUSTOMER VALUE classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_corp_customer_value"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_corp_customer_value_ntu"/>
+    </and>
+    <!-- Evaluate ENP IT Audit Observations classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_it_audit_observations"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_it_audit_observations_1_1_ntu"/>
+    </and>
+
+    <!-- Evaluate ENP IT TCE INFRA ARCHITECTURE classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_enp_it_tce_infra_architecture"/></not>
+      <userFunction name="dlp_lin_asml_is_enp_it_tce_infra_architecture_1_1_ntu"/>
+    </and>
+    <!-- Evaluate CORP CONQ EXCOM classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_corp_conq_excom"/></not>
+      <userFunction name="dlp_lin_asml_is_corp_conq_excom_ntu"/>
+    </and>
+    <!-- Evaluate LGL EXPORT CONTROL classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_lgl_export_control"/></not>
+      <userFunction name="dlp_lin_asml_is_lgl_export_control_info_ntu"/>
+    </and>
+    <!-- Evaluate CORP FINANCIAL PLANNING classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_corp_financial_planning"/></not>
+      <userFunction name="dlp_lin_asml_is_corp_financial_planning_ntu"/>
+    </and>
+    <!-- Evaluate RBA PENTEST Report classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_rba_pentest_reports"/></not>
+      <userFunction name="dlp_lin_asml_is_rba_pentest_reports_ntu"/>
+    </and>
+    <!-- Evaluate DE Matlab classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_de_matlab"/></not>
+      <userFunction name="dlp_lin_asml_is_de_matlab_ntu"/>
+    </and>
+    <!-- Evaluate BRION EXPORT CONTROL classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_brion_export_control_source"/></not>
+      <userFunction name="dlp_lin_asml_is_brion_export_control_source_ntu"/>
+    </and>
+    <!-- Evaluate Employee Data Generator classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_employee_data_generator"/></not>
+      <userFunction name="dlp_lin_asml_is_employee_data_generator_ntu"/>
+    </and>
+  </or>
