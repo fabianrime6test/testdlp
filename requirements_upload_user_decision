@@ -1,0 +1,34 @@
+Original dlp_lin_asml_classification_requirements_upload_user_decision
+
+
+<or>
+  <!-- Test TO DELETE JUST CHECKING IF TRIGERS -->
+  <userFunction name="dlp_lin_asml_is_corp_internal_audit_reports"/>
+  <userFunction name="dlp_lin_asml_is_css_coach_medium"/>
+</or>
+
+Called directly on the rule
+
+<!-- Classification requirements -->
+  <or>
+    <!-- Evaluate CSS COACH requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_css_coach"/></not>
+      <userFunction name="dlp_lin_asml_is_css_coach_medium"/>
+    </and>
+    <!-- Evaluate FB DRAWINGS requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_db_fb_drawings"/></not>
+      <userFunction name="dlp_lin_asml_is_db_fb_drawings_ntu"/>
+    </and>
+    <!-- Evaluate DE FO DRAWINGS classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_de_fo_drawings"/></not>
+      <userFunction name="dlp_lin_asml_is_de_fo_drawings_ntu"/>
+    </and>
+    <!-- Evaluate ENP D&E SEG EC classification requirement and channel whitelists -->
+    <and>
+      <not><userFunction name="dlp_lin_asml_approved_uploads_de_seg_ec"/></not>
+      <userFunction name="dlp_lin_asml_is_seg_ec_medium_ntu"/>
+    </and>
+  </or>
