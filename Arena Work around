@@ -1,0 +1,90 @@
+
+
+Policy Name: ASML - Lin - Framework Template - 01 - Monitor
+Rule Name:  DLP2004-19-Lin-Classified NTU to External Sites - Monitor (Priority 40295, Action Continue)
+
+<!--
+Rule logic:
+<and>
+  <not><userFunction name="dlp_lin_universal_rule_modifier" /></not>
+  <set><varstring name="dlp_lin_universal_modifier_rule_name" scope="event" /><string value="DLP2004" /></set>
+  
+  <!-- Classification Requirements -->
+  <userFunction name="dlp_lin_asml_classification_requirements_upload_monitor" />
+  
+  <userFunction name="dlp_lin_inspect_postdata" />
+  <userFunction name="dlp_lin_is_non_atp_classified"/>
+  <not><userFunction name="dlp_lin_upload_noise" /></not>
+  <equal>
+    <evtOperationType/>
+    <constOpNetTransferUpload/>
+  </equal>
+</and>
+
+Here the component rule <userFunction name="dlp_lin_asml_classification_requirements_upload_monitor" />
+<or>
+  <!-- Evaluate IT ARCHITECTURAL DESIGN requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_it_architectural_design"/></not>
+    <userFunction name="dlp_lin_asml_is_it_architectural_design_ntu"/>
+  </and>
+  <!-- Evaluate IT FINDINGS requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_it_findings"/></not>
+    <userFunction name="dlp_lin_asml_is_it_findings_ntu"/>
+  </and>
+  <!-- Evaluate CORP INTERNAL AUDIT REPORTS requirement and channel whitelists -->
+  <and>
+    <not><userFunction name="dlp_lin_asml_approved_uploads_corp_internal_audit_reports"/></not>
+    <userFunction name="dlp_lin_asml_is_corp_internal_audit_reports_ntu"/>
+  </and>
+</or>
+
+These 4 lines are repeat for each use case, so at the end the compoenent rules wil have the combination check classification + allowed domains for about 75 use cases
+
+Here what it looks like the component rule:
+<userFunction name="dlp_lin_asml_is_it_architectural_design_ntu"/>
+<in>
+  <evtSrcFilePolicyTag/>
+  <list>
+    <string value="asml_it_architectural_design_low"/>
+  </list>
+</in>
+
+and the component rule (Just 2 component list with allowed domains) <not><userFunction name="dlp_lin_asml_approved_uploads_corp_internal_audit_reports"/></not>
+
+<!-- Standard upload whitelist for it_architectural_design classification -->
+<in op="like" match="any">
+  <evtDomain/>
+  <list>
+    <componentListString name="dlp-asml-internal_domains_excluding_top_secret" />
+    <componentListString name="dlp-asml-approveduploadlocations_it_architectural_design" />
+  </list>
+</in>
+
+
+Then we have another policy and rule:
+
+Policy Name: ASML - Lin - Framework Template - 04 - Block Prompt
+Rule Name:  DLP2004-19-Lin-Classified NTU to External Sites - Block Prompt (Priority 30595, Action Block Prompt)
+<!--
+Rule logic:
+<and>
+  <not><userFunction name="dlp_lin_universal_rule_modifier" /></not>
+  <set><varstring name="dlp_lin_universal_modifier_rule_name" scope="event" /><string value="DLP2004" /></set>
+  
+  <!-- Classification Requirements -->
+  <userFunction name="dlp_lin_asml_classification_requirements_upload_block_prompt" />
+  
+  <userFunction name="dlp_lin_inspect_postdata" />
+  <userFunction name="dlp_lin_is_non_atp_classified"/>
+  <not><userFunction name="dlp_lin_upload_noise" /></not>
+  <equal>
+    <evtOperationType/>
+    <constOpNetTransferUpload/>
+  </equal>
+</and>
+
+On the component rule <userFunction name="dlp_lin_asml_classification_requirements_upload_block_prompt" /> some times it could call the same combination classification check + allowed domains as in dlp_lin_asml_classification_requirements_upload_monitor depending the use case and it will follow the same logic
+
+so if I want to applied the workaournd of ARENA 12XXX, I should add 
