@@ -1,0 +1,7 @@
+  <regExp expr=".*(D00|D100|D200|D300|D400|fmsr_0000|GSA-0|4022.|VOLU.|REQS.|TOOL.|SERV.|ANCI.).*">
+    <evtSrcFilePath/>
+  </regExp>
+  
+      <regExp expr="4022\.663.*">
+        <evtSrcFilePath/>
+      </regExp>
