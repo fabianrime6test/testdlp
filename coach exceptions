@@ -13,226 +13,221 @@
    asml_css_coach_keywords_11 is 1 or more
 -->
 <and>
-  <or>
-    <!-- Process Destination File -->
-    <and>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_11" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_10" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_09" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_08" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_07" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_06" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_05" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_04" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_03" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_02" /><int value="0" /></greaterThan>
-      <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_01" /><int value="0" /></greaterThan>
-
-      <!-- Only continue evaluation if this operation has a destination file -->
-      <in op="like">
-        <evtDestFilePath />
-        <list>
-          <string value="%/%" />
-          <string value="%\%" />
-        </list>
-      </in>
-      <!-- ===== Exception on file extension ===== -->
-   <not>
-<or>
-
-<!-- Evaluate Destination file -->
-	  
-	  <and>
-		<!-- Classify if counter is 3 or more -->
-		<greaterThan>
-		  <varint name="asml_css_coach_counter_dest" scope="event" />
-		  <int value="2" />
-		</greaterThan>	 
-		<!-- Evaluate asml_css_coach_exceptions_03 -->
-		<or>
-		  <!-- Continue if content pattern not found -->
-		  <equal>
-			<evtDestFileEntityFrequency name="asml_css_coach_exceptions_03" />
-			<int value="0" />
-		  </equal>
-		  <!-- If content pattern found, increment variable -->
-		  <and>
-			<add>
-			  <varint name="asml_css_coach_counter_dest" scope="event" />
-			  <int value ="1" />
-			</add>
-			<greaterThan>
-			  <evtDestFileEntityFrequency name="asml_css_coach_exceptions_03" />
-			  <int value="0" />
-			</greaterThan>
-		  </and>
-		</or>
-		<!-- Evaluate asml_css_coach_exceptions_02 -->
-		<or>
-		  <!-- Continue if content pattern not found -->
-		  <equal>
-			<evtDestFileEntityFrequency name="asml_css_coach_exceptions_02" />
-			<int value="0" />
-		  </equal>
-		  <!-- If content pattern found, increment variable -->
-		  <and>
-			<add>
-			  <varint name="asml_css_coach_counter_dest" scope="event" />
-			  <int value ="1" />
-			</add>
-			<greaterThan>
-			  <evtDestFileEntityFrequency name="asml_css_coach_exceptions_02" />
-			  <int value="0" />
-			</greaterThan>
-		  </and>
-		</or>
-		<!-- Evaluate asml_css_coach_exceptions_01 -->
-		<or>
-		  <!-- Continue if content pattern not found -->
-		  <equal>
-			<evtDestFileEntityFrequency name="asml_css_coach_exceptions_01" />
-			<int value="0" />
-		  </equal>
-		  <!-- If content pattern found, increment variable -->
-		  <and>
-			<add>
-			  <varint name="asml_css_coach_counter_dest" scope="event" />
-			  <int value ="1" />
-			</add>
-			<greaterThan>
-			  <evtDestFileEntityFrequency name="asml_css_coach_exceptions_01" />
-			  <int value="0" />
-			</greaterThan>
-		  </and>
-		</or>
-		<set>
-		  <varint name="asml_css_coach_counter_dest" scope="event" />
-		  <int value ="0" />
-		</set>
-		<in>
-		  <evtDestFileExt />
-		  <list>
-			<string value="html" />
-		  </list>
-		</in>
-	  </and> 
-	  	<in>
-          <evtSrcFileExt />
-          <list>
-            <string value="csv" />
-            <string value="xlsb" />
-            <string value="xlsx" />
-          </list>
-    </in>
-</or>
-</not>
-
-    <!-- Process Source File -->
-    <and>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_11" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_10" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_09" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_08" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_07" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_06" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_05" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_04" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_03" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_02" /><int value="0" /></greaterThan>
-      <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_01" /><int value="0" /></greaterThan>
-      <!-- ===== Exceptions HTML_File_With_Links ===== -->-->
-<not>
 	<or>
-	  <!-- Evaluate Source file -->
-	  <!-- ===== Exceptions HTML_File_With_Links ===== -->
-	  <and>
-		<!-- Classify if counter is 4 or more -->
-		<greaterThan>
-		  <varint name="asml_css_coach_counter_src" scope="event" />
-		  <int value="2" />
-		</greaterThan>
-
-		<!-- Evaluate asml_css_coach_exceptions_03 -->
-		<or>
-		  <!-- Continue if content pattern not found -->
-		  <equal>
-			<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_03" />
-			<int value="0" />
-		  </equal>
-		  <!-- If content pattern found, increment variable -->
-		  <and>
-			<add>
-			  <varint name="asml_css_coach_counter_src" scope="event" />
-			  <int value ="1" />
-			</add>
-			<greaterThan>
-			  <evtSrcFileEntityFrequency name="asml_css_coach_exceptions_03" />
-			  <int value="0" />
-			</greaterThan>
-		  </and>
-		</or>
-		<!-- Evaluate asml_css_coach_exceptions_02 -->
-		<or>
-		  <!-- Continue if content pattern not found -->
-		  <equal>
-			<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_02" />
-			<int value="0" />
-		  </equal>
-		  <!-- If content pattern found, increment variable -->
-		  <and>
-			<add>
-			  <varint name="asml_css_coach_counter_src" scope="event" />
-			  <int value ="1" />
-			</add>
-			<greaterThan>
-			  <evtSrcFileEntityFrequency name="asml_css_coach_exceptions_02" />
-			  <int value="0" />
-			</greaterThan>
-		  </and>
-		</or>
-		<!-- Evaluate asml_css_coach_exceptions_01 -->
-		<or>
-		  <!-- Continue if content pattern not found -->
-		  <equal>
-			<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_01" />
-			<int value="0" />
-		  </equal>
-		  <!-- If content pattern found, increment variable -->
-		  <and>
-			<add>
-			  <varint name="asml_css_coach_counter_src" scope="event" />
-			  <int value ="1" />
-			</add>
-			<greaterThan>
-			  <evtSrcFileEntityFrequency name="asml_css_coach_exceptions_01" />
-			  <int value="0" />
-			</greaterThan>
-		  </and>
-		</or>
-		<set>
-		  <varint name="asml_css_coach_counter_src" scope="event" />
-		  <int value ="0" />
-		</set>
-		<in>
-		  <evtSrcFileExt />
-		  <list>
-			<string value="html" />
-		  </list>
-		</in>
-	  </and> 
-
-	<in>
-          <evtSrcFileExt />
-          <list>
-            <string value="csv" />
-            <string value="xlsb" />
-            <string value="xlsx" />
-          </list>
-    </in>
-	</or>
-</not>  
+		<!-- Process Destination File -->
+		<and>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_11" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_10" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_09" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_08" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_07" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_06" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_05" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_04" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_03" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_02" /><int value="0" /></greaterThan>
+		  <greaterThan><evtDestFileEntityFrequency name="asml_css_coach_keywords_01" /><int value="0" /></greaterThan>
+			<!-- Only continue evaluation if this operation has a destination file -->
+			<in op="like">
+				<evtDestFilePath />
+				<list>
+					<string value="%/%" />
+					<string value="%\%" />
+				</list>
+			</in>
+			<!-- ===== Exception on file extension ===== -->
+			<not>
+				<or>
+					<!-- Evaluate Destination file -->
+					<and>
+						<!-- Classify if counter is 3 or more -->
+						<greaterThan>
+							<varint name="asml_css_coach_counter_dest" scope="event" />
+							<int value="2" />
+						</greaterThan>
+						<!-- Evaluate asml_css_coach_exceptions_03 -->
+						<or>
+							<!-- Continue if content pattern not found -->
+							<equal>
+								<evtDestFileEntityFrequency name="asml_css_coach_exceptions_03" />
+								<int value="0" />
+							</equal>
+							<!-- If content pattern found, increment variable -->
+							<and>
+								<add>
+									<varint name="asml_css_coach_counter_dest" scope="event" />
+									<int value ="1" />
+								</add>
+								<greaterThan>
+									<evtDestFileEntityFrequency name="asml_css_coach_exceptions_03" />
+									<int value="0" />
+								</greaterThan>
+							</and>
+						</or>
+						<!-- Evaluate asml_css_coach_exceptions_02 -->
+						<or>
+							<!-- Continue if content pattern not found -->
+							<equal>
+								<evtDestFileEntityFrequency name="asml_css_coach_exceptions_02" />
+								<int value="0" />
+							</equal>
+							<!-- If content pattern found, increment variable -->
+							<and>
+								<add>
+									<varint name="asml_css_coach_counter_dest" scope="event" />
+									<int value ="1" />
+								</add>
+								<greaterThan>
+									<evtDestFileEntityFrequency name="asml_css_coach_exceptions_02" />
+									<int value="0" />
+								</greaterThan>
+							</and>
+						</or>
+						<!-- Evaluate asml_css_coach_exceptions_01 -->
+						<or>
+							<!-- Continue if content pattern not found -->
+							<equal>
+								<evtDestFileEntityFrequency name="asml_css_coach_exceptions_01" />
+								<int value="0" />
+							</equal>
+							<!-- If content pattern found, increment variable -->
+							<and>
+								<add>
+									<varint name="asml_css_coach_counter_dest" scope="event" />
+									<int value ="1" />
+								</add>
+								<greaterThan>
+									<evtDestFileEntityFrequency name="asml_css_coach_exceptions_01" />
+									<int value="0" />
+								</greaterThan>
+							</and>
+						</or>
+						<set>
+							<varint name="asml_css_coach_counter_dest" scope="event" />
+							<int value ="0" />
+						</set>
+						<in>
+							<evtDestFileExt />
+							<list>
+								<string value="html" />
+							</list>
+						</in>
+					</and>
+					<in>
+						<evtSrcFileExt />
+						<list>
+							<string value="csv" />
+							<string value="xlsb" />
+							<string value="xlsx" />
+						</list>
+					</in>
+				</or>
+			</not>
+		</and>
+			<!-- Process Source File -->
+			<and>
+			   <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_11" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_10" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_09" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_08" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_07" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_06" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_05" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_04" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_03" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_02" /><int value="0" /></greaterThan>
+			  <greaterThan><evtSrcFileEntityFrequency name="asml_css_coach_keywords_01" /><int value="0" /></greaterThan>
 	  
-    </and>
-  </or>
-  <userFunction name="dlp_aci_extractable_file_extensions"/> 
-</and>
+				<!-- ===== Exceptions HTML_File_With_Links ===== -->
+				<not>
+					<or>
+						<!-- Evaluate Source file -->
+						<!-- ===== Exceptions HTML_File_With_Links ===== -->
+						<and>
+							<!-- Classify if counter is 4 or more -->
+							<greaterThan>
+								<varint name="asml_css_coach_counter_src" scope="event" />
+								<int value="2" />
+							</greaterThan>
+							<!-- Evaluate asml_css_coach_exceptions_03 -->
+							<or>
+								<!-- Continue if content pattern not found -->
+								<equal>
+									<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_03" />
+									<int value="0" />
+								</equal>
+								<!-- If content pattern found, increment variable -->
+								<and>
+									<add>
+										<varint name="asml_css_coach_counter_src" scope="event" />
+										<int value ="1" />
+									</add>
+									<greaterThan>
+										<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_03" />
+										<int value="0" />
+									</greaterThan>
+								</and>
+							</or>
+							<!-- Evaluate asml_css_coach_exceptions_02 -->
+							<or>
+								<!-- Continue if content pattern not found -->
+								<equal>
+									<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_02" />
+									<int value="0" />
+								</equal>
+								<!-- If content pattern found, increment variable -->
+								<and>
+									<add>
+										<varint name="asml_css_coach_counter_src" scope="event" />
+										<int value ="1" />
+									</add>
+									<greaterThan>
+										<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_02" />
+										<int value="0" />
+									</greaterThan>
+								</and>
+							</or>
+							<!-- Evaluate asml_css_coach_exceptions_01 -->
+							<or>
+								<!-- Continue if content pattern not found -->
+								<equal>
+									<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_01" />
+									<int value="0" />
+								</equal>
+								<!-- If content pattern found, increment variable -->
+								<and>
+									<add>
+										<varint name="asml_css_coach_counter_src" scope="event" />
+										<int value ="1" />
+									</add>
+									<greaterThan>
+										<evtSrcFileEntityFrequency name="asml_css_coach_exceptions_01" />
+										<int value="0" />
+									</greaterThan>
+								</and>
+							</or>
+							<set>
+								<varint name="asml_css_coach_counter_src" scope="event" />
+								<int value ="0" />
+							</set>
+							<in>
+								<evtSrcFileExt />
+								<list>
+									<string value="html" />
+								</list>
+							</in>
+						</and>
+						<in>
+							<evtSrcFileExt />
+							<list>
+								<string value="csv" />
+								<string value="xlsb" />
+								<string value="xlsx" />
+							</list>
+						</in>
+					</or>
+				</not>
+			</and>
+		</or>
+		<userFunction name="dlp_aci_extractable_file_extensions"/>
+	</and>
