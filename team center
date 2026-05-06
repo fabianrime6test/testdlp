@@ -1,23 +1,22 @@
-Team_Center_with_ECCN
-
-  <regExp expr="(?i)^D(?:00|100|200|300|400)[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
-  <regExp expr="(?i)^fmsr_0000[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
-  <regExp expr="(?i)^GSA-0[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
-  <regExp expr="(?i)^GSA_[A-Z0-9]{2}_[A-Z0-9]{4}_[A-Z0-9]{2}[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
-  <regExp expr="(?i)^(?:VOLU|REQS|TOOL|SERV|ANCI)\.[A-Z0-9]{3}\.[A-Z0-9]{5}[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
-  <regExp expr="(?i)^4022[^/]*\..*$"><evtSrcFilePath/></regExp>
-  <regExp expr="(?i)^4035_[A-Z0-9]{3}_[A-Z0-9]{5}[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
-  <regExp expr="(?i)^8122_[A-Z0-9]{3}_[A-Z0-9]{5}[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
-
-
-*****
-
-  <regExp expr=".*D00.*\..*|.*D100.*\..*|.*D200.*\..*|.*D300.*\..*|.*D400.*\..*"><evtSrcFilePath/></regExp>
-  <regExp expr="fmsr_.{13}.*\..*|fmsr\.{13}.*\..*|fmsr-.{13}.*\..*|fmsr_0000.*\..*"><evtSrcFilePath/></regExp>
-  <regExp expr="GSA_.{2}_.{4}_.*\..*|GSA\.{2}\.{4}\..*\..*|GSA-.{2}-.{4}-.*\..*|GSA-0.*\..*"><evtSrcFilePath/></regExp>
-  <regExp expr="VOLU\.{3}\.{5}\..*|VOLU.*\..*|.*VOLU.*\..*"><evtSrcFilePath/></regExp>
-  <regExp expr="REQS\.{3}\.{5}\..*|REQS.*\..*|.*REQS.*\..*"><evtSrcFilePath/></regExp>
-  <regExp expr="TOOL\.{3}\.{5}\..*|TOOL.*\..*|.*TOOL.*\..*"><evtSrcFilePath/></regExp>
-  <regExp expr="ANCI\.{3}\.{5}\..*|ANCI.*\..*|.*ANCI.*\..*"><evtSrcFilePath/></regExp>
-  <regExp expr=".*SERV.*\..*"><evtSrcFilePath/></regExp>
+    <or>
+    <regExp expr=".*[Dd]00.*\..*|.*[Dd]100.*\..*|.*[Dd]200.*\..*|.*[Dd]300.*\..*|.*[Dd]400.*\..*"><evtDestFilePath/></regExp>
+  <regExp expr="[fF][mM][sS][rR]_.{13}.*\..*|[fF][mM][sS][rR]\.{13}.*\..*|[fF][mM][sS][rR]-.{13}.*\..*|[fF][mM][sS][rR]_0000.*\..*"><evtDestFilePath/></regExp>
+  <regExp expr="[Gg][Ss][Aa]_.{2}_.{4}_.*\..*|[Gg][Ss][Aa]\.{2}\.{4}\..*\..*|[Gg][Ss][Aa]-.{2}-.{4}-.*\..*|[Gg][Ss][Aa]-0.*\..*"><evtDestFilePath/></regExp>
+  <regExp expr="[Vv][Oo][Ll][Uu]\.{3}\.{5}\..*|[Vv][Oo][Ll][Uu].*\..*|.*[Vv][Oo][Ll][Uu].*\..*"><evtDestFilePath/></regExp>
+  <regExp expr="[Rr][Ee][Qq][Ss]\.{3}\.{5}\..*|[Rr][Ee][Qq][Ss].*\..*|.*[Rr][Ee][Qq][Ss].*\..*"><evtDestFilePath/></regExp>
+  <regExp expr="[Tt][Oo][Oo][Ll]\.{3}\.{5}\..*|[Tt][Oo][Oo][Ll].*\..*|.*[Tt][Oo][Oo][Ll].*\..*"><evtDestFilePath/></regExp>
+  <regExp expr="[Aa][Nn][Cc][Ii]\.{3}\.{5}\..*|[Aa][Nn][Cc][Ii].*\..*|.*[Aa][Nn][Cc][Ii].*\..*"><evtDestFilePath/></regExp>
+  <regExp expr=".*[Ss][Ee][Rr][Vv].*\..*"><evtDestFilePath/></regExp>
+  <regExp expr=".*4022.*\..*"><evtDestFilePath/></regExp>
+  </or>
+  <or>
+  <regExp expr=".*[Dd]00.*\..*|.*[Dd]100.*\..*|.*[Dd]200.*\..*|.*[Dd]300.*\..*|.*[Dd]400.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="[fF][mM][sS][rR]_.{13}.*\..*|[fF][mM][sS][rR]\.{13}.*\..*|[fF][mM][sS][rR]-.{13}.*\..*|[fF][mM][sS][rR]_0000.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="[Gg][Ss][Aa]_.{2}_.{4}_.*\..*|[Gg][Ss][Aa]\.{2}\.{4}\..*\..*|[Gg][Ss][Aa]-.{2}-.{4}-.*\..*|[Gg][Ss][Aa]-0.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="[Vv][Oo][Ll][Uu]\.{3}\.{5}\..*|[Vv][Oo][Ll][Uu].*\..*|.*[Vv][Oo][Ll][Uu].*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="[Rr][Ee][Qq][Ss]\.{3}\.{5}\..*|[Rr][Ee][Qq][Ss].*\..*|.*[Rr][Ee][Qq][Ss].*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="[Tt][Oo][Oo][Ll]\.{3}\.{5}\..*|[Tt][Oo][Oo][Ll].*\..*|.*[Tt][Oo][Oo][Ll].*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="[Aa][Nn][Cc][Ii]\.{3}\.{5}\..*|[Aa][Nn][Cc][Ii].*\..*|.*[Aa][Nn][Cc][Ii].*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr=".*[Ss][Ee][Rr][Vv].*\..*"><evtSrcFilePath/></regExp>
   <regExp expr=".*4022.*\..*"><evtSrcFilePath/></regExp>
+  </or>
