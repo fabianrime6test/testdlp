@@ -8,3 +8,16 @@ Team_Center_with_ECCN
   <regExp expr="(?i)^4022[^/]*\..*$"><evtSrcFilePath/></regExp>
   <regExp expr="(?i)^4035_[A-Z0-9]{3}_[A-Z0-9]{5}[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
   <regExp expr="(?i)^8122_[A-Z0-9]{3}_[A-Z0-9]{5}[^/]*\.[^/\s.]+$"><evtSrcFilePath/></regExp>
+
+
+*****
+
+  <regExp expr=".*D00.*\..*|.*D100.*\..*|.*D200.*\..*|.*D300.*\..*|.*D400.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="fmsr_.{13}.*\..*|fmsr\.{13}.*\..*|fmsr-.{13}.*\..*|fmsr_0000.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="GSA_.{2}_.{4}_.*\..*|GSA\.{2}\.{4}\..*\..*|GSA-.{2}-.{4}-.*\..*|GSA-0.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="VOLU\.{3}\.{5}\..*|VOLU.*\..*|.*VOLU.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="REQS\.{3}\.{5}\..*|REQS.*\..*|.*REQS.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="TOOL\.{3}\.{5}\..*|TOOL.*\..*|.*TOOL.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr="ANCI\.{3}\.{5}\..*|ANCI.*\..*|.*ANCI.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr=".*SERV.*\..*"><evtSrcFilePath/></regExp>
+  <regExp expr=".*4022.*\..*"><evtSrcFilePath/></regExp>
