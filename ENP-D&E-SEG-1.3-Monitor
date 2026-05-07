@@ -1,0 +1,20 @@
+Test	Filename	keywords	Expected classfication values	Tag value
+1	test1.txt	Document ID
+Document Name
+Info Type
+SVP
+D23941246	asml_de_seg_ec_proximity01
+asml_de_seg_ec_proximity02_seg_1_3_monitor
+asml_de_seg_ec_expression_01	asml_de_seg_ec_low
+
+**********************
+
+2	test2.txt	Document ID
+Document Name
+Info Type
+SVP
+D23941246
+CCE Quote
+CCE20R2mt-2Jk8	asml_de_seg_ec_proximity01
+asml_de_seg_ec_proximity02_seg_1_3_monitor
+asml_de_seg_ec_expression_01	NO TAG : CCE values are an exception on the policy
