@@ -1,3 +1,24 @@
+
+****
+
+asml_css_customer_surveys_proximity01 > (?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity01_expression_list_B)
+asml_css_customer_surveys_proximity02 > (?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity02_expression_list_B)
+asml_css_customer_surveys_proximity03 > (?A:asml_css_customer_surveys_proximity03_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity02_expression_list_B)
+asml_css_customer_surveys_proximity04 > (?A:asml_css_customer_surveys_proximity04_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity03_expression_list_A)
+asml_css_customer_surveys_proximity05 > (?A:asml_css_customer_surveys_proximity03_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity01_expression_list_B)
+asml_css_customer_surveys_proximity06 > (?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity03_expression_list_A)
+asml_css_customer_surveys_proximity07 > (?A:asml_css_customer_surveys_proximity04_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity01_expression_list_B)
+asml_css_customer_surveys_proximity08 > (?A:asml_css_customer_surveys_proximity04_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity02_expression_list_B)
+
+
+
+asml_css_customer_surveys_proximity01_expression_list_A > (?A:asml_css_customer_surveys/css_customer_surveys_proximity01_expression_list_A)
+asml_css_customer_surveys_proximity01_expression_list_B > (?A:asml_css_customer_surveys/css_customer_surveys_proximity01_expression_list_B)
+asml_css_customer_surveys_proximity02_expression_list_B > (?A:asml_css_customer_surveys/css_customer_surveys_proximity02_expression_list_B)
+asml_css_customer_surveys_proximity03_expression_list_A > (?A:asml_css_customer_surveys/css_customer_surveys_proximity03_expression_list_A)
+asml_css_customer_surveys_proximity04_expression_list_A > (?A:asml_css_customer_surveys/css_customer_surveys_proximity04_expression_list_A)
+
+***
 <or>
   <!-- Process Destination File -->
   <and>
