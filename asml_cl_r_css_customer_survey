@@ -68,3 +68,637 @@
   <userFunction name="dlp_aci_extractable_file_extensions"/>
 </and>
 
+
+***************************
+
+<?xml version="1.0" encoding="utf-8"?>
+<Grammars>
+	<Dictionary name="asml_css_customer_surveys">
+		<EntrySet name="css_customer_surveys_proximity01_expression_list_A" case="off">
+			<Entry headword="NPS Score" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_proximity01_expression_list_B" case="off">
+			<Entry headword="CSAT NPS" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_proximity02_expression_list_B" case="off">
+			<Entry headword="Samsung NPS" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_proximity03_expression_list_A" case="off">
+			<Entry headword="Brand NPS" />
+			<Entry headword="Brands NPS" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_proximity04_expression_list_A" case="off">
+			<Entry headword="Overall NPS Score" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_keywords_01" case="off">
+			<Entry headword="Survey Results" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_keywords_02" case="off">
+			<Entry headword="Net Promoter Score" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_keywords_03" case="off">
+			<Entry headword="NPS" />
+			<Entry headword="NPS score" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_keywords_04" case="off">
+			<Entry headword="Average" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_keywords_05" case="off">
+			<Entry headword="CSAT" />
+			<Entry headword="CSAT Score" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_keywords_06" case="off">
+			<Entry headword="Customer Satisfaction" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_keywords_07" case="off">
+			<Entry headword="Customer Survey" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_keywords_08" case="off">
+			<Entry headword="Survey" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_exceptions_01" case="off">
+			<Entry headword="Category" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_exceptions_02" case="off">
+			<Entry headword="New Full Score" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_exceptions_03" case="off">
+			<Entry headword="Auditee" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_exceptions_04" case="off">
+			<Entry headword="score loss rate" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_exceptions_05" case="off">
+			<Entry headword="parts supply" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_exceptions_06" case="off">
+			<Entry headword="parts quality" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_exceptions_07" case="off">
+			<Entry headword="Please list specific areas where you need to improve, and what would be the payoffs if you made these improvements?" />
+		</EntrySet>
+		<EntrySet name="css_customer_surveys_exceptions_08" case="off">
+			<Entry headword="Rorschach Responses" />
+		</EntrySet>
+	</Dictionary>
+</Grammars>
+
+asml_css_customer_surveys_proximity01 > (?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity01_expression_list_B)
+asml_css_customer_surveys_proximity02 > (?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity02_expression_list_B)
+asml_css_customer_surveys_proximity03 > (?A:asml_css_customer_surveys_proximity03_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity02_expression_list_B)
+asml_css_customer_surveys_proximity04 > (?A:asml_css_customer_surveys_proximity04_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity03_expression_list_A)
+asml_css_customer_surveys_proximity05 > (?A:asml_css_customer_surveys_proximity03_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity01_expression_list_B)
+asml_css_customer_surveys_proximity06 > (?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity03_expression_list_A)
+asml_css_customer_surveys_proximity07 > (?A:asml_css_customer_surveys_proximity04_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity01_expression_list_B)
+asml_css_customer_surveys_proximity08 > (?A:asml_css_customer_surveys_proximity04_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity02_expression_list_B)
+
+
+<and>
+  <!--
+  Classify based on:
+    asml_css_customer_surveys_proximity01 is 1 or more and
+    asml_css_customer_surveys_proximity02 is 1 or more and
+    asml_css_customer_surveys_proximity03 is 1 or more and
+    asml_css_customer_surveys_proximity04 is 1 or more
+    asml_css_customer_surveys_proximity05 is 1 or more and
+ asml_css_customer_surveys_proximity06 is 1 or more and
+ asml_css_customer_surveys_proximity07 is 1 or more and
+ asml_css_customer_surveys_proximity08 is 1 or more and
+
+-->
+  <and>
+    <or>
+      <!-- Process Destination File -->
+      <and>
+        <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_proximity01" /><int value="0" /></greaterThan>
+        <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_proximity02" /><int value="0" /></greaterThan>
+        <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_proximity03" /><int value="0" /></greaterThan>
+        <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_proximity04" /><int value="0" /></greaterThan>
+        <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_proximity05" /><int value="0" /></greaterThan>
+        <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_proximity06" /><int value="0" /></greaterThan>
+        <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_proximity07" /><int value="0" /></greaterThan>
+        <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_proximity08" /><int value="0" /></greaterThan>
+      </and>
+
+      <!-- Process Source File -->
+      <and>
+        <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_proximity01" /><int value="0" /></greaterThan>
+        <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_proximity02" /><int value="0" /></greaterThan>
+        <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_proximity03" /><int value="0" /></greaterThan>
+        <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_proximity04" /><int value="0" /></greaterThan>
+        <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_proximity05" /><int value="0" /></greaterThan>
+        <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_proximity06" /><int value="0" /></greaterThan>
+        <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_proximity07" /><int value="0" /></greaterThan>
+        <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_proximity08" /><int value="0" /></greaterThan>
+      </and>  
+    </or>
+    <userFunction name="dlp_aci_extractable_file_extensions"/>
+  </and>
+  <not>
+    <or>
+      <!-- Evaluate Destination file -->
+      <and>
+        <!-- Classify if counter is 6 or more -->
+        <greaterThan>
+          <varint name="asml_customer_surveys_counter_dest" scope="event" />
+          <int value="5" />
+        </greaterThan>	
+        <!-- Evaluate asml_css_customer_surveys_exceptions_01 -->
+        <or>
+          <!-- Continue if content pattern not found -->
+          <equal>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_01" />
+            <int value="0" />
+          </equal>
+          <!-- If content pattern found, increment variable -->
+          <and>
+            <add>
+              <varint name="asml_customer_surveys_counter_dest" scope="event" />
+              <int value ="1" />
+            </add>
+            <greaterThan>
+              <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_01" />
+              <int value="0" />
+            </greaterThan>
+          </and>
+        </or>
+        <!-- Evaluate asml_css_customer_surveys_exceptions_02 -->
+        <or>
+          <!-- Continue if content pattern not found -->
+          <equal>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_02" />
+            <int value="0" />
+          </equal>
+          <!-- If content pattern found, increment variable -->
+          <and>
+            <add>
+              <varint name="asml_customer_surveys_counter_dest" scope="event" />
+              <int value ="1" />
+            </add>
+            <greaterThan>
+              <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_02" />
+              <int value="0" />
+            </greaterThan>
+          </and>
+        </or>
+        <!-- Evaluate asml_css_customer_surveys_exceptions_03 -->
+        <or>
+          <!-- Continue if content pattern not found -->
+          <equal>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_03" />
+            <int value="0" />
+          </equal>
+          <!-- If content pattern found, increment variable -->
+          <and>
+            <add>
+              <varint name="asml_customer_surveys_counter_dest" scope="event" />
+              <int value ="1" />
+            </add>
+            <greaterThan>
+              <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_03" />
+              <int value="0" />
+            </greaterThan>
+          </and>
+        </or>
+        <!-- Evaluate asml_css_customer_surveys_exceptions_04 -->
+        <or>
+          <!-- Continue if content pattern not found -->
+          <equal>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_04" />
+            <int value="0" />
+          </equal>
+          <!-- If content pattern found, increment variable -->
+          <and>
+            <add>
+              <varint name="asml_customer_surveys_counter_dest" scope="event" />
+              <int value ="1" />
+            </add>
+            <greaterThan>
+              <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_04" />
+              <int value="0" />
+            </greaterThan>
+          </and>
+        </or>
+        <!-- Evaluate asml_css_customer_surveys_exceptions_05 -->
+        <or>
+          <!-- Continue if content pattern not found -->
+          <equal>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_05" />
+            <int value="0" />
+          </equal>
+          <!-- If content pattern found, increment variable -->
+          <and>
+            <add>
+              <varint name="asml_customer_surveys_counter_dest" scope="event" />
+              <int value ="1" />
+            </add>
+            <greaterThan>
+              <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_05" />
+              <int value="0" />
+            </greaterThan>
+          </and>
+        </or>
+        <!-- Evaluate asml_css_customer_surveys_exceptions_06 -->
+        <or>
+          <!-- Continue if content pattern not found -->
+          <equal>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_06" />
+            <int value="0" />
+          </equal>
+          <!-- If content pattern found, increment variable -->
+          <and>
+            <add>
+              <varint name="asml_customer_surveys_counter_dest" scope="event" />
+              <int value ="1" />
+            </add>
+            <greaterThan>
+              <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_06" />
+              <int value="0" />
+            </greaterThan>
+          </and>
+        </or>
+        <set><varint name="asml_customer_surveys_counter_dest" scope="event" /><int value ="0" /></set>
+      </and> 
+
+      <!-- Evaluate Source file -->
+      <and>
+        <greaterThan>
+          <varint name="asml_customer_surveys_counter_src" scope="event"/>
+          <int value="5"/>
+        </greaterThan>
+        <!-- asml_css_customer_surveys_exceptions_01 -->
+        <or>
+          <and>
+            <greaterThan>
+              <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_01"/>
+              <int value="0"/>
+            </greaterThan>
+            <add>
+              <varint name="asml_customer_surveys_counter_src" scope="event"/>
+              <int value="1"/>
+            </add>
+          </and>
+          <equal>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_01"/>
+            <int value="0"/>
+          </equal>
+        </or>
+        <!-- asml_css_customer_surveys_exceptions_02 -->
+        <or>
+          <and>
+            <greaterThan>
+              <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_02"/>
+              <int value="0"/>
+            </greaterThan>
+            <add>
+              <varint name="asml_customer_surveys_counter_src" scope="event"/>
+              <int value="1"/>
+            </add>
+          </and>
+          <equal>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_02"/>
+            <int value="0"/>
+          </equal>
+        </or>
+        <!-- asml_css_customer_surveys_exceptions_03 -->
+        <or>
+          <and>
+            <greaterThan>
+              <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_03"/>
+              <int value="0"/>
+            </greaterThan>
+            <add>
+              <varint name="asml_customer_surveys_counter_src" scope="event"/>
+              <int value="1"/>
+            </add>
+          </and>
+          <equal>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_03"/>
+            <int value="0"/>
+          </equal>
+        </or>
+        <!-- asml_css_customer_surveys_exceptions_04 -->
+        <or>
+          <and>
+            <greaterThan>
+              <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_04"/>
+              <int value="0"/>
+            </greaterThan>
+            <add>
+              <varint name="asml_customer_surveys_counter_src" scope="event"/>
+              <int value="1"/>
+            </add>
+          </and>
+          <equal>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_04"/>
+            <int value="0"/>
+          </equal>
+        </or>
+        <!-- asml_css_customer_surveys_exceptions_05 -->
+        <or>
+          <and>
+            <greaterThan>
+              <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_05"/>
+              <int value="0"/>
+            </greaterThan>
+            <add>
+              <varint name="asml_customer_surveys_counter_src" scope="event"/>
+              <int value="1"/>
+            </add>
+          </and>
+          <equal>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_05"/>
+            <int value="0"/>
+          </equal>
+        </or>
+        <!-- asml_css_customer_surveys_exceptions_06 -->
+        <or>
+          <and>
+            <greaterThan>
+              <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_06"/>
+              <int value="0"/>
+            </greaterThan>
+            <add>
+              <varint name="asml_customer_surveys_counter_src" scope="event"/>
+              <int value="1"/>
+            </add>
+          </and>
+          <equal>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_06"/>
+            <int value="0"/>
+          </equal>
+        </or>
+        <set><varint name = "asml_customer_surveys_counter_src" scope="event" /> <int value="0"/> </set>    
+
+      </and>
+
+      <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_07" /><int value="0" /></greaterThan>
+      <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_07"/><int value="0"/></greaterThan>
+      <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_08" /><int value="0" /></greaterThan>
+      <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_08"/><int value="0"/></greaterThan>
+
+      <regExp expr="customer.*satisfaction.*survey">
+        <evtSrcFilePath/>
+      </regExp>
+      <regExp expr="*eBeam customer survey*">
+        <evtSrcFilePath/>
+      </regExp>
+
+    </or>
+  </not>
+</and>
+
+
+
+<not>
+  <or>
+    <!-- Evaluate Destination file -->
+    <and>
+      <!-- Classify if counter is 6 or more -->
+      <greaterThan>
+        <varint name="asml_customer_surveys_counter_dest" scope="event" />
+        <int value="5" />
+      </greaterThan>	
+      <!-- Evaluate asml_css_customer_surveys_exceptions_01 -->
+      <or>
+        <!-- Continue if content pattern not found -->
+        <equal>
+          <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_01" />
+          <int value="0" />
+        </equal>
+        <!-- If content pattern found, increment variable -->
+        <and>
+          <add>
+            <varint name="asml_customer_surveys_counter_dest" scope="event" />
+            <int value ="1" />
+          </add>
+          <greaterThan>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_01" />
+            <int value="0" />
+          </greaterThan>
+        </and>
+      </or>
+      <!-- Evaluate asml_css_customer_surveys_exceptions_02 -->
+      <or>
+        <!-- Continue if content pattern not found -->
+        <equal>
+          <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_02" />
+          <int value="0" />
+        </equal>
+        <!-- If content pattern found, increment variable -->
+        <and>
+          <add>
+            <varint name="asml_customer_surveys_counter_dest" scope="event" />
+            <int value ="1" />
+          </add>
+          <greaterThan>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_02" />
+            <int value="0" />
+          </greaterThan>
+        </and>
+      </or>
+      <!-- Evaluate asml_css_customer_surveys_exceptions_03 -->
+      <or>
+        <!-- Continue if content pattern not found -->
+        <equal>
+          <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_03" />
+          <int value="0" />
+        </equal>
+        <!-- If content pattern found, increment variable -->
+        <and>
+          <add>
+            <varint name="asml_customer_surveys_counter_dest" scope="event" />
+            <int value ="1" />
+          </add>
+          <greaterThan>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_03" />
+            <int value="0" />
+          </greaterThan>
+        </and>
+      </or>
+      <!-- Evaluate asml_css_customer_surveys_exceptions_04 -->
+      <or>
+        <!-- Continue if content pattern not found -->
+        <equal>
+          <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_04" />
+          <int value="0" />
+        </equal>
+        <!-- If content pattern found, increment variable -->
+        <and>
+          <add>
+            <varint name="asml_customer_surveys_counter_dest" scope="event" />
+            <int value ="1" />
+          </add>
+          <greaterThan>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_04" />
+            <int value="0" />
+          </greaterThan>
+        </and>
+      </or>
+      <!-- Evaluate asml_css_customer_surveys_exceptions_05 -->
+      <or>
+        <!-- Continue if content pattern not found -->
+        <equal>
+          <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_05" />
+          <int value="0" />
+        </equal>
+        <!-- If content pattern found, increment variable -->
+        <and>
+          <add>
+            <varint name="asml_customer_surveys_counter_dest" scope="event" />
+            <int value ="1" />
+          </add>
+          <greaterThan>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_05" />
+            <int value="0" />
+          </greaterThan>
+        </and>
+      </or>
+      <!-- Evaluate asml_css_customer_surveys_exceptions_06 -->
+      <or>
+        <!-- Continue if content pattern not found -->
+        <equal>
+          <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_06" />
+          <int value="0" />
+        </equal>
+        <!-- If content pattern found, increment variable -->
+        <and>
+          <add>
+            <varint name="asml_customer_surveys_counter_dest" scope="event" />
+            <int value ="1" />
+          </add>
+          <greaterThan>
+            <evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_06" />
+            <int value="0" />
+          </greaterThan>
+        </and>
+      </or>
+      <set><varint name="asml_customer_surveys_counter_dest" scope="event" /><int value ="0" /></set>
+    </and> 
+
+    <!-- Evaluate Source file -->
+    <and>
+      <greaterThan>
+        <varint name="asml_customer_surveys_counter_src" scope="event"/>
+        <int value="5"/>
+      </greaterThan>
+      <!-- asml_css_customer_surveys_exceptions_01 -->
+      <or>
+        <and>
+          <greaterThan>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_01"/>
+            <int value="0"/>
+          </greaterThan>
+          <add>
+            <varint name="asml_customer_surveys_counter_src" scope="event"/>
+            <int value="1"/>
+          </add>
+        </and>
+        <equal>
+          <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_01"/>
+          <int value="0"/>
+        </equal>
+      </or>
+      <!-- asml_css_customer_surveys_exceptions_02 -->
+      <or>
+        <and>
+          <greaterThan>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_02"/>
+            <int value="0"/>
+          </greaterThan>
+          <add>
+            <varint name="asml_customer_surveys_counter_src" scope="event"/>
+            <int value="1"/>
+          </add>
+        </and>
+        <equal>
+          <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_02"/>
+          <int value="0"/>
+        </equal>
+      </or>
+      <!-- asml_css_customer_surveys_exceptions_03 -->
+      <or>
+        <and>
+          <greaterThan>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_03"/>
+            <int value="0"/>
+          </greaterThan>
+          <add>
+            <varint name="asml_customer_surveys_counter_src" scope="event"/>
+            <int value="1"/>
+          </add>
+        </and>
+        <equal>
+          <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_03"/>
+          <int value="0"/>
+        </equal>
+      </or>
+      <!-- asml_css_customer_surveys_exceptions_04 -->
+      <or>
+        <and>
+          <greaterThan>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_04"/>
+            <int value="0"/>
+          </greaterThan>
+          <add>
+            <varint name="asml_customer_surveys_counter_src" scope="event"/>
+            <int value="1"/>
+          </add>
+        </and>
+        <equal>
+          <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_04"/>
+          <int value="0"/>
+        </equal>
+      </or>
+      <!-- asml_css_customer_surveys_exceptions_05 -->
+      <or>
+        <and>
+          <greaterThan>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_05"/>
+            <int value="0"/>
+          </greaterThan>
+          <add>
+            <varint name="asml_customer_surveys_counter_src" scope="event"/>
+            <int value="1"/>
+          </add>
+        </and>
+        <equal>
+          <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_05"/>
+          <int value="0"/>
+        </equal>
+      </or>
+      <!-- asml_css_customer_surveys_exceptions_06 -->
+      <or>
+        <and>
+          <greaterThan>
+            <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_06"/>
+            <int value="0"/>
+          </greaterThan>
+          <add>
+            <varint name="asml_customer_surveys_counter_src" scope="event"/>
+            <int value="1"/>
+          </add>
+        </and>
+        <equal>
+          <evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_06"/>
+          <int value="0"/>
+        </equal>
+      </or>
+      <set><varint name = "asml_customer_surveys_counter_src" scope="event" /> <int value="0"/> </set>    
+
+    </and>
+	
+	<greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_07" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_07"/><int value="0"/></greaterThan>
+	<greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_exceptions_08" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_exceptions_08"/><int value="0"/></greaterThan>
+	
+	<regExp expr="customer.*satisfaction.*survey">
+	  <evtSrcFilePath/>
+	</regExp>
+	<regExp expr="*eBeam customer survey*">
+	  <evtSrcFilePath/>
+	</regExp>
+	
+  </or>
+</not>
