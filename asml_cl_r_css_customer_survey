@@ -1,3 +1,44 @@
+****
+PROXIMITY PAIRS:
+
+asml_css_customer_surveys_proximity01
+(?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity03_expression_list_A)
+NPS Score > Brand NPS
+
+asml_css_customer_surveys_proximity02
+(?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity04_expression_list_A)
+NPS Score > Overall NPS Score
+
+asml_css_customer_surveys_proximity03
+(?A:asml_css_customer_surveys_proximity02_expression_list_B)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity04_expression_list_A)
+Samsung NPS > Overall NPS Score
+asml_css_customer_surveys_proximity04
+(?A:asml_css_customer_surveys_proximity01_expression_list_B)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity02_expression_list_B)
+CSAT NPS > Samsung NPS
+
+asml_css_customer_surveys_proximity05
+(?A:asml_css_customer_surveys_proximity02_expression_list_B)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity03_expression_list_A)
+Samsung NPS > Brand NPS
+
+
+asml_css_customer_surveys_proximity06
+(?A:asml_css_customer_surveys_proximity01_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity02_expression_list_B)
+NPS Score > Samsung NPS
+
+asml_css_customer_surveys_proximity07
+(?A:asml_css_customer_surveys_proximity01_expression_list_B)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity03_expression_list_A)
+CSAT NPS > Brand NPS
+
+asml_css_customer_surveys_proximity08
+(?A:asml_css_customer_surveys_proximity01_expression_list_B)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity04_expression_list_A)
+CSAT NP > Overall NPS Score
+
+asml_css_customer_surveys_proximity09
+(?A:asml_css_customer_surveys_proximity03_expression_list_A)(.|\n){0,500}(?A:asml_css_customer_surveys_proximity04_expression_list_A)
+Brand NPS > CSAT NP
+
+
+****
 ****************Original Rule*****************************
 
 <and>
