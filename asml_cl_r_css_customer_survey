@@ -1,3 +1,44 @@
+
+asml_cl_r_css_customer_survey_set_1_info
+<or>
+  <!-- Process Destination File -->
+  <and>
+    <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_keywords_01" /><int value="0" /></greaterThan>
+    <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_keywords_02" /><int value="0" /></greaterThan>
+    <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_keywords_03" /><int value="0" /></greaterThan>
+    <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_keywords_04" /><int value="0" /></greaterThan>
+    <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_keywords_05" /><int value="0" /></greaterThan>
+    <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_keywords_06" /><int value="0" /></greaterThan>
+    <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_keywords_07" /><int value="0" /></greaterThan>
+    <greaterThan><evtDestFileEntityFrequency name="asml_css_customer_surveys_keywords_08" /><int value="0" /></greaterThan>
+  </and>
+
+  <!-- Process Source File -->
+  <and>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_keywords_01" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_keywords_02" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_keywords_03" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_keywords_04" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_keywords_05" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_keywords_06" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_keywords_07" /><int value="0" /></greaterThan>
+    <greaterThan><evtSrcFileEntityFrequency name="asml_css_customer_surveys_keywords_08" /><int value="0" /></greaterThan>
+  </and>  
+</or>
+
+
+******************
+asml_cl_r_css_customer_survey_set_2_info
+<and>
+  <or>
+    <like expr="%verbatim%customer%"><evtSrcFilePath/></like>
+    <like expr="%customer%survey%20%"><evtSrcFilePath/></like>
+  </or>
+  <userFunction name="dlp_aci_extractable_file_extensions_css_customer_surveys"/> 
+</and>
+
+
+
 ****
 PROXIMITY PAIRS:
 
