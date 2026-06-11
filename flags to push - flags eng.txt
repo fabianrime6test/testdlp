@@ -1,0 +1,328 @@
+# ------------------------------------------------------
+# ASML APPLICATION LIST  
+# ------------------------------------------------------
+
+# ack
+(^.*/)ack$,0,~SK|NI
+
+# ansible-core
+^.*/ansible$,0,~SK|NI
+^.*/ansible-[A-Za-z0-9_.-]*$,0,~SK|NI
+
+# asml-vscode / VS Code family
+#^.*/(asml-vscode|code|code-insiders|code-oss|codium)$,0,~SK|NI
+
+# atop
+^.*/(atop|atopacctd|atopsar)$,0,~SK|NI
+
+# azure-cli
+^.*/az$,0,~SK|NI
+
+# bat
+^.*/(bat|batcat)$,0,~SK|NI
+
+# buildah
+^.*/buildah$,0,~SK|NI
+
+# cntlm
+^.*/cntlm$,0,~SK|NI
+
+# conda
+^.*/(conda|conda-env)$,0,~SK|NI
+
+# copyq
+^.*/copyq$,0,~SK|NI
+
+# createrepo
+^.*/(createrepo|createrepo_c|modifyrepo|modifyrepo_c|mergerepo|mergerepo_c|repo2module)$,0,~SK|NI
+
+# emacs
+^.*/(emacs|emacsclient)$,0,~SK|NI
+
+# fd-find
+^.*/(fd|fdfind)$,0,~SK|NI
+
+# freerdp
+^.*/(xfreerdp|xfreerdp3|wlfreerdp|sdl-freerdp)$,0,~SK|NI
+
+# fzf
+^.*/fzf$,0,~SK|NI
+
+# firefox
+^.*/firefox$,0,~SK|NI
+
+# geany
+^.*/geany$,0,~SK|NI
+
+# gimp
+^.*/(gimp|gimp-2[.][0-9][0-9]*)$,0,~SK|NI
+
+# git-chglog
+^.*/git-chglog$,0,~SK|NI
+
+# git-lfs
+^.*/git-lfs$,0,~SK|NI
+
+# gnuplot
+^.*/gnuplot$,0,~SK|NI
+
+# golang
+^.*/(go|gofmt)$,0,~SK|NI
+
+# google-cloud-sdk
+^.*/(gcloud|gsutil|bq|docker-credential-gcloud)$,0,~SK|NI
+^.*/git-credential-gcloud[.]sh$,0,~SK|NI
+
+# inkscape
+^.*/inkscape$,0,~SK|NI
+
+# inspec
+^.*/(inspec|chef-inspec)$,0,~SK|NI
+
+# java-11-openjdk-devel
+^.*/(java|javac|jar|jarsigner|javadoc|javap|jdeps|jlink|jmod|jshell|jdb|keytool|rmid|rmiregistry|serialver)$,0,~SK|NI
+
+# kdiff3
+^.*/kdiff3$,0,~SK|NI
+
+# libreoffice / libreoffice-calc / libreoffice-impress
+# Note: LibreOffice modules commonly converge into soffice.bin, so this inspects the suite process.
+^.*/(libreoffice|soffice|soffice[.]bin|localc|loimpress|lowriter|lodraw|lobase|lomath),0,~SK|NI
+
+# maven
+^.*/(mvn|mvnDebug)$,0,~SK|NI
+
+# mc
+^.*/(mc|mcedit|mcview|mcdiff)$,0,~SK|NI
+
+# meld
+^.*/meld$,0,~SK|NI
+
+# neovim
+^.*/(nvim|nvim-qt)$,0,~SK|NI
+
+# nodejs
+^.*/node$,0,~SK|NI
+
+# npm
+^.*/(npm|npx)$,0,~SK|NI
+
+# packer
+^.*/packer$,0,~SK|NI
+
+# pdk-2.4.0.1
+^.*/pdk$,0,~SK|NI
+
+# podman-compose
+# Include podman because podman-compose/podman compose hands work to podman.
+^.*/(podman-compose|podman|podman-remote)$,0,~SK|NI
+
+# powershell
+^.*/(pwsh|pwsh-preview)$,0,~SK|NI
+
+# python3.11
+^.*/(python3[.]11|pip3[.]11|pydoc3[.]11|idle3[.]11)$,0,~SK|NI
+
+# python3.12 / python3.12-devel / python3.12-pip
+^.*/(python3[.]12|pip3[.]12|pydoc3[.]12|idle3[.]12|python3[.]12-config)$,0,~SK|NI
+
+# python38
+^.*/(python3[.]8|pip3[.]8|pydoc3[.]8|idle3[.]8)$,0,~SK|NI
+
+# python39
+^.*/(python3[.]9|pip3[.]9|pydoc3[.]9|idle3[.]9)$,0,~SK|NI
+
+# qt-creator
+^.*/qtcreator$,0,~SK|NI
+
+# rcs
+# ci and co are generic basenames; validate on the ASML image before enabling if collision risk matters.
+^.*/(rcs|rcsdiff|rcsmerge|rcsclean|rlog|ident)$,0,~SK|NI
+^.*/(ci|co)$,0,~SK|NI
+
+# remmina
+^.*/(remmina|remmina-file-wrapper)$,0,~SK|NI
+
+# rpm-build
+^.*/(rpmbuild|rpmspec)$,0,~SK|NI
+
+# rpm-sign
+^.*/rpmsign$,0,~SK|NI
+
+# rsh
+^.*/(rsh|rcp|rlogin)$,0,~SK|NI
+
+# ruby
+^.*/(ruby|irb|gem|rake|bundle|bundler)$,0,~SK|NI
+
+# screen
+^.*/screen$,0,~SK|NI
+
+# ShellCheck
+^.*/shellcheck$,0,~SK|NI
+
+# skopeo
+^.*/skopeo$,0,~SK|NI
+
+# tcpdump
+^.*/tcpdump$,0,~SK|NI
+
+# terminator
+^.*/terminator$,0,~SK|NI
+
+# terraform
+^.*/terraform$,0,~SK|NI
+
+# tftp
+^.*/tftp$,0,~SK|NI
+
+# tmux
+^.*/tmux$,0,~SK|NI
+
+# traceroute
+^.*/(traceroute|traceroute6|tcptraceroute)$,0,~SK|NI
+
+# vim-X11
+^.*/(gvim|gvimdiff|gview|rgvim|rgview|vimx)$,0,~SK|NI
+
+# virt-viewer
+^.*/(virt-viewer|remote-viewer)$,0,~SK|NI
+
+# wb / wbb
+^.*/wb$,0,~SK|NI
+^.*/wbb$,0,~SK|NI
+
+# wireshark
+^.*/(wireshark|tshark|dumpcap|capinfos|editcap|mergecap|rawshark|text2pcap|reordercap)$,0,~SK|NI
+^.*/(androiddump|ciscodump|randpktdump|sshdump|udpdump|randpkt|dftest)$,0,~SK|NI
+
+# xterm
+^.*/(xterm|uxterm|koi8rxterm)$,0,~SK|NI
+
+# Zim
+^.*/zim$,0,~SK|NI
+
+# ------------------------------------------------------
+# BROWSERS 
+# ------------------------------------------------------
+^.*/firefox$,0,~SK|NI
+^.*/firefox-esr$,0,~SK|NI
+
+# ------------------------------------------------------
+# FILE TRANSFER & DOWNLOAD
+# ------------------------------------------------------
+^.*/curl$,0,~SK|NI
+^.*/wget$,0,~SK|NI
+^.*/aria2c$,0,~SK|NI
+^.*/ftp$,0,~SK|NI
+^.*/sftp$,0,~SK|NI
+^.*/scp$,0,~SK|NI
+^.*/rsync$,0,~SK|NI
+^.*/tftp$,0,~SK|NI
+
+# ------------------------------------------------------
+# REMOTE ACCESS & TUNNELING
+# ------------------------------------------------------
+^.*/ssh$,0,~SK|NI
+^.*/telnet$,0,~SK|NI
+^.*/nc$,0,~SK|NI
+^.*/ncat$,0,~SK|NI
+^.*/netcat$,0,~SK|NI
+^.*/socat$,0,~SK|NI
+^.*/proxychains$,0,~SK|NI
+^.*/rsh$,0,~SK|NI
+
+# ------------------------------------------------------
+# CLOUD CLI - direct upload capability
+# ------------------------------------------------------
+^.*/az$,0,~SK|NI
+^.*/gcloud$,0,~SK|NI
+^.*/gsutil$,0,~SK|NI
+^.*/bq$,0,~SK|NI
+^.*/aws$,0,~SK|NI
+
+# ------------------------------------------------------
+# CONTAINER REGISTRY PUSH
+# ------------------------------------------------------
+^.*/podman$,0,~SK|NI
+^.*/skopeo$,0,~SK|NI
+^.*/buildah$,0,~SK|NI
+
+# ------------------------------------------------------
+# ARCHIVE - exfil staging
+# ------------------------------------------------------
+^.*/tar$,0,~SK|NI
+^.*/zip$,0,~SK|NI
+^.*/7z$,0,~SK|NI
+^.*/7za$,0,~SK|NI
+^.*/7zr$,0,~SK|NI
+
+# ------------------------------------------------------
+# CLIPBOARD MANAGERS
+# ------------------------------------------------------
+^.*/copyq$,0,~SK|NI
+^.*/xclip$,0,~SK|NI
+^.*/xsel$,0,~SK|NI
+
+# ------------------------------------------------------
+# OFFICE SUITE - document creation & handling
+# ------------------------------------------------------
+^.*/soffice,0,~SK|NI
+^.*/soffice\.bin,0,~SK|NI
+^.*/libreoffice,0,~SK|NI
+/usr/lib64/libreoffice,0,~SK|NI
+/usr/lib64/libreoffice/program,0,~SK|NI
+^.*/scalc$,0,~SK|NI
+^.*/simpress$,0,~SK|NI
+^.*/swriter$,0,~SK|NI
+^.*/sdraw$,0,~SK|NI
+^.*/sbase$,0,~SK|NI
+
+# ------------------------------------------------------
+# TEXT PROCESSING
+# ------------------------------------------------------
+^/usr/lib64/gedit,0,~SK|NI
+^.*/gedit,0,~SK|NI
+^.*/sed$,0,~SK|NI
+^.*/awk$,0,~SK|NI
+^.*/gawk$,0,~SK|NI
+^.*/mawk$,0,~SK|NI
+^.*/nawk$,0,~SK|NI
+^.*/xargs$,0,~SK|NI
+^.*/strings$,0,~SK|NI
+^.*/iconv$,0,~SK|NI
+^.*/dos2unix$,0,~SK|NI
+^.*/unix2dos$,0,~SK|NI
+^.*/jq$,0,~SK|NI
+^.*/yq$,0,~SK|NI
+^.*/xmllint$,0,~SK|NI
+^.*/xmlstarlet$,0,~SK|NI
+^.*/cp$,0,~SK|NI
+^.*/mv$,0,~SK|NI
+^.*/cat,0,~SK|NI
+^.*/nautilus,0,~SK|NI
+
+# ------------------------------------------------------
+# PRINT - physical exfil channel
+# ------------------------------------------------------
+^.*/lpr$,0,~SK|NI
+^.*/lpq$,0,~SK|NI
+^.*/lprm$,0,~SK|NI
+^.*/lpstat$,0,~SK|NI
+^.*/lpadmin$,0,~SK|NI
+^.*/cupsd$,0,~SK|NI
+^.*/cupsctl$,0,~SK|NI
+
+# ------------------------------------------------------
+# VERSION CONTROL - push to external remotes
+# ------------------------------------------------------
+^.*/git$,0,~SK|NI
+
+# ------------------------------------------------------
+# REMOTE DESKTOP CLIENTS
+# ------------------------------------------------------
+^.*/xfreerdp$,0,~SK|NI
+^.*/remmina$,0,~SK|NI
+^.*/virt-viewer$,0,~SK|NI
+^.*/remote-viewer$,0,~SK|NI
+^.*/virt-manager$,0,~SK|NI
