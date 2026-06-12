@@ -1,6 +1,14 @@
-Responsible dept., Document type, functional block
+NPS Score
+Test
 
-FB_
+CSAT NPS
+Keywords in Expression/Keyword List A can be 500 words away from keywords in Expression/Keyword List B.
+Expression List A: NPS Score
+Expression List B: Samsung NPS
 
-dsfsdfsdf
-
+Category
+New Full Score
+Auditee
+score loss rate
+parts supply
+parts quality
