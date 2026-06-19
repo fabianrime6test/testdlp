@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 cls_stress_test.py
-Generates file churn with ECCN-tagged content and controlled filename patterns
+Generates file churn with fixed ECCN content and controlled filename patterns
 to trigger DG ACI classification and .cls sidecar writes.
 """
 
@@ -13,12 +13,7 @@ import string
 import argparse
 import re
 
-# --- Configuration ---
-
-ECCN_CODES = [
-    "3D001", "3D002", "3D003", "3D991", "3D992",
-    "3E001", "3E991", "EAR99", "3E005"
-]
+FILENAME_STEMS = ["VOLU", "REQS", "TOOL", "SERV", "ANCI"]
 
 FILENAME_PATTERNS = [
     re.compile(r'.*VOLU.*'),
@@ -28,7 +23,8 @@ FILENAME_PATTERNS = [
     re.compile(r'.*ANCI.*'),
 ]
 
-FILENAME_STEMS = ["VOLU", "REQS", "TOOL", "SERV", "ANCI"]
+FILE_CONTENT = """test file: 3D001, 3D002, 3D003, 3D991, 3D992, 3E001, 3E991, EAR99, 3E005
+test file: 3D001, 3D002, 3D003, 3D991, 3D992, 3E001, 3E991, EAR99, 3E005"""
 
 def rand_suffix(k=6):
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=k))
@@ -37,20 +33,7 @@ def make_filename(i):
     stem = random.choice(FILENAME_STEMS)
     return f"{stem}_{i}_{rand_suffix()}.txt"
 
-def make_content():
-    """Generate a text block embedding random ECCN codes."""
-    eccn = random.sample(ECCN_CODES, k=random.randint(1, 4))
-    lines = [
-        f"Document reference: DOC-{rand_suffix()}",
-        f"Classification: {', '.join(eccn)}",
-        f"Description: Technology export control test file.",
-        f"Item ECCN: {random.choice(ECCN_CODES)}",
-        f"Notes: {''.join(random.choices(string.ascii_letters + ' ', k=120))}",
-    ]
-    return '\n'.join(lines)
-
 def validate_filename(name):
-    """Assert generated name matches at least one pattern."""
     return any(p.match(name) for p in FILENAME_PATTERNS)
 
 def run(base_dir, iterations, delay):
@@ -65,15 +48,15 @@ def run(base_dir, iterations, delay):
             assert validate_filename(name), f"Filename {name} matches no pattern — bug in make_filename()"
             path = os.path.join(base_dir, name)
             with open(path, 'w') as f:
-                f.write(make_content())
+                f.write(FILE_CONTENT)
             live_files.append(path)
             print(f"[CREATE] {path}")
 
         elif action == 'modify' and live_files:
             path = random.choice(live_files)
             if os.path.exists(path):
-                with open(path, 'a') as f:
-                    f.write('\n' + make_content())
+                with open(path, 'w') as f:
+                    f.write(FILE_CONTENT)
                 print(f"[MODIFY] {path}")
 
         elif action == 'rename' and live_files:
