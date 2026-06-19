@@ -1,0 +1,40 @@
+team_center_with_eccn
+(3D001|3D002|3D003|3D991|3D992|3E001|3E991|EAR99|3E005)
+
+<and>
+  <!-- Team Center with ECCN - Source File Evaluation -->
+  <and>
+    <regExp expr=".*[Dd]00.*\..*|.*[Dd]100.*\..*|.*[Dd]200.*\..*|.*[Dd]300.*\..*|.*[Dd]400.*\..*|[fF][mM][sS][rR]_0000.*\..*|[Gg][Ss][Aa]-0.*\..*|.*4022.*\..*|.*[Vv][Oo][Ll][Uu].*\..*|.*[Rr][Ee][Qq][Ss].*\..*|.*[Tt][Oo][Oo][Ll].*\..*|.*[Ss][Ee][Rr][Vv].*\..*|.*[Aa][Nn][Cc][Ii].*\..*">
+      <evtSrcFilePath/>
+    </regExp>
+
+    <greaterThan>
+      <evtSrcFileEntityFrequency name="team_center_with_eccn"/> <!--Content pattern is .*(3D001|3D002|3D003|3D991|3D992|3E001|3E991|EAR99|3E005).* --> 
+      <int value="0"/>
+    </greaterThan>
+  </and>
+  <!-- Classification Exceptions -->
+  <not>    
+    <or>
+      <!-- MSG files -->
+      <regExp expr="msg$"><evtSrcFilePath/></regExp>
+
+      <!-- Other Files: stp, hex, ply, log -->
+      <regExp expr="\.(stp|hex|ply|log)$"><evtSrcFilePath/></regExp>
+
+      <!-- Image files -->
+      <regExp expr="\.(jpg|jpeg|png|gif)$"><evtSrcFilePath/></regExp>
+
+      <!-- Whitelisted file names -->
+      <regExp expr="4022\.439.*"><evtSrcFilePath/></regExp>
+      <regExp expr="4022\.489.*"><evtSrcFilePath/></regExp>
+      <regExp expr="4022\.488.*"><evtSrcFilePath/></regExp>
+      <regExp expr="4022\.438.*"><evtSrcFilePath/></regExp>
+      <regExp expr="4022\.663.*"><evtSrcFilePath/></regExp>
+      <regExp expr="2522\..*"><evtSrcFilePath/></regExp>
+      <regExp expr="2622\..*"><evtSrcFilePath/></regExp>
+      <regExp expr="4022\.626.*"><evtSrcFilePath/></regExp>
+      <regExp expr="4022\.476.*"><evtSrcFilePath/></regExp>
+    </or>
+  </not>
+</and>
