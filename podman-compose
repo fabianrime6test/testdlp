@@ -1,0 +1,24 @@
+# Create a docker-compose.yml that mounts the stress dir and runs file ops
+cat > /tmp/test-compose.yml << 'EOF'
+version: '3'
+services:
+  stresstest:
+    image: ubi8
+    volumes:
+      - /home/farivera/test/stress:/stress
+    command: >
+      bash -c "
+        for stem in VOLU REQS TOOL SERV ANCI; do
+          echo 'test file: 3D001, 3D002, 3D003, 3D991, 3D992, 3E001, 3E991, EAR99, 3E005
+test file: 3D001, 3D002, 3D003, 3D991, 3D992, 3E001, 3E991, EAR99, 3E005' > /stress/${stem}_podman_001.txt;
+        done;
+        sleep 2;
+        for stem in VOLU REQS TOOL SERV ANCI; do
+          cp /stress/${stem}_podman_001.txt /stress/${stem}_podman_002.txt;
+        done;
+        sleep 2;
+        for stem in VOLU REQS TOOL SERV ANCI; do
+          rm /stress/${stem}_podman_001.txt;
+        done"
+EOF
+podman-compose -f /tmp/test-compose.yml up --abort-on-container-exit
