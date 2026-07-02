@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grammars>
+  <Dictionary name="kr_pii" case="off">
+
+    <!-- Drivers_License rule: keyword condition, whole word, >=1 -->
+    <EntrySet name="dl_terms">
+      <Entry headword="자동차운전면허증" />
+      <Entry headword="Driver's License">
+        <Synonym>Driver’s License</Synonym>
+      </Entry>
+    </EntrySet>
+
+    <!-- Korean_Passport rule: passport keyword condition, >=1 -->
+    <EntrySet name="passport_terms">
+      <Entry headword="passport" />
+      <Entry headword="Korean Passport" />
+      <Entry headword="Korean Passports" />
+      <Entry headword="passport book" />
+      <Entry headword="한국어 여권" />
+      <Entry headword="여권" />
+      <Entry headword="여권 번호" />
+    </EntrySet>
+
+    <!-- Korean_Passport rule: standalone "Korea" keyword condition -->
+    <EntrySet name="korea">
+      <Entry headword="Korea" />
+    </EntrySet>
+
+    <!-- Korean_Credit_Cards rule: Korea/Korean keyword condition -->
+    <EntrySet name="korea_kr">
+      <Entry headword="Korea" />
+      <Entry headword="Korean" />
+    </EntrySet>
+
+    <!-- Korean_Bank_Account_Numbers rule: wide Korea keyword condition -->
+    <EntrySet name="korea_wide">
+      <Entry headword="Korea" />
+      <Entry headword="Korean" />
+      <Entry headword="Seoul" />
+      <Entry headword="한국" />
+      <Entry headword="한국인" />
+      <Entry headword="서울" />
+    </EntrySet>
+
+    <!-- Korean_Credit_Cards: keyword validators of the built-in Credit Card Number DI -->
+    <EntrySet name="cc_terms">
+      <Entry headword="아메리칸 익스프레스" />
+      <Entry headword="아메리칸익스프레스" />
+      <Entry headword="아멕스" />
+      <Entry headword="은행카드" />
+      <Entry headword="은행 카드" />
+      <Entry headword="카드 번호" />
+      <Entry headword="신용 카드" />
+      <Entry headword="신용 카드#" />
+      <Entry headword="신용 카드 번호" />
+      <Entry headword="신용카드" />
+      <Entry headword="체크카드" />
+      <Entry headword="한국" />
+      <Entry headword="한국인" />
+      <Entry headword="korea" />
+      <Entry headword="korean" />
+    </EntrySet>
+
+    <!-- Korean_Bank_Account_Numbers: keyword validators of the custom DI -->
+    <EntrySet name="bank_names">
+      <Entry headword="WOORI BANK" />
+      <Entry headword="KOOKMIN BANK" />
+      <Entry headword="INDUSTRIAL BANK OF KOREA" />
+      <Entry headword="CITIBANK" />
+      <Entry headword="KEB HANA BANK" />
+      <Entry headword="SHINHAN BANK" />
+      <Entry headword="NONGHYUP BANK" />
+      <Entry headword="SUHYUP BANK" />
+      <Entry headword="THE HONGKONG AND SHANGHAI BANKING CORPORATION" />
+      <Entry headword="BUSAN BANK" />
+      <Entry headword="DAEGU BANK" />
+      <Entry headword="KYONGNAM BANK" />
+      <Entry headword="POSTAL BUSINESS HEADQUARTERS" />
+      <Entry headword="STANDARD CHARTERED BANK" />
+      <Entry headword="KOREA DEVELOPMENT BANK" />
+      <Entry headword="AUSTRALIA AND NEW ZEALAND BANKING GROUP" />
+      <Entry headword="KWANGJU BANK" />
+      <Entry headword="BANK OF KOREA" />
+      <Entry headword="DEUTSCHE BANK" />
+      <Entry headword="U.B.A.F.-UNION DE BANQUES ARABES ETFRANCAISES" />
+      <Entry headword="AGRICULTURAL BANK OF CHINA" />
+      <Entry headword="VIA ASSET MANAGEMENT" />
+      <Entry headword="BANK OF CHINA" />
+      <Entry headword="BNP PARIBAS" />
+      <Entry headword="BANK OF AMERICA" />
+      <Entry headword="MUFG BANK" />
+      <Entry headword="JPMORGAN CHASE BANK" />
+      <Entry headword="BANK OF COMMUNICATIONS" />
+      <Entry headword="CREDIT SUISSE" />
+      <Entry headword="DBS BANK" />
+      <Entry headword="THE EXPORT-IMPORT BANK OF KOREA" />
+      <Entry headword="GOLDMAN SACHS" />
+      <Entry headword="INDUSTRIAL AND COMMERCIAL BANK OF CHINA" />
+      <Entry headword="ING BANK" />
+      <Entry headword="THE BANK OF NEW YORK MELLON" />
+      <Entry headword="JEONBUK BANK" />
+      <Entry headword="JEJU BANK" />
+      <Entry headword="WOORI INVESTMENT BANK" />
+      <Entry headword="LLOYDS BANK" />
+      <Entry headword="MIZUHO BANK" />
+      <Entry headword="MERRILL LYNCH INTERNATIONAL" />
+      <Entry headword="MORGAN STANLEY BANK" />
+      <Entry headword="NATIONAL BANK OF PAKISTAN" />
+      <Entry headword="CHINA CONSTRUCTION BANK" />
+      <Entry headword="WELLS FARGO BANK" />
+      <Entry headword="STATE BANK OF INDIA" />
+      <Entry headword="STATE STREET BANK AND TRUST COMPANY" />
+      <Entry headword="SUMITOMO MITSUI BANKING CORPORATION" />
+      <Entry headword="SOCIETE GENERALE" />
+      <Entry headword="LANDESBANK BADEN-WUERTTEMBERG" />
+      <Entry headword="UNITED OVERSEAS BANK" />
+      <Entry headword="YAMAGUCHI BANK" />
+      <Entry headword="METROPOLITAN BANK" />
+      <Entry headword="OVERSEA-CHINESE BANKING COPORATION" />
+      <Entry headword="BANK MELLAT" />
+      <Entry headword="KAKAOBANK" />
+    </EntrySet>
+
+    <!-- Exception: False_Positives_for_Passport -->
+    <EntrySet name="exc_fp_passport">
+      <Entry headword="Curriculum Vitae" />
+      <Entry headword="invoice date" />
+      <Entry headword="Picking List" />
+    </EntrySet>
+
+    <!-- Exception: PCMS ID -->
+    <EntrySet name="exc_pcms">
+      <Entry headword="PCMS ID" />
+    </EntrySet>
+
+    <!-- Exception: ID Exception (keyword half; regex half is content pattern kr_exc_it50) -->
+    <EntrySet name="exc_approvable">
+      <Entry headword="Approvable ID" />
+    </EntrySet>
+
+    <!-- DRAFT / OPEN ITEM: compensating keyword set for lost RRN checksum validation.
+         Symantec's narrow RRN DI internally requires resident-number keywords; that
+         internal list is not exportable. Candidate entries below are a reconstruction,
+         NOT the Symantec list. Include only if the compensating-control decision is YES. -->
+    <EntrySet name="rrn_terms">
+      <Entry headword="주민등록번호" />
+      <Entry headword="주민번호" />
+      <Entry headword="주민등록" />
+      <Entry headword="resident registration number" />
+      <Entry headword="resident registration" />
+    </EntrySet>
+
+  </Dictionary>
+</Grammars>
