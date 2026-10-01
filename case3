@@ -1,0 +1,13 @@
+seivdilc89057:~ % cleartool setview omahto_at_qbld007_dumbo_dgagent_int
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % cd /vobs/vb423/40224348429/KMLD/com/int/dat
+/vobs/vb423/40224348429/KMLD/com/int/dat: Permission denied.
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % cleartool setview omahto_at_qbld007_dumbo_dgagent_int
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % 
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % cleartool catcs
+cleartool: Error: Cannot get config spec for view: Permission denied.
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % ls -la /vobs/vb423/
+ls: reading directory '/vobs/vb423/': Permission denied
+total 0
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % cleartool ls /vobs/vb423/
+cleartool: Error: Trouble reading directory "/vobs/vb423/".
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % 
