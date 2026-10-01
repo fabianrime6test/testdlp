@@ -1,0 +1,50 @@
+seivdilc89057:~ % cleartool lsstgloc -view
+  good_choice          /sdevviewdata/viewstg12/ehv_tst_unix/nleidc661
+  best_choice          /sdevviewdata/viewstg11/ehv_tst_unix/nleidc661
+seivdilc89057:~ % 
+seivdilc89057:~ % cleartool mkview -tag farivera_dgagent_test -stgloc -auto
+Selected Server Storage Location "good_choice".
+Created view.
+Host-local path: nleidc661:/sdevviewdata/viewstg12/ehv_tst_unix/nleidc661/farivera/farivera_dgagent_test.vws
+Global path:     /sdevviewdata/viewstg12/ehv_tst_unix/nleidc661/farivera/farivera_dgagent_test.vws
+It has the following rights:
+Owner: asml.nl/farivera : rwx (all)
+Group: asml.nl/users    : rwx (all)
+Other:                  : r-x (read)
+seivdilc89057:~ % cleartool mkview -tag farivera_dgagent_test -stgloc -auto
+cleartool: Error: A registry entry already exists for "farivera_dgagent_test".
+seivdilc89057:~ % cleartool setview farivera_dgagent_test
+seivdilc89057:farivera_dgagent_test:~ % 
+seivdilc89057:farivera_dgagent_test:~ % cleartool setview farivera_dgagent_test
+seivdilc89057:farivera_dgagent_test:~ % 
+seivdilc89057:farivera_dgagent_test:~ % 
+seivdilc89057:farivera_dgagent_test:~ % cd /vobs/litho_back/DGAgent_Test
+seivdilc89057:farivera_dgagent_test:/vobs/litho_back/DGAgent_Test % cleartool co -nc .
+cleartool: Error: No permission to perform operation "checkout".
+cleartool: Error: Must be one of: member of element group, element owner, VOB owner, root
+cleartool: Error: Unable to check out ".".
+seivdilc89057:farivera_dgagent_test:/vobs/litho_back/DGAgent_Test % exit
+exit
+seivdilc89057:farivera_dgagent_test:~ % exit
+exit
+seivdilc89057:~ % 
+seivdilc89057:~ % 
+seivdilc89057:~ % cleartool setview omahto_at_qbld007_dumbo_dgagent_int
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % namei -l /vobs/vb423/40224348429/KMLD/com/int/dat
+f: /vobs/vb423/40224348429/KMLD/com/int/dat
+dr-xr-xr-x root    root /
+drwxr-xr-x root    root vobs
+drwxrwxr-x ccadmin asd  vb423
+                        40224348429 - No such file or directory
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % id
+uid=501811(farivera) gid=500(users) groups=500(users) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % cleartool describe -long vob:/vobs/vb423 | grep -i -A5 group
+    group asml.nl/asd
+  minimum client feature level: 5
+  ACLs enabled: No
+  Attributes:
+    FeatureLevel = 8
+  Hyperlinks:
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % cleartool lsvob /vobs/vb423
+* /vobs/vb423          /sdevvobdata/vobstg15/nleidc657/vb423.vbs public
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:~ % 
