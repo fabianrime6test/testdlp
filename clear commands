@@ -1,0 +1,56 @@
+seivdilc89057:~ % cleartool -version
+VersionVault version 3.0.2 (Tue Dec 19 06:32:25 EST 2023) (VV_3.0.2_HCL.FCS)
+VersionVault version 3.0.2.1 (Mon Jul 15 09:34:12 EST 2024) (VV_3.0.2.01.00_2024B_HCL.FCS)
+VersionVault version 3.0.2.2 (Mon Oct 21 12:26:11 EST 2024) (VV_3.0.2.02.00_2024C_HCL.FCS)
+VersionVault version 3.0.2.3 (Fri May 9 14:31:25 EST 2025) (VV_3.0.2.03.00_2025A_HCL.FCS)
+VersionVault version 3.0.2.04 (Tue Aug 12 10:25:19 EDT 2025) (VV_3.0.2.04.00_2025B_HCL.D250811)
+@(#) MVFS version 3.0.2.4 (Thu Jul 17 23:24:45 2025) built at $Date: 2026-09-18.10:58:28 (UTC) $
+cleartool                         3.0.2.4 (Fri Jul 18 00:22:02 2025) 64-bit
+db_server                         3.0.2.4 (Fri Jul 18 00:26:26 2025) 64-bit
+VOB database schema versions: 54, 55, 80, 81
+seivdilc89057:~ % 
+seivdilc89057:~ % 
+seivdilc89057:~ % lsmod | grep -i mvfs
+mvfs                  647168  519
+sunrpc                589824  41 auth_rpcgss,lockd,mvfs,nfsv3,nfs_acl,nfs
+seivdilc89057:~ % mount | grep -i mvfs
+mvfs on /view type mvfs (rw,nosuid,relatime,viewroot)
+nleidc656:/sdevvobdata/vobstg14/nleidc656/vb388.vbs on /vobs/vb388 type mvfs (rw,nosuid,relatime,uuid=5cdbb3ef.0bb011e5.86df.00:01:86:2d:79:ae)
+nleidc656:/sdevvobdata/vobstg14/nleidc656/vb365.vbs on /vobs/vb365 type mvfs (rw,nosuid,relatime,uuid=16b1604f.0bb111e5.869a.00:01:86:2e:0a:54)
+nleidc656:/sdevvobdata/vobstg14/nleidc656/litho_back.vbs on /vobs/litho_back type mvfs (rw,nosuid,relatime,uuid=57743bcb.198a11e5.a29f.a0:48:1c:b9:3a:c8)
+nleidc656:/sdevvobdata/vobstg15/nleidc656/vb354.vbs on /vobs/vb354 type mvfs (rw,nosuid,relatime,uuid=48487c70.0bb011e5.94b3.00:01:86:2d:71:de)
+nleidc656:/sdevvobdata/vobstg14/nleidc656/vb395.vbs on /vobs/vb395 type mvfs (rw,nosuid,relatime,uuid=a0808639.0bb011e5.825b.00:01:86:2d:cd:78)
+nleidc656:/sdevvobdata/vobstg11/nleidc656/vb352.vbs on /vobs/vb352 type mvfs (rw,nosuid,relatime,uuid=f76f2c38.0baf11e5.852c.00:01:86:2d:79:ae)
+nleidc657:/sdevvobdata/vobstg14/nleidc657/testlitho.vbs on /vobs/testlitho type mvfs (rw,nosuid,relatime,uuid=104bd4fe.ffb711e5.8869.00:01:83:5a:56:61)
+nleidc656:/sdevvobdata/vobstg14/nleidc656/vb290.vbs on /vobs/vb290 type mvfs (rw,nosuid,relatime,uuid=a71307aa.0bb011e5.8296.00:01:86:2d:cd:78)
+
+
+seivdilc89057:~ % cleartool hostinfo -long
+Client: seivdilc89057
+  Product: VersionVault 3.0.2.4
+  Operating system: Linux 4.18.0-553.158.1.el8_10.x86_64 #1 SMP Sun Aug 23 20:58:55 EDT 2026
+  Hardware type: x86_64
+  Registry host: ccregtst1.eu.asml.com
+  Registry region: ehv_tst_unix
+seivdilc89057:~ % 
+
+seivdilc89057:~ % 
+seivdilc89057:~ % cleartool lsview | grep -i farivera
+  farivera_dgagent_test /sdevviewdata/viewstg12/ehv_tst_unix/nleidc661/farivera/farivera_dgagent_test.vws
+seivdilc89057:~ % 
+seivdilc89057:~ % cleartool lsview -long farivera_dgagent_test
+Tag: farivera_dgagent_test
+  Global path: /sdevviewdata/viewstg12/ehv_tst_unix/nleidc661/farivera/farivera_dgagent_test.vws
+  Server host: nleidc661
+  Region: ehv_tst_unix
+  Active: NO
+  View tag uuid:9fe82b32.bd9311f1.9ff9.00:50:56:93:98:3d
+View on host: nleidc661
+View server access path: /sdevviewdata/viewstg12/ehv_tst_unix/nleidc661/farivera/farivera_dgagent_test.vws
+View uuid: 9fe82b32.bd9311f1.9ff9.00:50:56:93:98:3d
+View owner: asml.nl/farivera
+
+
+
+
+
