@@ -1,0 +1,156 @@
+eivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cleartool lsview -long -properties -full vkakarl1_basecc_dgagent_test
+Tag: vkakarl1_basecc_dgagent_test "Created to test dgagent new version"
+  Global path: /sdevviewdata/viewstg11/ehv_tst_unix/nleidc661/vkakarl1/vkakarl1_basecc_dgagent_test.vws
+  Server host: nleidc661
+  Region: ehv_tst_unix
+  Active: YES
+  View tag uuid:02dbcb5a.bcd111f1.a3e3.00:50:56:94:b6:94
+View on host: nleidc661
+View server access path: /sdevviewdata/viewstg11/ehv_tst_unix/nleidc661/vkakarl1/vkakarl1_basecc_dgagent_test.vws
+View uuid: 02dbcb5a.bcd111f1.a3e3.00:50:56:94:b6:94
+View owner: asml.nl/vkakarl1
+
+Created 2026-09-30T15:08:21+02:00 by vkakarl1.asd@nleidc661
+Last modified 2026-09-30T15:08:21+02:00 by vkakarl1.asd@nleidc661
+Last accessed 2026-09-30T15:08:21+02:00 by vkakarl1.asd@nleidc661
+Last config spec update 2026-09-30T15:08:21+02:00 by vkakarl1.asd@::ffff:172.31.7.193
+Text mode: unix
+Properties: dynamic readwrite shareable_dos
+Owner: vkakarl1         : rwx (all)
+Group: asd              : r-x (read)
+Other:                  : r-x (read)
+Current view server process credentials (different from calculated credentials):
+Owner: asml.nl/vkakarl1 : rwx (all)
+Group: asml.nl/asd      : r-x (read)
+Other:                  : r-x (read)
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % id
+uid=501811(farivera) gid=522(asd) groups=522(asd) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cleartool describe -long vob:/vobs/litho_back
+versioned object base "/vobs/litho_back"
+  created 2015-06-23T11:22:17+02:00 by clearcase administrator (Willem van Veggel) (ccadmin.asd@nleidc002.sn-eu.asml.com)
+  protected by rolemap: "DefaultRolemap"
+  effective access for user "farivera": rmelem,Read
+  VOB family feature level: 8
+  VOB storage host:pathname "nleidc656:/sdevvobdata/vobstg14/nleidc656/litho_back.vbs"
+  VOB storage global pathname "/sdevvobdata/vobstg14/nleidc656/litho_back.vbs"
+  database schema version: 80
+  semilive reformatvob in progress: false
+  modification by remote privileged user: allowed
+  atomic checkin: disabled
+  srfm: disabled
+  evil twin detection: disabled
+  VOB ownership:
+    owner asml.nl/ccadmin
+    group asml.nl/asd
+  minimum client feature level: 5
+  ACLs enabled: No
+  Attributes:
+    FeatureLevel = 8
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % touch fab_test.txt
+touch: cannot touch 'fab_test.txt': Permission denied
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % ls -la
+
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % touch /home/farivera/Downloads/test_fab.txt
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % ls
+bld					      ENP-CORP-Employee_Data_Generator-2.0-Block  ENP-DnE-FB_Drawings-2.0-User_Cancel  KMLD.mdldp  KMLDxTH.cnf	  makefile
+ENP-ASML_Berlin-ETS_Bond_Diffusion-2.0-Block  ENP-CSnS-NPI_KT-2.0-Monitor		  KMLD.lodccnf			       KMLD.smjob  KMLDxTHRB.cnf
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % pwd
+/vobs/vb423/40224348429/KMLD/com/int/dat
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % rm /home/farivera/Downloads/te
+test_fab.txt   testfiles/     testfiles.zip  
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % rm /home/farivera/Downloads/test_fab.txt 
+rm: remove regular empty file '/home/farivera/Downloads/test_fab.txt'? Y
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cleartool co -nc .
+cleartool: Error: Unable to update view "omahto_at_qbld007_dumbo_dgagent_int": Permission denied.
+cleartool: Error: Unable to check out ".".
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cleartool lsco .
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cleartool unco .
+cleartool: Error: No branch of element is checked out to view "nleidc661:/sdevviewdata/viewstg11/ehv_tst_unix/nleidc661/omahto/omahto_at_qbld007_dumbo_dgagent_int.vws".
+cleartool: Error: Unable to find checked out version for ".".
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cleartool ls
+bld --> ../../../../.KMLD/com/int/dat
+ENP-ASML_Berlin-ETS_Bond_Diffusion-2.0-Block@@/main/at_qbld007_dumbo_omahto_dgagent_integration/1        Rule: .../at_qbld007_dumbo_omahto_dgagent_integration/LATEST
+ENP-CORP-Employee_Data_Generator-2.0-Block@@/main/at_qbld007_dumbo_omahto_dgagent_integration/1          Rule: .../at_qbld007_dumbo_omahto_dgagent_integration/LATEST
+ENP-CSnS-NPI_KT-2.0-Monitor@@/main/at_qbld007_dumbo_omahto_dgagent_integration/1         Rule: .../at_qbld007_dumbo_omahto_dgagent_integration/LATEST
+ENP-DnE-FB_Drawings-2.0-User_Cancel@@/main/at_qbld007_dumbo_omahto_dgagent_integration/1                 Rule: .../at_qbld007_dumbo_omahto_dgagent_integration/LATEST
+KMLD.lodccnf@@/main/at_qbl001_lvl_common/1               Rule: at_qbl001_lvl_common_40224348429_230327_193203 -mkbranch at_qbld007_dumbo_omahto_dgagent_integration
+KMLD.mdldp@@/main/at_qbl001_lvl_ldl/1                    Rule: at_qbl001_lvl_common_40224348429_230327_193203 -mkbranch at_qbld007_dumbo_omahto_dgagent_integration
+KMLD.smjob@@/main/at_qbl001_lvl_ldl/2                    Rule: at_qbl001_lvl_common_40224348429_230327_193203 -mkbranch at_qbld007_dumbo_omahto_dgagent_integration
+KMLDxTH.cnf@@/main/at_qbl001_lvl_ldl/1                   Rule: at_qbl001_lvl_common_40224348429_230327_193203 -mkbranch at_qbld007_dumbo_omahto_dgagent_integration
+KMLDxTHRB.cnf@@/main/at_qbl001_lvl_ldl/2                 Rule: at_qbl001_lvl_common_40224348429_230327_193203 -mkbranch at_qbld007_dumbo_omahto_dgagent_integration
+makefile@@/main/at_qbl001_lvl_ldl/at_qbl001_lvl_common/2                 Rule: at_qbl001_lvl_common_40224348429_230327_193203 -mkbranch at_qbld007_dumbo_omahto_dgagent_integration
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cleartool lsvtree ENP-CORP-Employee_Data_Generator-2.0-Block 
+ENP-CORP-Employee_Data_Generator-2.0-Block@@/main
+ENP-CORP-Employee_Data_Generator-2.0-Block@@/main/0
+ENP-CORP-Employee_Data_Generator-2.0-Block@@/main/at_qbld007_dumbo_omahto_dgagent_integration
+ENP-CORP-Employee_Data_Generator-2.0-Block@@/main/at_qbld007_dumbo_omahto_dgagent_integration/1
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cleartool describe -long ENP-CORP-Employee_Data_Generator-2.0-Block
+version "ENP-CORP-Employee_Data_Generator-2.0-Block@@/main/at_qbld007_dumbo_omahto_dgagent_integration/1"
+  created 2026-09-30T15:25:53+02:00 by Om Prakash Mahto (omahto.asd@seivdilc89004)
+  protected by rolemap: "DefaultRolemap"
+  effective access for user "farivera": rmver,mod-label,Change
+  Element Protection:
+    User : ccadmin  : r--
+    Group: asd      : r--
+    Other:          : r--
+  element type: compressed_file
+  predecessor version: /main/at_qbld007_dumbo_omahto_dgagent_integration/0
+  Attached activity:
+    activity:at_qbld007_dumbo_omahto_dgagent_act@/vobs/litho_projects1  "at_qbld007_dumbo_omahto_dgagent"
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cat ENP-CORP-Employee_Data_Generator-2.0-Block 
+Ref. Nr., Empl. Nr., Employee Group, Position ID, Payroll Area, Manager ID, Employment %, Birth Date, Is Manager
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cat ENP-CORP-Employee_Data_Generator-2.0-Block 
+Ref. Nr., Empl. Nr., Employee Group, Position ID, Payroll Area, Manager ID, Employment %, Birth Date, Is Manager
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % date
+Wed Oct  7 09:55:23 CEST 2026
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % cp ./ENP-CORP-Employee_Data_Generator-2.0-Block /home/farivera/Downloads/
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % ls -la /home/farivera/Downloads/
+total 464
+drwxr-xr-x.  6 farivera users   4096 Oct  7 09:55 .
+drwx------. 10 farivera users   4096 Oct  7 09:44 ..
+drwxr-xr-x.  4 farivera users   4096 Sep 24 15:55 DG_DLP_NTU_Test_Fixtures
+-rw-rw-r--.  1 farivera users  97896 Sep 24 16:12 DG_DLP_NTU_Test_Fixtures.zip
+drwxr-xr-x.  3 farivera users   4096 Sep 25 11:45 DG_DLP_Ready_Source_Fixtures_Renamed
+drwx------.  3 farivera users   4096 Sep 25 11:35 DG_DLP_Ready_Source_Fixtures_v1
+-r--r--r--.  1 farivera asd      113 Sep 30 15:25 ENP-CORP-Employee_Data_Generator-2.0-Block
+-rw-------.  1 farivera users     95 Sep 24 14:48 fb_draw.txt
+-rw-rw-r--.  1 farivera users    206 Sep 24 14:45 github-recovery-codes.txt
+-rw-------.  1 farivera users     39 Sep 25 10:05 t2.txt
+drwxrwxrwx. 78 farivera users   8192 Sep 25 13:51 testfiles
+-rw-rw-r--.  1 farivera users 324629 Sep 25 13:55 testfiles.zip
+seivdilc89057:omahto_at_qbld007_dumbo_dgagent_int:/vobs/vb423/40224348429/KMLD/com/int/dat % 
+
+
+
+
+
