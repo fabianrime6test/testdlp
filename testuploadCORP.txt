@@ -1,0 +1,1 @@
+Ref. Nr., Empl. Nr., Employee Group, Position ID, Payroll Area, Manager ID, Employment %, Birth Date, Is Manager
