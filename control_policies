@@ -57,4 +57,74 @@ Linux Server - Policy Development Group SM
 Linux Server - Production - POLICIES ON
 
 Linux Server - Production - RESOURCES - NOT POLICIES
-	
+
+
+
+
+Linux Server - Box Users > ASML - Lin - Framework Template - 04 - Block Prompt - Box
+
+Linux Server - Leavers CH > Ninguna por el momento, toca desplegarlas despues
+Linux Server - Leavers High Risk - High > Ninguna por el momento, toca desplegarlas despues
+
+Linux Server - LFT Users > ASML - Lin - Framework Template - 10 - User Exceptions - Monitor
+
+Linux Server - Webex > ASML - Lin - Framework Template - 04 - Block Prompt- Webex
+
+Linux Server - Production - POLICIES ON > Este grupo tiene casi todo (este es el grupo base)
+
+ASML - Lin - Framework Template - 01 - Monitor 		ASML 	Control 	Active
+ASML - Lin - Framework Template - 03 - Export Control 	 ENP-D&E-SEG_EC-2.1-User_Cancel_&_Block   ENP-D&E-TPD_EC-2.2-User_Cancel_&_Block 	ASML 	Control 	Active
+ASML - Lin - Framework Template - 03 - UD - Generic UC CIS Med 		ASML 	Control 	Active
+ASML - Lin - Framework Template - 03 - User Decision 		ASML 	Control 	Active
+ASML - Lin - Framework Template - 03 - User Decision - ENP DE User Cancel 	Policy with custom prompts for use cases: ENP-D&E-FB_Drawings-2.0-User_Cancel   ENP-D&E-FO_Drawings-2.0-User_Cancel 	ASML 	Control 	Active
+ASML - Lin - Framework Template - 04 - Block Prompt 		ASML 	Control 	Active
+ASML - Lin - Framework Template - 04 - Block Prompt - Block Coach 		ASML 	Control 	Active
+ASML - Lin - Framework Template - 04 - Block Prompt - Block_severity_LOW 	ENP-RBA-Top_Secret-3.7-User_Cancel_&_Block 	ASML 	Control 	Active
+ASML - Lin - Framework Template - 04 - Block Prompt - Block_severity_MEDIUM 		ASML 	Control 	Active
+ASML - Lin - Framework Template - 04 - Block Prompt - Block_TCE_to_AIR 	ENP-D&E-Team_Center-2.16-Block 	ASML 	Control 	Active
+ASML - Lin - Framework Template - 04 - Block Prompt - Warning_Severity_Medium 		ASML 	Control 	Active
+asml_cl_p_brion_export_control_source_high 		ASML 	Classification 	Active
+asml_cl_p_corp_ccb_info 		ASML 	Classification 	Active
+asml_cl_p_corp_conq_excom_info 		ASML 	Classification 	Active
+asml_cl_p_corp_financial_forecast_medium 		ASML 	Classification 	Active
+asml_cl_p_corp_financial_planning_info 		ASML 	Classification 	Active
+asml_cl_p_corp_internal_audit_reports_info 		ASML 	Classification 	Active
+asml_cl_p_css_customer_survey_info 		ASML 	Classification 	Active
+asml_cl_p_css_fairness_curve 		ASML 	Classification 	Active
+asml_cl_p_css_known_issues_info 		ASML 	Classification 	Active
+asml_cl_p_css_vpa_21_low 		ASML 	Classification 	Active
+asml_cl_p_css_vpa_21_medium 		ASML 	Classification 	Active
+asml_cl_p_db_fb_drawings_info 		ASML 	Classification 	Active
+asml_cl_p_de_co_drawings_info 		ASML 	Classification 	Active
+asml_cl_p_de_kicad_info 		ASML 	Classification 	Active
+asml_cl_p_de_matlab_info 		ASML 	Classification 	Active
+asml_cl_p_de_seg_ec_high 	ENP-D&E-SEG_EC-2.0-User_Cancel_&_Block ENP-D&E-SEG_LFT_Exception-1.0-Monitor 	ASML 	Classification 	Active
+asml_cl_p_de_seg_ec_medium 	ENP-D&E-SEG_EC-2.0-User_Cancel_&_Block ENP-D&E-SEG_LFT_Exception-1.0-Monitor 	ASML 	Classification 	Active
+asml_cl_p_de_seg_low_seg_1.3_monitor 		ASML 	Classification 	Active
+asml_cl_p_employee_data_generator 		ASML 	Classification 	Active
+asml_cl_p_gmf_csr_low 		ASML 	Classification 	Active
+asml_cl_p_gmf_sat_packages_info 		ASML 	Classification 	Active
+asml_cl_p_it_architectural_design_low 		ASML 	Classification 	Active
+asml_cl_p_it_findings_info 		ASML 	Classification 	Active
+asml_cl_p_lgl_export_control_high 		ASML 	Classification 	Active
+asml_cl_p_lgl_export_control_info 		ASML 	Classification 	Active
+asml_cl_p_lgl_legal_issues_report_info 		ASML 	Classification 	Active
+asml_cl_p_pd_capacity_planning_high 		ASML 	Classification 	Active
+asml_cl_p_pd_ibp_2.1_info 	ENP-P&D-IBP-21.-Block 	ASML 	Classification 	Active
+asml_cl_p_pd_ibp_apps_info 	ENP-P&D-IBP_Apps-2.1-Block 	ASML 	Classification 	Active
+asml_cl_p_rba_keepass_high 		ASML 	Classification 	Active
+asml_cl_p_rba_pentest_reports_low 		ASML 	Classification 	Active
+asml_cl_p_rba_source_code_passwords_info 		ASML 	Classification 	Active
+asml_cl_p_sp_npi_pa_info 	ENP-S&P-NPI_PA-2.1-Block 	ASML 	Classification 	Active
+asml_cl_p_sp_rabobank_files_info 		ASML 	Classification 	Active
+asml_cl_p_ssp_qmd_high 		ASML 	Classification 	Active
+asml_cl_r_css_vba_21_low 	ENP-CS&S-VBA-2.1-Block 	ASML 	Classification 	Active
+asml_cl_r_sp_vpa_2.1_block 	ENP-S&P-VPA-2.1-Block 	ASML 	Classification 	Active
+berlin_ets_bond_difussion 		ASML 	Classification 	Active
+Coach-2.7_m 	ASML Coach Data M 	ASML 	Classification 	Active
+COMPANY_SECRET_4.13_HIGH 		ASML 	Classification 	Active
+COMPANY_SECRET_4.13_INFO 		ASML 	Classification 	Active
+cymer_upgrade_2.0_info 		ASML 	Classification 	Active
+ENP-CORP-CCCR-1.0-Monitor 		ASML-Content 	Classification 	Active
+
+
