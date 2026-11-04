@@ -1,0 +1,7 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_lgl_export_control_info | rule: asml_cl_r_lgl_export_control_info
+
+ECCN 
+3E991 
+codeveloper 
+
+TEST DATA - generated for DLP rule validation - not real data
