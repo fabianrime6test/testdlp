@@ -1,0 +1,13 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_employee_data_generator | rule: asml_cl_r_employee_data_generator
+
+Prefix 
+Employee 
+Manpower Group 
+Job Title 
+Salary 
+HR Manager Name 
+Contract End Date 
+Birth Date 
+Permit Type 
+
+TEST DATA - generated for DLP rule validation - not real data
