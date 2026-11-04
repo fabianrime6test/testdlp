@@ -1,0 +1,10 @@
+DLP TEST SAMPLE | DG policy: ENP-LGL-Dutch_PII-1.2-Monitor | rule: ENP-LGL-Dutch_PII-1.2-Monitor_Netherlands_Burgerservicenummer
+
+781551262
+348091783
+371324300
+141278523
+356297445
+BSN 
+
+TEST DATA - generated for DLP rule validation - not real data
