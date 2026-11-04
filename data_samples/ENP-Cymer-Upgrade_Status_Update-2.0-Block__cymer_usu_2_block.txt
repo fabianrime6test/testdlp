@@ -1,0 +1,14 @@
+DLP TEST SAMPLE | DG policy: cymer_upgrade_2.0_info | rule: asml_cymer_usu_2
+
+LIGHT SOURCE
+SERIAL NUMBER
+EXPOSURE TOOL
+SALES REGION
+PARENT GROUP
+REGION
+Dock Quarter 
+Install Date 
+PARENT
+CUSTOMER/SITE
+
+TEST DATA - generated for DLP rule validation - not real data
