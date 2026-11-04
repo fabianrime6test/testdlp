@@ -1,0 +1,25 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_css_fairness_curve | rule: asml_fairness_system_vpa_database_low
+
+31,2%
+System type 
+Customer 
+Scenario 
+Region 
+End-Use 
+VPA Start date 
+VPA End Date 
+Discount 
+ID 
+ImportedDate 
+Group 
+Item Category ID 
+Item category name 
+Item 
+Description 
+Units 
+List Price 
+Net Price 
+Material costs 
+Labor costs 
+
+TEST DATA - generated for DLP rule validation - not real data
