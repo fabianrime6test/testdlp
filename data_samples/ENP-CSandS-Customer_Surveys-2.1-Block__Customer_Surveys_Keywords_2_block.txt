@@ -1,0 +1,5 @@
+DLP TEST SAMPLE | Symantec policy: ENP-CS&S-Customer_Surveys-2.1-Block | detection rule: Customer Surveys Keywords 2
+
+NPS Score CSAT NPS
+
+TEST DATA - generated for DLP rule validation - not real data
