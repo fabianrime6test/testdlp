@@ -1,0 +1,25 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_gmf_sat_packages_info | rule: asml_cl_r_gmf_sat_info_1
+
+(CNL item) 
+Process step name 
+Function 
+Status 
+Tools (Description) 
+Test ID 
+A-time 
+Availability Label 
+Tools (12 NC) 
+CNL Comments 
+(CNL item) 
+
+Online link
+Process step name
+Function
+Status
+Tools (Description)
+A-time
+Availability Label
+Tools (12 NC)
+CNL Comments
+
+TEST DATA - generated for DLP rule validation - not real data
