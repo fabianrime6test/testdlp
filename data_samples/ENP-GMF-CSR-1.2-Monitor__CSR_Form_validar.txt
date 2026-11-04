@@ -1,0 +1,4 @@
+DLP TEST SAMPLE | Symantec policy: ENP-GMF-CSR-1.2-Monitor | detection rule: CSR_Form
+
+
+TEST DATA - generated for DLP rule validation - not real data
