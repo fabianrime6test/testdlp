@@ -1,0 +1,6 @@
+DLP TEST SAMPLE | DG policy: ENP-CSS-CS-Academy-KT-1.0-Monitor | rule: ENP-CSS-CS-Academy-KT-1.0-Monitor_CS_Academy_PPT_Template_Customer_v1
+
+CSTEMPLATE
+CSTRAINING CUSTOMER
+
+TEST DATA - generated for DLP rule validation - not real data
