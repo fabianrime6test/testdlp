@@ -1,0 +1,6 @@
+DLP TEST SAMPLE | Symantec policy: ENP-LGL-Korean_PII-2.16-Warning | detection rule: Drivers_License
+
+11-23-456789-01
+자동차운전면허증
+
+TEST DATA - generated for DLP rule validation - not real data
