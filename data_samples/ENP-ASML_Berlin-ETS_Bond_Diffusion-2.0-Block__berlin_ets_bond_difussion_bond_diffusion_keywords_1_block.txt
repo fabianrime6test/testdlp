@@ -1,0 +1,8 @@
+DLP TEST SAMPLE | DG policy: berlin_ets_bond_difussion | rule: asml_berlin_ets_bond_difussion_bond_diffusion_keywords_1
+
+hot pressing 
+Ti 
+1300°C 
+500 nm 
+
+TEST DATA - generated for DLP rule validation - not real data
