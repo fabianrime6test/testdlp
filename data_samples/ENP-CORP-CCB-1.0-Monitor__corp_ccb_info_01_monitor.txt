@@ -1,0 +1,10 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_corp_ccb_info | rule: asml_cl_r_corp_ccb_info_01
+
+Fiscal YearPeriod 
+GC Amount 
+LC Planning Amount 
+Plan Item 
+Plan Item Description 
+CCB Cost Bucket 
+
+TEST DATA - generated for DLP rule validation - not real data
