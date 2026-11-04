@@ -1,0 +1,8 @@
+DLP TEST SAMPLE | Symantec policy: ENP-LGL-Korean_PII-2.16-Warning | detection rule: Korean_Credit_Card_Numbers
+
+Korea credit card
+9410916011084367
+5585469748212379
+4579899143301461
+
+TEST DATA - generated for DLP rule validation - not real data
