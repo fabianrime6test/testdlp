@@ -1,0 +1,7 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_corp_internal_audit_reports_info | rule: asml_cl_r_corp_internal_audit_reports_info
+
+Audit committee 
+Internal Audit Announcement 
+Internal control committee 
+
+TEST DATA - generated for DLP rule validation - not real data
