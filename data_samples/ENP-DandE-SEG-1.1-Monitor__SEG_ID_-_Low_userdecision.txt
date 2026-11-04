@@ -1,0 +1,7 @@
+DLP TEST SAMPLE | Symantec policy: ENP-D&E-SEG-1.1-Monitor | detection rule: SEG ID - Low
+
+Document ID Info Type
+Info Type AAF
+D30024589
+
+TEST DATA - generated for DLP rule validation - not real data
