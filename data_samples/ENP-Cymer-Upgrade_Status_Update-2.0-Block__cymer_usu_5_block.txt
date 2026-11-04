@@ -1,0 +1,12 @@
+DLP TEST SAMPLE | DG policy: cymer_upgrade_2.0_info | rule: asml_cymer_usu_5
+
+SERVICE DATE
+ORIG SERVICE DATE
+LASER MODEL
+LASER SN
+ACCOUNT
+SITE
+PLANNED ITEMS
+SN (TEXT)
+
+TEST DATA - generated for DLP rule validation - not real data
