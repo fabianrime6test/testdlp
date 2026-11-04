@@ -1,0 +1,11 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_de_seg_low_seg_1.3_monitor | rule: asml_cl_r_de_seg_ec_low
+
+D31507958
+Document Name Info Type 
+Info Type DKRC 
+
+Document ID Info Type
+Info Type AAF
+D36193451
+
+TEST DATA - generated for DLP rule validation - not real data
