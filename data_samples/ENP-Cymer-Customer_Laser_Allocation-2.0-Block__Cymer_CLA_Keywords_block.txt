@@ -1,0 +1,13 @@
+DLP TEST SAMPLE | DG policy: ENP-Cymer-Customer-Laser-Allocation-2.0-Block | rule: ENP-Cymer-Customer-Laser-Allocation-2.0-Block_Cymer_CLA_Keywords
+
+Laser serial 
+TYPE
+Customer fab 
+WIP LIST 3257
+
+Laser vendor
+Type
+Customer fab
+WIP List 8778
+
+TEST DATA - generated for DLP rule validation - not real data
