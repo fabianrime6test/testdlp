@@ -1,0 +1,5 @@
+DLP TEST SAMPLE | DG policy: IBP_DUV_2.1_INFO | rule: IBP_DUV_INFO
+
+DEMDCZ72_PL8 
+
+TEST DATA - generated for DLP rule validation - not real data
