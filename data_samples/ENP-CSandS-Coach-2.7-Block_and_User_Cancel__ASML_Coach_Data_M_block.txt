@@ -1,0 +1,15 @@
+DLP TEST SAMPLE | DG policy: Coach-2.7_m | rule: ASML_Coach_Data_M
+
+System 
+Function 
+Profile 
+Parts 
+Contents 
+Destination 
+Section id 
+Tools 
+Software 
+Necessary Persons 
+Family 
+
+TEST DATA - generated for DLP rule validation - not real data
