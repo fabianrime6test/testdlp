@@ -1,0 +1,15 @@
+DLP TEST SAMPLE | DG policy: ENP-DE-FO-Drawings-2.0-User-Cancel | rule: ENP-DE-FO-Drawings-2.0-User-Cancel_FO_Keywords_2
+
+CLASS.NO. 
+NAME 
+NAAM 
+CONTR 
+SUPERS. 
+VERV. 
+Property of 
+Eigendom van 
+DAT. 
+ASML B.V. Veldhoven-The Netherlands 
+FO_ 
+
+TEST DATA - generated for DLP rule validation - not real data
