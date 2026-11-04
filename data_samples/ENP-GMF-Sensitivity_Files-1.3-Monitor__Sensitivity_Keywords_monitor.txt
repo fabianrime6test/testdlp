@@ -1,0 +1,15 @@
+DLP TEST SAMPLE | DG policy: ENP-GMF-Sensitivity-Files-1.3-Monitor | rule: ENP-GMF-Sensitivity-Files-1.3-Monitor_Sensitivity_Keywords
+
+SENSITIVITIES
+SIGMA INNER
+Z0
+STRUCTURE
+CD
+PITCH
+ORIENTATION
+MAX
+ILLUMINATION
+MODE
+SIGMA OUTER
+
+TEST DATA - generated for DLP rule validation - not real data
