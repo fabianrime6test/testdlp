@@ -1,0 +1,11 @@
+DLP TEST SAMPLE | DG policy: ENP-CSS-PCS-2.0-User-Cancel-Block | rule: ENP-CSS-PCS-2.0-User-Cancel-Block_Identifiers
+
+PROBLEM ID
+SYMPTOM ID
+CAUSE ID
+SYSTEM
+SOFTWARE
+DESTINATION
+FAMILY
+
+TEST DATA - generated for DLP rule validation - not real data
