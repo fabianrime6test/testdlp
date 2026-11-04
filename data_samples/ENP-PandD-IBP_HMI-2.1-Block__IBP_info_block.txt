@@ -1,0 +1,5 @@
+DLP TEST SAMPLE | DG policy: IBP_HMI_2.1_info | rule: asml_IBP_info
+
+DGMHY53BeQ_nL9
+
+TEST DATA - generated for DLP rule validation - not real data
