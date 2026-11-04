@@ -1,0 +1,10 @@
+DLP TEST SAMPLE | DG policy: TPD_1.0_ID_MED_PLUS | rule: TPD_ID_MED_PLUS
+
+110 
+Not Applicable 
+ucp6.231_4815
+NAME DESCRIPTION 
+NAME CODEVELOPER STATUS 
+CHECKED BY SHEET 
+
+TEST DATA - generated for DLP rule validation - not real data
