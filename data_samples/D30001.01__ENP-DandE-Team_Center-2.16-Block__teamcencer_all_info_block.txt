@@ -1,0 +1,4 @@
+DLP TEST SAMPLE | DG policy: Team_Center-2.16-all_Info | rule: teamcencer_all_info
+
+
+TEST DATA - generated for DLP rule validation - not real data
