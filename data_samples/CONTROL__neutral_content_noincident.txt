@@ -1,0 +1,6 @@
+DLP TEST SAMPLE | CONTROL (neutral content)
+
+Weekly lunch menu: soup, pasta, salad.
+Meeting room booking reminder for Friday.
+
+TEST DATA - generated for DLP rule validation - not real data
