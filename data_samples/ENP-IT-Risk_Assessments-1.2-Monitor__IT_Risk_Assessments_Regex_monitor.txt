@@ -1,0 +1,7 @@
+DLP TEST SAMPLE | DG policy: ENP-IT-Risk-Assessments-1.2-Monitor | rule: ENP-IT-Risk-Assessments-1.2-Monitor_IT_Risk_Assessments_Regex
+
+RK005PzPW
+RISK ASSESSMENT
+RISK ASSESSMENT
+
+TEST DATA - generated for DLP rule validation - not real data
