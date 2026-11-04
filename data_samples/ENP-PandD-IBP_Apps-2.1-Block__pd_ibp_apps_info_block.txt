@@ -1,0 +1,5 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_pd_ibp_apps_info | rule: asml_cl_r_pd_ibp_apps_info
+
+D&SA98Nx3sa_1 
+
+TEST DATA - generated for DLP rule validation - not real data
