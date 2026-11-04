@@ -1,0 +1,15 @@
+DLP TEST SAMPLE | DG policy: Zemax_Files_1.3 | rule: asml_zemax_files_DAT_type1
+
+material definitions 
+wavelength 
+TABLE 
+ANGL 
+ENCRYPTED 
+!MATE 
+!real index 
+!imaginary value 
+!COAT 
+!IDEAL 
+!WAVE 
+
+TEST DATA - generated for DLP rule validation - not real data
