@@ -1,0 +1,6 @@
+DLP TEST SAMPLE | DG policy: machine_data_2.5_info | rule: machine_data_test_reports_info
+
+CREATE_TIME_TAG|INT|| 
+MACHINE_NUMBER_TAG|TEXT| 
+
+TEST DATA - generated for DLP rule validation - not real data
