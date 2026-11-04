@@ -1,0 +1,5 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_pd_capacity_planning_high | rule: asml_cl_r_pd_capacity_planning_high
+
+88d68ac4-8bc4-4a86-93b9-b9c148c370d8 
+
+TEST DATA - generated for DLP rule validation - not real data
