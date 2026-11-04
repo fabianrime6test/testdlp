@@ -1,0 +1,10 @@
+DLP TEST SAMPLE | DG policy: ENP-IT-Risk-Assessments-1.2-Monitor | rule: ENP-IT-Risk-Assessments-1.2-Monitor_IT_Risk_Assessments_IDM
+
+RK00INA43
+IT_RISK_ASSESSMENT
+
+RK00kýòkO
+Risk Assessment
+Risk Assessment
+
+TEST DATA - generated for DLP rule validation - not real data
