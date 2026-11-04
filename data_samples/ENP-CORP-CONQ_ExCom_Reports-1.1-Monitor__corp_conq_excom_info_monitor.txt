@@ -1,0 +1,6 @@
+DLP TEST SAMPLE | DG policy: asml_cl_p_corp_conq_excom_info | rule: asml_cl_r_corp_conq_excom_info
+
+&^$*(*&^$**JAN
+C Public 
+
+TEST DATA - generated for DLP rule validation - not real data
