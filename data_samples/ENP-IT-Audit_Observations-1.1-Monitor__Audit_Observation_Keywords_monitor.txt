@@ -1,0 +1,7 @@
+DLP TEST SAMPLE | DG policy: ENP-IT-Audit-Observations-1.1-Monitor | rule: ENP-IT-Audit-Observations-1.1-Monitor_Audit_Observation_Keywords
+
+A-FND 
+RECC 
+Content Security Policy 
+
+TEST DATA - generated for DLP rule validation - not real data
