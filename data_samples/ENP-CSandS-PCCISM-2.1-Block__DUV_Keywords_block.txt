@@ -1,0 +1,9 @@
+DLP TEST SAMPLE | DG policy: ENP-CSS-PCCISM-2.1-Block | rule: ENP-CSS-PCCISM-2.1-Block_DUV_Keywords
+
+DN/SO 
+Issue start date 
+AIR ID 
+Containment / Solution 
+Problem Description 
+
+TEST DATA - generated for DLP rule validation - not real data
