@@ -1,0 +1,9 @@
+DLP TEST SAMPLE | DG policy: TPD_1.0_ID_MED | rule: TPD_ID_MED
+
+110 
+Cl1E-860-9965
+NAME DESCRIPTION 
+NAME CODEVELOPER STATUS 
+SHEET SHEET CHECKED BY 
+
+TEST DATA - generated for DLP rule validation - not real data
