@@ -1,0 +1,5 @@
+DLP TEST SAMPLE | DG policy: asml_cl_r_css_vba_21_low | rule: asml_vba_2_1
+
+d8a63e7b-edd5-41b5-9ea3-36f20068b956
+
+TEST DATA - generated for DLP rule validation - not real data
