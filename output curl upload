@@ -1,0 +1,159 @@
+seivdilc89057:/ > 
+seivdilc89057:/ > clear
+
+$f\"" https://api.github.com/; sleep 2; done 2>&1 | tee ~/dlptest/curl_run_$(date +%Y%m%d_%H%M).logax-time 120 -H "Expect:" -F "file=@\"$
+11:51:26  402201-110-01.01__ENP-DandE-TPD_EC-1.3-Monitor__TPD_ID_HIGH_block.txt -> 
+404
+11:51:30  4022..ENP-LGL-TPD_Packages-1.4-Block__TPD_PACKAGES_INFO_block.txt -> 404
+11:51:35  ABD_DATA01_dat__ENP-DandE-Zemax_Files-1.3-Monitor__zemax_files_DAT_type2_noincident.txt -> 404
+11:51:38  ASML_Architectural_Design__ENP-IT-Architectural_Design-1.1-Monitor__it_architectural_design_low_2_monitor.txt -> 404
+11:51:41  COATING01_dat__ENP-DandE-Zemax_Files-1.3-Monitor__zemax_files_DAT_type3_noincident.txt -> 404
+11:51:44  CONTROL__neutral_content_noincident.txt -> 404
+11:51:46  D00.ENP-DandE-Team_Center-2.16-Block__teamcencer_with_eccn_medium_block.txt -> 404
+11:51:49  D30001.01__ENP-DandE-Team_Center-2.16-Block__teamcencer_all_info_block.txt -> 404
+11:51:51  ENP-ASML_Berlin-ETS_Bond_Diffusion-2.0-Block__berlin_ets_bond_difussion_bond_diffusion_keywords_1_block.txt -> 404
+11:51:54  ENP-ASML_Berlin-ETS_Bond_Diffusion-2.0-Block__berlin_ets_bond_difussion_bond_diffusion_keywords_2_block.txt -> 404
+11:51:56  ENP-CORP-CCB-1.0-Monitor__corp_ccb_info_01_monitor.txt -> 404
+11:51:58  ENP-CORP-CCB-1.0-Monitor__corp_ccb_info_02_monitor.txt -> 404
+11:52:01  ENP-CORP-CCB-1.0-Monitor__corp_ccb_info_03_monitor.txt -> 404
+11:52:03  ENP-CORP-CCB-1.0-Monitor__corp_ccb_info_04_monitor.txt -> 404
+11:52:05  ENP-CORP-CCCR-1.0-Monitor__CCCR_Details_On_Demand_monitor.txt -> 404
+11:52:08  ENP-CORP-CCCR-1.0-Monitor__CCCR_Movement_Analysis_monitor.txt -> 404
+11:52:10  ENP-CORP-CCCR-1.0-Monitor__CCCR_Report_monitor.txt -> 404
+11:52:12  ENP-CORP-CONQ_ExCom_Reports-1.1-Monitor__corp_conq_excom_info_monitor.txt -> 404
+11:52:14  ENP-CORP-Customer_Value-1.1-Monitor__Customer_Value_Reports_monitor.txt -> 404
+11:52:17  ENP-CORP-Employee_Data_Generator-2.0-Block__employee_data_generator_block.txt -> 404
+11:52:19  ENP-CORP-Financial_Forecast-2.1-Block__corp_financial_forecast_medium_block.txt -> 404
+11:52:21  ENP-CORP-Financial_Planning_Docs-1.1-Monitor__corp_financial_planning_info_monitor.txt -> 404
+11:52:23  ENP-CORP-Internal_Audit_Reports-1.3-Monitor__corp_internal_audit_reports_info_monitor.txt -> 404
+11:52:25  ENP-CSandS-CAL-1.9-Monitor__CAL_Keyword_Matching_monitor.txt -> 404
+11:52:27  ENP-CSandS-CAL-1.9-Monitor__CAL_Keywords_monitor.txt -> 404
+11:52:30  ENP-CSandS-CAL-1.9-Monitor__Sales_Report_Label_monitor.txt -> 404
+11:52:32  ENP-CSandS-Coach-2.7-Block_and_User_Cancel__ASML_Coach_Data_M_block.txt -> 404
+11:52:36  ENP-CSandS-CS_Academy_KT-1.0-Monitor__CS_Academy_Case_Template_monitor.txt -> 404
+11:52:39  ENP-CSandS-CS_Academy_KT-1.0-Monitor__CS_Academy_Exercise_Template_monitor.txt -> 404
+11:52:41  ENP-CSandS-CS_Academy_KT-1.0-Monitor__CS_Academy_PPT_Template_Customer_v1_monitor.txt -> 404
+11:52:43  ENP-CSandS-CS_Academy_KT-1.0-Monitor__CS_Academy_PPT_Template_Internal_monitor.txt -> 404
+11:52:45  ENP-CSandS-Customer_Surveys-2.1-Block__Customer_Surveys_IDM_validar.txt -> 404
+11:52:48  ENP-CSandS-Customer_Surveys-2.1-Block__Customer_Surveys_Keywords_1_block.txt -> 404
+11:52:54  ENP-CSandS-Customer_Surveys-2.1-Block__Customer_Surveys_Keywords_2_block.txt -> 404
+11:52:56  ENP-CSandS-Fairness_Curve-2.1-Block__fairness_systems_vpa_database_7_low_block.csv -> 404
+11:53:00  ENP-CSandS-Fairness_Curve-2.1-Block__fairness_systems_vpa_database_8_low_block.csv -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:53:02  ENP-CSandS-Fairness_Curve-2.1-Block__fairness_system_vpa_database_low_block.csv -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:53:05  ENP-CSandS-Fairness_Curve-2.1-Block__system_pricing_fairness_low_block.csv -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:53:07  ENP-CSandS-Known_Issues-1.0-Monitor__css_known_issues_monitor.txt -> 404
+11:53:09  ENP-CSandS-Machine_Data-2.5-Block__machine_data_adel_files_info_block.xml -> 404
+11:53:12  ENP-CSandS-Machine_Data-2.5-Block__machine_data_machine_event_log_info_block.dat -> 404
+11:53:14  ENP-CSandS-Machine_Data-2.5-Block__machine_data_machine_machine_constant_event_log_csv_info_block.dat -> 404
+11:53:18  ENP-CSandS-Machine_Data-2.5-Block__machine_data_performance_parameters_info_block.xml -> 404
+11:53:20  ENP-CSandS-Machine_Data-2.5-Block__machine_data_source_kpis_info_block.dat -> 404
+11:53:23  ENP-CSandS-Machine_Data-2.5-Block__machine_data_test_reports_info_block.tgs -> 404
+11:53:25  ENP-CSandS-NPI_KT-2.0-Monitor__KT_Metadata_1_info_block.txt -> 404
+11:53:29  ENP-CSandS-NPI_KT-2.0-Monitor__KT_Metadata_2_info_block.txt -> 404
+11:53:31  ENP-CSandS-NPI_KT-2.0-Monitor__KT_Metadata_3_info_block.txt -> 404
+11:53:36  ENP-CSandS-PCCISM-2.1-Block__DUV_Keywords_block.txt -> 403
+11:53:38  ENP-CSandS-PCCISM-2.1-Block__EUV_Keywords_block.txt -> 403
+11:53:42  ENP-CSandS-PCS-2.0-User_Cancel_and_Block__Identifiers_block.txt -> 403
+11:53:44  ENP-CSandS-Sold_Option_Tracker-1.1-Monitor__CV_Sales_History_Keywords_monitor.txt -> 403
+11:53:46  ENP-CSandS-Sold_Option_Tracker-1.1-Monitor__CV_Sold_Unsold_Options_Keywords_monitor.txt -> 403
+11:53:49  ENP-CSandS-VBA-2.1-Block__vba_2_1_block.txt -> 403
+11:53:51  ENP-CSandS-VPA-2.1-Block__css_vpa_21_low_monitor.txt -> 403
+11:53:53  ENP-CSandS-VPA-2.1-Block__css_vpa_21_medium_monitor.pptx -> 403
+11:53:55  ENP-Cymer-Customer_Laser_Allocation-2.0-Block__Cymer_CLA_Keywords_block.txt -> 403
+11:54:00  ENP-Cymer-Upgrade_Status_Update-2.0-Block__cymer_usu_1_block.txt -> 403
+11:54:02  ENP-Cymer-Upgrade_Status_Update-2.0-Block__cymer_usu_2_block.txt -> 403
+11:54:07  ENP-Cymer-Upgrade_Status_Update-2.0-Block__cymer_usu_3_block.txt -> 403
+11:54:09  ENP-Cymer-Upgrade_Status_Update-2.0-Block__cymer_usu_4_block.txt -> 403
+11:54:17  ENP-Cymer-Upgrade_Status_Update-2.0-Block__cymer_usu_5_block.txt -> 403
+11:54:19  ENP-DandE-BRION_Export_Control_Source_Code_Data-1.7-Monitor__brion_export_control_source_high_noincident.md -> 403
+11:54:22  ENP-DandE-CO_Drawings-1.1-Monitor__de_co_drawings_info_1_userdecision.txt -> 403
+11:54:24  ENP-DandE-CO_Drawings-1.1-Monitor__de_co_drawings_info_2_userdecision.txt -> 403
+11:54:26  ENP-DandE-DW_Drawings-1.1-Monitor__DW_Keywords_1_monitor.txt -> 403
+11:54:28  ENP-DandE-DW_Drawings-1.1-Monitor__DW_Keywords_2_monitor.txt -> 403
+11:54:30  ENP-DandE-E_Drawings-2.3-Block__Coach_Draw_Keywords_block.txt -> 403
+11:54:33  ENP-DandE-FB_Drawings-2.0-User_Cancel__db_fb_drawings_info_1_userdecision.txt -> 403
+11:54:37  ENP-DandE-FB_Drawings-2.0-User_Cancel__db_fb_drawings_info_2_userdecision.txt -> 403
+11:54:39  ENP-DandE-FO_Drawings-2.0-User_Cancel__FO_Keywords_1_userdecision.txt -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:54:43  ENP-DandE-FO_Drawings-2.0-User_Cancel__FO_Keywords_2_userdecision.txt -> 403
+11:54:45  ENP-DandE-KiCAD-1.2-Monitor__de_kicad_info_1_monitor.gbrjob -> 403
+11:54:47  ENP-DandE-KiCAD-1.2-Monitor__de_kicad_info_2_monitor.gbrjob -> 403
+11:54:49  ENP-DandE-Matlab-1.4-Monitor__de_matlab_info_monitor.m -> 403
+11:54:52  ENP-DandE-SEG-1.1-Monitor__SEG_ID_-_Low_userdecision.txt -> 403
+11:54:58  ENP-DandE-SEG-1.3-Monitor__de_seg_ec_low_userdecision.txt -> 403
+11:55:00  ENP-DandE-SEG_EC-1.3-Monitor__de_seg_ec_high_block.txt -> 403
+11:55:06  ENP-DandE-SEG_EC-1.3-Monitor__de_seg_ec_medium1_userdecision.txt -> 403
+11:55:09  ENP-DandE-SEG_EC-1.3-Monitor__de_seg_ec_medium_plus_userdecision.txt -> 403
+11:55:12  ENP-DandE-TPD-1.2-Monitor__TPD_ID_LOW_monitor.txt -> 403
+11:55:14  ENP-DandE-TPD_EC-1.3-Monitor__TPD_ID_INFO_monitor.txt -> 403
+11:55:16  ENP-DandE-TPD_EC-1.3-Monitor__TPD_ID_MED_PLUS_userdecision.txt -> 403
+11:55:21  ENP-DandE-TPD_EC-1.3-Monitor__TPD_ID_MED_userdecision.txt -> 403
+11:55:23  ENP-DandE-Zemax_Files-1.3-Monitor__zemax_files_DAT_type1_monitor.dat -> 403
+11:55:25  ENP-DandE-Zemax_Files-1.3-Monitor__zemax_files_extensions_monitor.igs -> 403
+11:55:28  ENP-GMF-CSR-1.2-Monitor__CSR_Form_validar.txt -> 403
+11:55:30  ENP-GMF-CSR-1.2-Monitor__CSR_Keywords_monitor.xlsx -> 403
+11:55:32  ENP-GMF-Green_Banana-2.0-Block__Green_Banana_Keywords_block.xlsx -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:55:35  ENP-GMF-Queues-1.0-Monitor__Queues_Keywords_monitor.txt -> 403
+11:55:38  ENP-GMF-SAT_Packages-1.1-Monitor__gmf_sat_info_1_monitor.txt -> 403
+11:55:40  ENP-GMF-SAT_Packages-1.1-Monitor__gmf_sat_info_2_monitor.txt -> 403
+11:55:42  ENP-GMF-Sensitivity_Files-1.3-Monitor__Sensitivity_Keywords_monitor.txt -> 403
+11:55:44  ENP-IT-Architectural_Design-1.1-Monitor__it_architectural_design_low_1_monitor.txt -> 403
+11:55:46  ENP-IT-Audit_Observations-1.1-Monitor__Audit_Observation_Keywords_monitor.txt -> 403
+11:55:49  ENP-IT-Awoai_Files-2.1-Block__File_Type_and_Keywords_block.awoai -> 403
+11:55:55  ENP-IT-Awoai_Files-2.1-Block__File_Type_block.aw0file -> 403
+11:55:57  ENP-IT-IT_Findings-1.2-Monitor__it_findings_info_monitor.txt -> 403
+11:55:59  ENP-IT-Risk_Assessments-1.2-Monitor__IT_Risk_Assessments_IDM_monitor.txt -> 403
+11:56:01  ENP-IT-Risk_Assessments-1.2-Monitor__IT_Risk_Assessments_Regex_monitor.txt -> 403
+11:56:04  ENP-IT-TCE_Infra_Architecture-1.1-Monitor__Infra_Architecture_Keywords_monitor.txt -> 403
+11:56:06  ENP-LGL-Dutch_PII-1.2-Monitor__Netherlands_Burgerservicenummer_userdecision.txt -> 403
+11:56:08  ENP-LGL-Export_Control-2.5-Block__lgl_export_control_high_block.txt -> 403
+11:56:10  ENP-LGL-Export_Control-2.5-Block__lgl_export_control_info_monitor.txt -> 403
+11:56:13  ENP-LGL-Korean_PII-2.16-Warning__Drivers_License_userdecision.txt -> 403
+11:56:15  ENP-LGL-Korean_PII-2.16-Warning__Korean_Bank_Account_Numbers_userdecision.txt -> 403
+11:56:17  ENP-LGL-Korean_PII-2.16-Warning__Korean_Credit_Card_Numbers_userdecision.txt -> 403
+11:56:19  ENP-LGL-Korean_PII-2.16-Warning__Korean_Credit_Cards_userdecision.txt -> 403
+11:56:21  ENP-LGL-Korean_PII-2.16-Warning__Korean_Passport_userdecision.txt -> 403
+11:56:23  ENP-LGL-Korean_PII-2.16-Warning__Korea_Residence_Registration_Number_for_Foreigners_userdecision.txt -> 403
+11:56:26  ENP-LGL-Korean_PII-2.16-Warning__Korea_Residence_Registration_Number_for_Koreans_userdecision.txt -> 403
+11:56:28  ENP-LGL-Legal_Issues_Report-1.0-Monitor__lgl_legal_issues_report_info_monitor.txt -> 403
+11:56:30  ENP-PandD-Capacity_Planning_package-1.0-Block__pd_capacity_planning_high_block.txt -> 403
+11:56:44  ENP-PandD-IBP-2.1-Block__pd_ibp_info_block.txt -> 403
+11:56:46  ENP-PandD-IBP_Apps-2.1-Block__pd_ibp_apps_info_block.txt -> 403
+11:56:49  ENP-PandD-IBP_DUV-2.1-Block__IBP_DUV_INFO_block.txt -> 403
+11:56:51  ENP-PandD-IBP_EUV-2.1-Block__IBP_EUV_INFO_block.txt -> 403
+11:56:55  ENP-PandD-IBP_HMI-2.1-Block__IBP_info_block.txt -> 403
+11:56:57  ENP-RBAandS-Company_Secret-5.0-User_Cancel_and_Block__COMPANY_SECRET_LABELS_AND_FILENAMES_monitor__SCALED_DRAWING01.PDF -> 403
+11:56:59  ENP-RBAandS-Company_Secret-5.0-User_Cancel_and_Block__COMPANY_SECRET_LABELS_block.txt -> 403
+11:57:06  ENP-RBA-Julia_Source_Code-1.1-Monitor__Julia_Source_Code_monitor.jl -> 403
+11:57:08  ENP-RBA-KeePass-2.2-Block__rba_kepass_high_block.kdb -> 403
+11:57:16  ENP-RBA-PenTest_Reports-1.1-Monitor__rba_pentest_reports_low_1_block.txt -> 403
+11:57:20  ENP-RBA-PenTest_Reports-1.1-Monitor__rba_pentest_reports_low_2_monitor.txt -> 403
+11:57:22  ENP-RBA-Source_Code_Passwords-1.4-Monitor__rba_source_code_passwords_info_monitor.cpp -> 403
+11:57:24  ENP-RBA-Specific_Source_Code-1.1-Monitor__Specific_Source_Code_monitor.py -> 403
+11:57:26  ENP-RBA-Top_Secret-3.7-User_Cancel_and_Block__TOP_SECRET_LABELS_block.txt -> 403
+11:57:49  ENP-SandP-NPI_PA-2.1-Block__sp_npi_pa_info_block.txt -> 403
+11:57:51  ENP-SandP-Rabobank_files-1.0-Block__sp_rabobank_files_info_block__Acceptable Use of Assets - Rabo copy for ASML.pdf -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:57:54  ENP-SandP-VPA-2.1-Block__sp_vpa_2.1_block_block.txt -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:57:59  ENP-SandP-ZEISS_Documents-2.2-Block__ZEISS_CONFIDENTIAL_block.docx -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:58:01  ENP-SandP-ZEISS_Documents-2.2-Block__ZEISS_RESTRICTED_monitor.docx -> 403
+11:58:03  ENP-SandP-ZEISS_Documents-2.2-Block__ZEISS_SECRET_block.docx -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:58:07  ENP-SSandP-QMD-2.0-Block__ssp_qmd_high_1_block.txt -> 403
+11:58:10  ENP-SSandP-QMD-2.0-Block__ssp_qmd_high_2_block.txt -> 403
+11:58:13  FOCAL_SENSITIVITIES_01_01__ENP-GMF-Sensitivity_Files-1.3-Monitor__Sensitivity_File_Names_1_monitor.txt -> 403
+11:58:15  ILIAS_SENSITIVITIES_01_01__ENP-GMF-Sensitivity_Files-1.3-Monitor__Sensitivity_File_Names_2_monitor.txt -> 403
+11:58:17  MC_event_log.ENP-CSandS-Machine_Data-2.5-Block__machine_data_machine_constant_event_log_info_block.txt -> 403
+11:58:19  tENP-RBAandS-Company_Secret-5.0-User_Cancel_and_Block__COMPANY_SECRET_LABELS_AND_FILENAMES_monitor__SCALED_DRAWING01.pdf -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+11:58:23  verbatim_customer__ENP-CSandS-Customer_Surveys-2.1-Block__Customer_Surveys_File_Name_and_Type_block.xlsx -> curl: (55) SSL_write() returned SYSCALL, errno = 13
+000
+seivdilc89057:~/Downloads/ASML_DLP_DataSamples/data_samples > 
+seivdilc89057:~/Downloads/ASML_DLP_DataSamples/data_samples > 
+seivdilc89057:~/Downloads/ASML_DLP_DataSamples/data_samples > 
