@@ -1,0 +1,13 @@
+DLP TEST SAMPLE | DG policy: ENP-IT-TCE-Infra-Architecture-1.1-Monitor | rule: ENP-IT-TCE-Infra-Architecture-1.1-Monitor_Infra_Architecture_Keywords
+
+IT-G: SE200523
+SNOW: SE200534
+ICS1060dZqAj
+NLEIDTBL1
+
+IT-G: SE200523
+SNOW: SE200534
+ics1060GF9ly
+NLEIDTïËé
+
+TEST DATA - generated for DLP rule validation - not real data
