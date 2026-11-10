@@ -1,0 +1,12 @@
+DLP TEST SAMPLE | DG policy: ENP-CORP-Customer-Value-1.1-Monitor | rule: ENP-CORP-Customer-Value-1.1-Monitor_Customer_Value_Reports
+
+Executive summary 
+GROSS MARGIN
+MOR
+MAIN RISKS AND OPPORTUNITIES
+INSTALL BASE
+TAP
+OPEX
+CASH INFLOW
+
+TEST DATA - generated for DLP rule validation - not real data
