@@ -1,0 +1,12 @@
+DLP TEST SAMPLE | DG policy: ENP-DE-DW-Drawings-1.1-Monitor | rule: ENP-DE-DW-Drawings-1.1-Monitor_DW_Keywords_1
+
+Document type 
+detailed wiring 
+DW_ 
+
+Responsible dept.
+Document type
+detailed wiring
+DW_
+
+TEST DATA - generated for DLP rule validation - not real data
