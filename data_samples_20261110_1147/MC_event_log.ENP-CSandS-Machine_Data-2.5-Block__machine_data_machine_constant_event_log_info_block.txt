@@ -1,0 +1,9 @@
+DLP TEST SAMPLE | DG policy: machine_data_2.5_info | rule: machine_data_machine_constant_event_log_info
+
+MACHINE CONSTANTS EVENT 
+HISTORY OF MACHINE 
+
+MACHINE CONSTANTS EVENT
+HISTORY OF MACHINE
+
+TEST DATA - generated for DLP rule validation - not real data
