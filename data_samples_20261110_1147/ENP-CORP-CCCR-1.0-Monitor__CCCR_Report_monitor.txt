@@ -1,0 +1,9 @@
+DLP TEST SAMPLE | DG policy: ENP-CORP-CCCR-1.0-Monitor | rule: ENP-CORP-CCCR-1.0-Monitor_CCCR_Report
+
+CUSTOM BUCKET
+PLAN ITEM TEXT
+MONTH ASSIGNED
+QTD ASSIGNED
+CURRENT Q ASSIGNED
+
+TEST DATA - generated for DLP rule validation - not real data
